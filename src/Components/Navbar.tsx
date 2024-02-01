@@ -1,16 +1,12 @@
-// write a
-"use client";
 import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import BrandLogo from "./Logo";
 import Link from "next/link";
 import ColorModeToggle from "./ModeToggle";
 
-type Props = {
-  nav?: boolean;
-};
+type Props = {};
 
-function Header({ nav }: Props) {
+function Header({}: Props) {
   const path = usePathname();
 
   const navItems = [
