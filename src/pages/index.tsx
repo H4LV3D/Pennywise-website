@@ -274,7 +274,7 @@ export default function Home() {
                   <div
                     className={`"space-y-2 mx-auto p-6 rounded-lg ${
                       index === 0 || index === 3 || index === 4
-                        ? "md:bg-brand-blue md:text-white md:dark:bg-brand-white dark:text-brand-blue "
+                        ? "md:bg-brand-blue md:text-white  "
                         : " dark:text-brand-white "
                     }  `}
                     key={index}
@@ -293,7 +293,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* text-[#6c6c6c] dark:text-neutral-500  */}
+          {/* text-[#6c6c6c] dark:text-neutral-500 md:dark:bg-brand-white dark:text-brand-blue */}
 
           <div className="py-16 xl:w-[950px] mx-auto">
             <div className="bg-black  p-6 sm:p-0 sm:pl-8  min-h-[35vh] w-full rounded-2xl flex items-center ">
@@ -310,7 +310,7 @@ export default function Home() {
                   <i className="fab fa-apple fa-fw fa-lg text-black "></i>
                 </button>
               </div>
-              <div className="hidden w-[30rem] mx-auto sm:block relative ">
+              <div className="hidden w-[30rem] h-[25rem] mx-auto sm:block relative ">
                 <Image
                   src="/iPhone 13 Pro.png"
                   alt=""

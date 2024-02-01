@@ -45,7 +45,7 @@ export default function ColorModeToggle() {
       <button
         type="button"
         onClick={toggleDarkMode}
-        className="h-[3.5rem] w-[3.5rem] rounded-lg p-4 hover:bg-gray-100 dark:hover:bg-gray-700"
+        className="h-[3.5rem] w-[3.5rem] rounded-lg p-4 hover:bg-gray-100 dark:hover:bg-brand-green"
       >
         <svg
           className="fill-brand-blue block dark:hidden"
@@ -55,7 +55,7 @@ export default function ColorModeToggle() {
           <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
         </svg>
         <svg
-          className="fill-brand-green hidden dark:block"
+          className="fill-brand-green dark:hover:fill-brand-white hidden dark:block"
           fill="currentColor"
           viewBox="0 0 20 20"
         >
