@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import BrandLogo from "./Logo";
 import Link from "next/link";
+import ColorModeToggle from "./ModeToggle";
 
 type Props = {
   nav?: boolean;
@@ -76,13 +77,16 @@ function Header({ nav }: Props) {
             </div>
           </div>
 
-          <button
-            data-aos="fade-down"
-            data-aos-delay={1200}
-            className="h-[3.5rem] px-8 rounded-[0.5rem] font-[500] bg-brand-blue text-white hover:bg-[#191919] transition-all duration-300 ease-in-out"
-          >
-            Download
-          </button>
+          <div className="flex items-center space-x-3 ">
+            <ColorModeToggle />
+            <button
+              data-aos="fade-down"
+              data-aos-delay={1200}
+              className="h-[3.5rem] px-8 rounded-[0.5rem] font-[500] bg-brand-blue text-white hover:bg-[#191919] transition-all duration-300 ease-in-out"
+            >
+              Download
+            </button>
+          </div>
         </div>
       </div>
     </div>

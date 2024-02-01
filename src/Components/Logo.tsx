@@ -4,7 +4,8 @@ import Image from "next/image";
 type Props = {};
 
 const Logo = (props: Props) => {
-  const logo = localStorage.theme;
+  // const logo = localStorage.theme;
+  const logo = "dark";
   const dark = "/Primary.svg";
   const light = "/logo.svg";
   return (

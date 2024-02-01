@@ -5,25 +5,6 @@ import Footer from "@/Components/Footer";
 import Image from "next/image";
 
 export default function Home() {
-  if (
-    localStorage.theme === "dark" ||
-    (!("theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
-  ) {
-    document.documentElement.classList.add("dark");
-  } else {
-    document.documentElement.classList.remove("dark");
-  }
-
-  // // // Whenever the user explicitly chooses light mode
-  // localStorage.theme = "light";
-
-  // // // Whenever the user explicitly chooses dark mode
-  localStorage.theme = "dark";
-
-  // // // Whenever the user explicitly chooses to respect the OS preference
-  // // localStorage.removeItem("theme");
-
   return (
     <div className={` min-h-screen bg-[#fbfbfb] dark:bg-[#000B17] pt-20  `}>
       <PageLayout>
