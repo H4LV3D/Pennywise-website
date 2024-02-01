@@ -1,14 +1,12 @@
 "use client";
 import PageLayout from "@/layout/PageLayout";
-import Navbar from "@/Components/Navbar";
-import Footer from "@/Components/Footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div
-      className={` min-h-screen bg-[#fbfbfb] dark:bg-[#000B17] xxxl:pt-20  `}
-    >
+    <div className={` min-h-screen bg-[#fbfbfb] dark:bg-[#000B17] pt-20  `}>
       <PageLayout>
         <Navbar />
         <div className="px-4 md:px-8 max-w-[1250px] mx-auto overflow-hidden ">
@@ -40,14 +38,14 @@ export default function Home() {
                   <span>Learn More</span>
                 </button>
               </div>
-              {/* <div className="">
+              <div className="">
                 <Image
                   src="/Achievements.png"
                   alt="Achievements"
                   width={600}
                   height={300}
                 />
-              </div> */}
+              </div>
             </div>
             <div className="relative flex -space-x-72 ">
               {[1, 2, 3].map((item, index) => (
