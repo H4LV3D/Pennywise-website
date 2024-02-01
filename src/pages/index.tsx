@@ -308,7 +308,7 @@ export default function Home() {
                   <i className="fab fa-apple fa-fw fa-lg text-black "></i>
                 </button>
               </div>
-              <div className="hidden w-[30rem] mx-auto sm:block ">
+              <div className="hidden w-[30rem] mx-auto sm:block relative ">
                 <Image
                   src="/iPhone 13 Pro.png"
                   alt=""
