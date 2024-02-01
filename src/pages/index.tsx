@@ -1,7 +1,7 @@
 "use client";
 import PageLayout from "@/layout/PageLayout";
-import Navbar from "@/new/Navbar";
-import Footer from "@/new/Footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Image from "next/image";
 
 export default function Home() {
