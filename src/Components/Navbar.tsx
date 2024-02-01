@@ -17,8 +17,8 @@ function Header({}: Props) {
   ];
 
   return (
-    <div className=" top-0 left-0 w-full bg-[#fbfbfb] dark:bg-[#000B17] bg-opacity-75 z-20">
-      <div className="px-6 lg:px-0 md:container mx-auto xl:w-[1250px]">
+    <div className="fixed top-0 left-0 w-full bg-[#fbfbfb] dark:bg-[#000B17] bg-opacity-75 z-20">
+      <div className="px-6 lg:px-0 mx-auto xl:w-[1250px]">
         <div
           className={`flex items-center justify-between py-5 md:py-3   shadow-sm `}
         >

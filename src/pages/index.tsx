@@ -6,7 +6,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className={` min-h-screen bg-[#fbfbfb] dark:bg-[#000B17] pt-20  `}>
+    <div
+      className={` min-h-screen bg-[#fbfbfb] dark:bg-[#000B17] xxxl:pt-20  `}
+    >
       <PageLayout>
         <Navbar />
         <div className="px-4 md:px-8 max-w-[1250px] mx-auto overflow-hidden ">
