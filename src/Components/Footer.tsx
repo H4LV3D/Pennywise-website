@@ -78,7 +78,7 @@ function Footer({}: Props) {
   ];
   return (
     <>
-      <div className="w-full font-raleway bg-neutral-100 dark:bg-neutral-800 dark:text-neutral-400 py-20">
+      <div className="w-full font-raleway bg-neutral-100 dark:bg-[#000B17] dark:text-neutral-400 py-20">
         <div className="px-6 lg:px-0 md:container mx-auto xl:w-[950px]">
           <div className="md:flex flex-row lg:grid sm:grid-cols-2 mb-8">
             <div className="w-full sm:w-1/3 lg:w-full mb-8 md:mb-4 ">

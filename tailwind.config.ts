@@ -17,7 +17,14 @@ const config: Config = {
     },
     fontFamily: {
       clash: ["ClashDisplay", "sans-serif"],
-      // sans: ["ui-sans-serif", "system-ui"],
+    },
+    extend: {
+      colors: {
+        "brand-green": "#80FF00",
+        "brand-blue": "#023047",
+        "brand-light-blue": "#4CC9F0",
+        "brand-white": "#FBFBFB",
+      },
     },
   },
   plugins: [],

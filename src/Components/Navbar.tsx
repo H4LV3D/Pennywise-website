@@ -39,7 +39,7 @@ function Header({ nav }: Props) {
   } ${hasShadow ? "shadow-sm border-gray-200" : ""}`;
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-[#fbfbfb] dark:bg-[#191919] z-20">
+    <div className="fixed top-0 left-0 w-full bg-[#fbfbfb] dark:bg-[#000B17] bg-opacity-75 z-20">
       <div className="px-6 lg:px-0 md:container mx-auto xl:w-[1250px]">
         <div className={`${headerClasses}`}>
           <div className="flex items-center space-x-6 text-black dark:text-neutral-400">
@@ -64,9 +64,9 @@ function Header({ nav }: Props) {
                     data-aos-delay={index * 100}
                     className={`w-full p-2  ${
                       path === item.link
-                        ? "text-lg text-black font-[600] dark:text-neutral-200"
-                        : "text-lg text-neutral-400  hover:text-black "
-                    } 
+                        ? "text-lg text-brand-green font-[600] dark:text-brand-green "
+                        : "text-lg text-neutral-400 dark:hover:text-white  hover:text-black "
+                    }  
                        `}
                   >
                     {item.text}
@@ -79,7 +79,7 @@ function Header({ nav }: Props) {
           <button
             data-aos="fade-down"
             data-aos-delay={1200}
-            className="h-[3.5rem] px-8 rounded-[0.5rem] font-[500] bg-black text-white hover:bg-[#191919] transition-all duration-300 ease-in-out"
+            className="h-[3.5rem] px-8 rounded-[0.5rem] font-[500] bg-brand-blue text-white hover:bg-[#191919] transition-all duration-300 ease-in-out"
           >
             Download
           </button>
