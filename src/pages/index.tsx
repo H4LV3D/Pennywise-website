@@ -1,3 +1,4 @@
+"use client";
 import PageLayout from "@/layout/PageLayout";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
@@ -56,6 +57,14 @@ export default function Home() {
                   <span>Learn More</span>
                 </button>
               </div>
+              {/* <div className="">
+                <Image
+                  src="/Achievements.png"
+                  alt="Achievements"
+                  width={600}
+                  height={300}
+                />
+              </div> */}
             </div>
             <div className="relative flex -space-x-72 ">
               {[1, 2, 3].map((item, index) => (
