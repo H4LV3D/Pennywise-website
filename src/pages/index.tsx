@@ -274,7 +274,7 @@ export default function Home() {
                   <div
                     className={`"space-y-2 mx-auto p-6 rounded-lg ${
                       index === 0 || index === 3 || index === 4
-                        ? "md:bg-brand-blue md:text-white md:dark:bg-brand-green dark:text-brand-blue "
+                        ? "md:bg-brand-blue md:text-white md:dark:bg-brand-white dark:text-brand-blue "
                         : " dark:text-brand-white "
                     }  `}
                     key={index}
@@ -282,7 +282,7 @@ export default function Home() {
                     <h5 className="font-[500] text-[1.3rem] ">
                       The Best Financial Accounting App Ever!
                     </h5>
-                    <p className="text-[#6c6c6c] dark:text-neutral-500 text-[1rem] ">
+                    <p className="text-[1rem] ">
                       It is your money and you should be able to manage it the
                       way you want. With Pennywise, you can customize everything
                       from budgets to categories to accounts.
@@ -292,6 +292,8 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* text-[#6c6c6c] dark:text-neutral-500  */}
 
           <div className="py-16 xl:w-[950px] mx-auto">
             <div className="bg-black  p-6 sm:p-0 sm:pl-8  min-h-[35vh] w-full rounded-2xl flex items-center ">
