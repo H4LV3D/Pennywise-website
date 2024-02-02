@@ -11,9 +11,9 @@ function Header({}: Props) {
 
   const navItems = [
     { text: "Home", link: "/" },
-    { text: "About", link: "/shop" },
-    { text: "Pricing", link: "/contact" },
-    { text: "Features", link: "/contact" },
+    { text: "About", link: "/about" },
+    { text: "Pricing", link: "/pricing" },
+    { text: "Contact", link: "/contact" },
   ];
 
   return (
@@ -34,7 +34,7 @@ function Header({}: Props) {
                 <i className="fas fa-bars fa-fw fa-lg text-black dark:text-neutral-400"></i>
               </button>
             </div>
-            <div className="hidden lg:block">
+            {/* <div className="hidden lg:block">
               <div className="flex items-center space-x-5">
                 {navItems.map((item, index) => (
                   <Link
@@ -53,11 +53,11 @@ function Header({}: Props) {
                   </Link>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="flex items-center space-x-3 ">
-            <ToggleButton />
+            {/* <ToggleButton /> */}
             <button
               data-aos="fade-down"
               data-aos-delay={1200}
