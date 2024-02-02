@@ -9,14 +9,14 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Pennywise Home </title>
+        <title>Pennywise | Home </title>
         <meta
           name="description"
           content="Pennywise is a financial accounting app that helps you make the best financial decisions by providing you with the right information and tools."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={` min-h-screen bg-[#fbfbfb] dark:bg-[#000B17] pt-20  `}>
+      <div className={` min-h-screen bg-[#fbfbfb] dark:bg-[#000B17] pt-20 `}>
         <PageLayout>
           <Navbar />
           <div className="px-4 md:px-8 max-w-[1250px] mx-auto overflow-hidden ">
