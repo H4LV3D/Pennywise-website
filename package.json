@@ -2,6 +2,11 @@
   "name": "pennywise-website",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Pennywise",
+    "email": "iampennywise@gmail.com",
+    "url": "https://iampennywise.vercel.app"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
