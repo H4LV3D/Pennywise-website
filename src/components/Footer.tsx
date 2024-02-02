@@ -76,6 +76,7 @@ function Footer({}: Props) {
       icon: "fab fa-telegram",
     },
   ];
+  const date = new Date().getFullYear();
   return (
     <>
       <div className="w-full font-raleway bg-neutral-100 dark:bg-[#000B17] dark:text-neutral-400 py-20">
@@ -88,8 +89,9 @@ function Footer({}: Props) {
                 data-aos="fade-right"
                 className="text-sm font-[400] sm:text-base lg:text-base !leading-6 md:!leading-7 mt-4 text-justify sm:hidden lg:block lg:w-2/3 xl:w-3/4"
               >
-                Welcome to Pennywise, We help you make financial decisions that
-                will help you save money and make more money.
+                We help you make the best financial decisions by providing you
+                with the right information and tools. We are your one stop shop
+                for all your financial needs.
               </p>
             </div>
 
@@ -144,7 +146,7 @@ function Footer({}: Props) {
           <div className="md:grid grid-cols-1 sm:grid-cols-2 items-center py-2 mt-4">
             <div className="flex items-center font-raleway font-normal sm:text-base text-sm text-neutral-600 dark:text-neutral-400 space-x-4 mb-3 md:mb-0">
               <span className=" ">All rights reserved.</span>
-              <span className="font-number ">© 2023 </span>
+              <span className="font-number ">© {date} </span>
             </div>
             <div className="flex space-x-2 items-center md:justify-end">
               {socials.map((item, index) => (

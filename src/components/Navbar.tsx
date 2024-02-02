@@ -57,7 +57,7 @@ function Header({}: Props) {
           </div>
 
           <div className="flex items-center space-x-3 ">
-            {/* <ToggleButton /> */}
+            <ToggleButton />
             <button
               data-aos="fade-down"
               data-aos-delay={1200}
