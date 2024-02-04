@@ -25,10 +25,6 @@ const footerData = {
   ],
   resources: [
     {
-      title: "Blog",
-      link: "",
-    },
-    {
       title: "Pricing",
       link: "",
     },
@@ -44,15 +40,15 @@ const footerData = {
       link: "/",
     },
     {
-      title: "Shop",
-      link: "/shop",
-    },
-    {
-      title: "About Us",
+      title: "About",
       link: "/about",
     },
     {
-      title: "Contact Us",
+      title: "Pricing",
+      link: "/pricing",
+    },
+    {
+      title: "Contact",
       link: "/contact",
     },
   ],
@@ -93,6 +89,16 @@ function Footer({}: Props) {
                 with the right information and tools. We are your one stop shop
                 for all your financial needs.
               </p>
+              <div className="mt-4">
+                <a
+                  href="mailto:hello@iampennywise.com"
+                  data-aos="fade-right"
+                  className="text-sm font-[400] sm:text-base lg:text-base hover:text-brand-white flex items-center text-brand-green space-x-2 "
+                >
+                  <i className="fas fa-envelope fa-fw fa-md"></i>
+                  <span>hello@iampennywise.com</span>
+                </a>
+              </div>
             </div>
 
             <div className="hidden w-full md:w-2/3 lg:w-full sm:grid grid-cols-3 sm:grid-cols-3 gap-4">

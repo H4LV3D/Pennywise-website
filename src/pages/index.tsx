@@ -5,6 +5,7 @@ import Footer from "@/components/shared/Footer";
 import Image from "next/image";
 import Head from "next/head";
 import data from "@/data/index.json";
+import TestimonialsSection from "@/components/shared/Testimonials";
 
 export default function Home() {
   const { features, why, FAQ } = data;
@@ -177,7 +178,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-
+            {/* 
             <div className="py-16 ">
               <div className="text-center">
                 <p className="uppercase text-[1.125rem] !tracking-widest text-brand-green dark:text-neutral-400 ">
@@ -211,15 +212,7 @@ export default function Home() {
                           : "bottom-20 left-28"
                       } `}
                       key={index}
-                    >
-                      {/* <Image
-                      src="/peep-8.svg"
-                      alt="peep"
-                      width={65}
-                      height={65}
-                      className="mx-auto"
-                    /> */}
-                    </div>
+                    ></div>
                   ))}
                 </div>
                 <div className="w-full ">
@@ -252,7 +245,9 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+
+            <TestimonialsSection />
 
             <div className="py-16 xl:w-[950px] mx-auto">
               <div className="">
@@ -284,31 +279,41 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+              Test
             </div>
 
             {/* text-[#6c6c6c] dark:text-neutral-500 md:dark:bg-brand-white dark:text-brand-blue */}
 
             <div className="py-16 xl:w-[950px] mx-auto">
-              <div className="bg-black  p-6 sm:p-0 sm:pl-8  min-h-[35vh] w-full rounded-2xl flex items-center ">
+              <div className="bg-black  p-6 sm:p-0 sm:pl-8 overflow-hidden h-[30vh] w-full rounded-2xl flex items-center ">
                 <div className="text-white w-[28rem] ">
                   <h3 className="text-[2.25rem] font-[600] ">
-                    Ready To Get Started?
+                    Get Started Today!
                   </h3>
-                  <p className="text-[#6c6c6c] dark:text-neutral-400">
+                  {/* <p className="text-[#6c6c6c] dark:text-neutral-400">
                     We help you make the best financial decisions by providing
                     you with the right information and tools.
-                  </p>
-                  <button className="bg-white text-black h-[3rem] px-8 rounded-[0.5rem] flex items-center space-x-2 mt-4 ">
-                    <span className="font-[500] ">Download App</span>
-                    <i className="fab fa-apple fa-fw fa-lg text-black "></i>
-                  </button>
+                  </p> */}
+                  <div className="flex items-center space-x-4 mt-4">
+                    <p className="text-brand-white text-lg font-[500] ">
+                      Download Now
+                    </p>
+                    <button className=" text-brand-white h-[2.5rem] w-[2.5rem] rounded-[2.5rem] border flex justify-center items-center">
+                      <i className="fab fa-apple fa-fw fa-lg "></i>
+                    </button>
+                    <button className=" text-brand-white h-[2.5rem] w-[2.5rem] rounded-[2.5rem] border flex justify-center items-center">
+                      <i className="fab fa-google-play fa-fw fa-lg "></i>
+                    </button>
+                  </div>
                 </div>
-                <div className="hidden w-[30rem] h-[25rem] mx-auto sm:block relative ">
+                <div className="hidden mx-auto sm:block relative ">
                   <Image
                     src={`/assets/images/app_screenshots/6.png`}
                     alt=""
-                    fill={true}
-                    className=""
+                    width={500}
+                    height={800}
+                    // fill={true}
+                    className=" mt-72 "
                   />
                 </div>
               </div>
