@@ -25,12 +25,13 @@ export default function Error() {
               Contact Us
             </h1>
             <p className="mt-3 text-[1.25rem] text-center text-[#6464646] dark:text-neutral-400 max-w-[30rem] ">
-              We have you covered by helping you make financial decisions that
-              matter.
+              We are always available to help you with any issues you might
+              have. We are currently available to take any messages at the
+              moment.
             </p>
             <Link href="/">
               <button className="dark:bg-brand-blue text-brand-white h-[3rem] px-8 rounded-[0.5rem] font-[500] flex items-center space-x-2 mt-3 ">
-                <span>Go Home</span>
+                <span>Leave a message</span>
                 <i className="fas fa-chevron-right fa-fw fa-md text-white "></i>
               </button>
             </Link>
