@@ -1,7 +1,7 @@
 "use client";
 import PageLayout from "@/layout/PageLayout";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
 import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";

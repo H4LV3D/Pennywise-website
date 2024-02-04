@@ -1,11 +1,13 @@
 "use client";
 import PageLayout from "@/layout/PageLayout";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
 import Image from "next/image";
 import Head from "next/head";
+import data from "@/data/index.json";
 
 export default function Home() {
+  const { features, why, FAQ } = data;
   return (
     <>
       <Head>
@@ -101,18 +103,16 @@ export default function Home() {
                 </div>
 
                 <div className="grid grid-cols-1 gap-y-8 ">
-                  {[1, 2, 3].map((item, index) => (
-                    <div className="" key={index}>
+                  {features.map((item, index) => (
+                    <div className="" key={item.title}>
                       <div className="flex space-x-2 items-center dark:text-neutral-200 ">
                         <i className="fas fa-money-bill fa-lg fa-fw"></i>
                         <h5 className="font-[500] text-[1.4rem] dark:text-brand-white  ">
-                          Budgeting Intervals
+                          {item.title}
                         </h5>
                       </div>
-                      <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem]">
-                        We help you make the best financial decisions by
-                        providing you with the right information and tools. We
-                        are your one stop shop for all your financial needs.
+                      <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] text-justify lg:pr-6 ">
+                        {item.body}
                       </p>
                     </div>
                   ))}
@@ -133,19 +133,15 @@ export default function Home() {
 
                 <div className="space-y-4 ">
                   <div className="flex space-x-2 items-center dark:text-brand-white">
-                    <span className="h-[2.25rem] w-[2.25rem] border border-black dark:border-brand-white rounded-[50%] flex justify-center items-center ">
-                      <i className="fas fa-bell fa-lg fa-fw"></i>
+                    <span className="h-[2rem] w-[2rem] border border-black dark:border-brand-white rounded-[50%] flex justify-center items-center ">
+                      <i className="fas fa-bell fa-sm fa-fw"></i>
                     </span>
                     <h5 className="font-[500] text-[1.4rem]  ">
-                      Clever Notifications
+                      {why[0].title}
                     </h5>
                   </div>
-                  <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] lg:pr-24 ">
-                    With our clever notifications, you will never miss a payment
-                    or an important event. We will notify you when you need to
-                    take action. We will also notify you when you are spending
-                    too much money. We will also notify you when you are
-                    spending too much money.
+                  <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] text-justify lg:pr-24 ">
+                    {why[0].body}
                   </p>
                 </div>
               </div>
@@ -170,19 +166,13 @@ export default function Home() {
               </div>
               <div className="space-y-4 ">
                 <div className="flex space-x-2 items-center dark:text-brand-white">
-                  <span className="h-[2.25rem] w-[2.25rem] border border-black dark:border-brand-white rounded-[50%] flex justify-center items-center ">
-                    <i className="fas fa-star fa-lg fa-fw"></i>
+                  <span className="h-[2rem] w-[2rem] border border-black dark:border-brand-white rounded-[50%] flex justify-center items-center ">
+                    <i className="fas fa-star fa-sm fa-fw"></i>
                   </span>
-                  <h5 className="font-[500] text-[1.4rem] ">
-                    Fully Customizable
-                  </h5>
+                  <h5 className="font-[500] text-[1.4rem] ">{why[1].title}</h5>
                 </div>
-                <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] lg:pr-24 ">
-                  It is your money and you should be able to manage it the way
-                  you want. With Pennywise, you can customize everything from
-                  budgets to categories to accounts. You can also create your
-                  own custom categories and budgets. You can also create your
-                  own custom categories and budgets.
+                <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] text-justify lg:pr-24 ">
+                  {why[1].body}
                 </p>
               </div>
             </div>
@@ -198,12 +188,6 @@ export default function Home() {
               </div>
               <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center min-h-[40vh]  ">
                 <div className="md:flex justify-center items-center py-8 relative hidden  w-[500px] h-[500px] ">
-                  {/* <Image
-                  src="/three_rings.png"
-                  alt="three rings"
-                  width={500}
-                  height={500}
-                /> */}
                   <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center  ">
                     <div className=" bg-brand-blue w-[160px] h-[160px] flex items-center justify-center rounded-[50%]">
                       <Image
@@ -280,7 +264,7 @@ export default function Home() {
               </div>
               <div className="mt-8 ">
                 <div className="w-full grid grid-cols-1 gap-8 md:grid-cols-2 ">
-                  {[1, 2, 3, 4, 5, 6].map((item, index) => (
+                  {FAQ.map((item, index) => (
                     <div
                       className={`"space-y-2 mx-auto p-6 rounded-lg ${
                         index === 0 || index === 3 || index === 4
@@ -289,13 +273,11 @@ export default function Home() {
                       }  `}
                       key={index}
                     >
-                      <h5 className="font-[500] text-[1.3rem] ">
-                        The Best Financial Accounting App Ever!
+                      <h5 className="font-[500] text-[1.3rem] line-clamp-1 hover:line-clamp-none ">
+                        {item.question}
                       </h5>
-                      <p className="text-[1rem] ">
-                        It is your money and you should be able to manage it the
-                        way you want. With Pennywise, you can customize
-                        everything from budgets to categories to accounts.
+                      <p className="text-[1rem] line-clamp-3 hover:line-clamp-none ">
+                        {item.answer}
                       </p>
                     </div>
                   ))}

@@ -1,0 +1,48 @@
+{
+  "features": [
+    {
+      "title": "Multi-Account Connectivity",
+      "body": "Effortlessly manage multiple accounts with our platform, gaining a comprehensive financial overview in one place. You can seamlessly monitor all your accounts, saving significant time and hassle. Rest assured, your accounts are securely connected through advanced encryption protocols."
+    },
+    {
+      "title": "Customizable Spending Limits",
+      "body": "Tailor your budget precisely to your needs by setting personalized spending limits. Receive instant notifications as you approach or exceed your set spending thresholds. With flexibility built-in, you can adapt your spending limits to changing financial circumstances with ease."
+    },
+    {
+      "title": " Detailed Transaction Insights",
+      "body": "Dive deep into detailed breakdowns of your expenditures to identify trends and areas for improvement. Use these transaction insights to make informed decisions and plan for a more secure financial future. Gain transparency into your budget allocations with clear explanations of where your money is going."
+    }
+  ],
+  "why": [
+    {
+      "title": "Seamless Financial Management",
+      "body": "We at Pennywise aim for effortless financial management! Connect accounts easily, breeze through budgets, stay informed and in control with real-time notifications, ensuring responsible spending habits for a stress-free financial journey."
+    },
+    {
+      "title": "Empowering Financial Growth",
+      "body": "Transform your financial journey with Pennywise! Gain insights, set goals, and track progress effortlessly. With detailed analytics and personalized features, we empower you to secure a prosperous future."
+    }
+  ],
+  "FAQ": [
+    {
+      "question": "How do I connect my accounts?",
+      "answer": "Simply navigate to the 'Accounts' tab and select 'Connect Account'. You will be prompted to enter your account credentials, and once verified, your account will be securely connected."
+    },
+    {
+      "question": "How do I set spending limits?",
+      "answer": "To set spending limits, navigate to the 'Budget' tab and select 'Set Spending Limits'. You can then input your desired spending limits for each category, and you will receive notifications as you approach or exceed these limits."
+    },
+    {
+      "question": "How do I view detailed transaction insights?",
+      "answer": "To view detailed transaction insights, navigate to the 'Transactions' tab and select 'View Insights'. You will then be presented with a comprehensive breakdown of your expenditures, allowing you to identify trends and areas for improvement."
+    },
+    {
+      "question": "How do I set financial goals?",
+      "answer": "To set financial goals, navigate to the 'Goals' tab and select 'Set Goals'. You can then input your desired financial goals, and track your progress over time. With detailed analytics and personalized features, we empower you to secure a prosperous future."
+    },
+    {
+      "question": "How do I view my financial overview?",
+      "answer": "To view your financial overview, navigate to the 'Overview' tab. Here, you will find a comprehensive summary of your financial status, including account balances, spending limits, and transaction insights."
+    }
+  ]
+}
