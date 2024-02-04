@@ -59,7 +59,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="relative flex -space-x-72 ">
+              <div className="relative flex -rotate-12 -space-x-72 ">
                 {[1, 2, 3].map((item, index) => (
                   <div
                     className={`${
@@ -72,7 +72,7 @@ export default function Home() {
                     key={index}
                   >
                     <Image
-                      src={`/phone-${index + 1}.png`}
+                      src={`/assets/images/app_screenshots/${index + 6}.png`}
                       alt="Features"
                       width={1000}
                       height={1000}
@@ -86,7 +86,7 @@ export default function Home() {
             <div className=" py-16 grid grid-cols-1 lg:grid-cols-2 place-items-center border-b dark:border-neutral-700 min-h-[80vh] ">
               <div className="">
                 <Image
-                  src="/features.png"
+                  src={`/assets/images/app_screenshots/6.png`}
                   alt="Features"
                   width={600}
                   height={600}
@@ -147,10 +147,10 @@ export default function Home() {
               </div>
               <div className="">
                 <Image
-                  src="/notifications.png"
+                  src={`/assets/images/app_screenshots/7.png`}
                   alt="Customize"
-                  width={600}
-                  height={600}
+                  width={500}
+                  height={500}
                 />
               </div>
             </div>
@@ -158,10 +158,11 @@ export default function Home() {
             <div className=" py-16 grid grid-cols-1 lg:grid-cols-2 place-items-center border-b dark:border-neutral-700 min-h-[60vh] ">
               <div className="">
                 <Image
-                  src="/customize.png"
+                  src={`/assets/images/app_screenshots/8.png`}
                   alt="Customize"
                   width={500}
                   height={500}
+                  loading="lazy"
                 />
               </div>
               <div className="space-y-4 ">
@@ -191,7 +192,7 @@ export default function Home() {
                   <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center  ">
                     <div className=" bg-brand-blue w-[160px] h-[160px] flex items-center justify-center rounded-[50%]">
                       <Image
-                        src="/Memoji-8.png"
+                        src={`/assets/images/placeholders/Memoji-8.png`}
                         alt="Icons"
                         width={200}
                         height={200}
@@ -304,7 +305,7 @@ export default function Home() {
                 </div>
                 <div className="hidden w-[30rem] h-[25rem] mx-auto sm:block relative ">
                   <Image
-                    src="/iPhone 13 Pro.png"
+                    src={`/assets/images/app_screenshots/6.png`}
                     alt=""
                     fill={true}
                     className=""

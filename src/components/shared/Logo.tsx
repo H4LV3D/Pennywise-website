@@ -7,7 +7,7 @@ type Props = {};
 
 const Logo = ({}: Props) => {
   const { theme } = ColorModeToggle();
-  const dark = "/Primary.svg";
+  const dark = "/assets/images/logo/Primary.svg";
   const light = "/logo.svg";
   return (
     <Link href={"/"}>
