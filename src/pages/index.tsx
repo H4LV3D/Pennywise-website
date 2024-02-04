@@ -52,7 +52,7 @@ export default function Home() {
                 </div>
                 <div className="">
                   <Image
-                    src="/Achievements.png"
+                    src="/assets/images/screenshots/Achievements.png"
                     alt="Achievements"
                     width={600}
                     height={300}
