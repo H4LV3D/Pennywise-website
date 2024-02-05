@@ -23,7 +23,7 @@ export default function Document() {
         />
       </head>
       <Head />
-      <body>
+      <body className="bg-[#000B17]">
         <Main />
         <NextScript />
       </body>

@@ -6,8 +6,6 @@ const TestimonialsSection = () => {
   const { testimonials } = data;
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  //   const testimonials = [1, 2, 3, 4];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);

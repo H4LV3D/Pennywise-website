@@ -19,7 +19,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={` min-h-screen bg-[#fbfbfb] dark:bg-[#000B17] pt-20 `}>
+      <div className={` min-h-screen light:bg-[#fbfbfb] bg-[#000B17] pt-20 `}>
         <PageLayout>
           <Navbar />
           <div className="px-4 md:px-8 max-w-[1250px] mx-auto overflow-hidden ">
@@ -84,7 +84,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className=" py-16 grid grid-cols-1 lg:grid-cols-2 place-items-center border-b dark:border-neutral-700 min-h-[80vh] ">
+            <div className=" py-16 grid grid-cols-1 lg:grid-cols-2 place-items-center border-b dark:border-neutral-700 min-h-[70vh] ">
               <div className="">
                 <Image
                   src={`/assets/images/app_screenshots/6.png`}
