@@ -70,5 +70,22 @@
       "title": "Financial Advisor",
       "quote": "Pennywise has been a valuable tool for my clients. With its detailed transaction insights, they can gain transparency into their budget allocations and make informed decisions. The platform has truly empowered them to secure a prosperous future."
     }
+  ],
+  "socials": [
+    {
+      "title": "Twitter",
+      "link": "https://twitter.com/kinkunmz_",
+      "icon": "fab fa-twitter"
+    },
+    {
+      "title": "Instagram",
+      "link": "https://www.instagram.com/__moyin_",
+      "icon": "fab fa-instagram"
+    },
+    {
+      "title": "Telegram",
+      "link": "https://t.me/H4LV3D",
+      "icon": "fab fa-telegram"
+    }
   ]
 }

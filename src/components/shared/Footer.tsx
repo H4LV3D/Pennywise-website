@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import BrandLogo from "./Logo";
+import data from "@/data/index.json";
 
 type Props = {};
 
@@ -55,23 +56,7 @@ const footerData = {
 };
 
 function Footer({}: Props) {
-  const socials = [
-    {
-      title: "Twitter",
-      link: "https://twitter.com/kinkunmz_",
-      icon: "fab fa-twitter",
-    },
-    {
-      title: "Instagram",
-      link: "https://www.instagram.com/__moyin_",
-      icon: "fab fa-instagram",
-    },
-    {
-      title: "Telegram",
-      link: "https://t.me/H4LV3D",
-      icon: "fab fa-telegram",
-    },
-  ];
+  const { socials } = data;
   const date = new Date().getFullYear();
   return (
     <>
