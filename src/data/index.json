@@ -48,25 +48,25 @@
   "testimonials": [
     {
       "image": "https://randomuser.me/api/portraits",
-      "name": "John Isreal",
+      "name": "John",
       "title": "Financial Analyst",
       "quote": "Pennywise has revolutionized the way I manage my finances. With its intuitive platform, I can effortlessly monitor all my accounts, set personalized spending limits, and gain detailed transaction insights. It has truly transformed my financial journey!"
     },
     {
       "image": "https://randomuser.me/api/portraits",
-      "name": "Esther Moturayo",
+      "name": "Esther",
       "title": "Business Owner",
       "quote": "Pennywise has been a game-changer for my business. With its customizable spending limits, I can tailor my budget precisely to my needs. The detailed transaction insights have allowed me to identify trends and areas for improvement, enabling me to make informed decisions and plan for a more secure financial future."
     },
     {
       "image": "https://randomuser.me/api/portraits",
-      "name": "Grace James",
+      "name": "Grace",
       "title": "Entrepreneur",
       "quote": "Pennywise has empowered me to transform my financial journey. With its seamless financial management features, I can effortlessly connect accounts, breeze through budgets, and stay informed and in control with real-time notifications. It has truly been a game-changer for me!"
     },
     {
       "image": "https://randomuser.me/api/portraits",
-      "name": "Emmanuel Johnson",
+      "name": "Emmanuel",
       "title": "Financial Advisor",
       "quote": "Pennywise has been a valuable tool for my clients. With its detailed transaction insights, they can gain transparency into their budget allocations and make informed decisions. The platform has truly empowered them to secure a prosperous future."
     }

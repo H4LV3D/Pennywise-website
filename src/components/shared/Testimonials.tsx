@@ -95,7 +95,7 @@ const TestimonialsSection = () => {
                 </button>
               ))}
             </div>
-            <p className="text-[.9375rem] font-[500] text-brand-green">
+            <p className="text-[1rem] font-[500] text-brand-green">
               {testimonials[currentIndex].name}
             </p>
           </div>
