@@ -8,6 +8,7 @@ type Props = {};
 
 function Header({}: Props) {
   const path = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const navItems = [
     { text: "Home", link: "/" },
@@ -30,7 +31,7 @@ function Header({}: Props) {
               </p>
             </div>
             <div className="lg:hidden">
-              <button className="">
+              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="">
                 <i className="fas fa-bars fa-fw fa-lg text-black dark:text-neutral-400"></i>
               </button>
             </div>
@@ -68,6 +69,31 @@ function Header({}: Props) {
           </div>
         </div>
       </div>
+      {
+        // Mobile Menu
+        isMenuOpen && (
+          <div className="w-full p-6 md:hidden ">
+            <div className="grid grid-cols-1 space-y-3">
+              {navItems.map((item, index) => (
+                <Link
+                  href={item.link}
+                  key={index}
+                  data-aos="fade-down"
+                  data-aos-delay={index * 100}
+                  className={`w-full p-2  ${
+                    path === item.link
+                      ? "text-xl text-brand-green font-[600] dark:text-brand-green "
+                      : "text-xl text-neutral-400 dark:hover:text-white  hover:text-black "
+                  }  
+                       `}
+                >
+                  {item.text}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )
+      }
     </div>
   );
 }
