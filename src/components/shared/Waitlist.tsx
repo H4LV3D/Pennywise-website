@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useQuery, useMutation } from "@tanstack/react-query";
+import ButtonLoader from "./ButtonLoader";
 
 interface Response {
   message: string;
@@ -53,6 +54,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
   }, []);
 
   const addToWaitList = async (data: WaitlistFormData) => {
+    setLoading(true);
     const response = await fetch(
       "https://iampennywise-waitlist.onrender.com/api/v1/email",
       {
@@ -79,6 +81,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
     if (res) {
       setResponse(res);
     }
+    setLoading(false);
   };
 
   return (
@@ -169,10 +172,14 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
               <div className="mt-6">
                 <button
                   type="submit"
-                  // disabled={isPending}
+                  disabled={loading}
                   className="hover:bg-brand-blue hover:text-brand-white bg-brand-green text-brand-blue h-[3rem] font-[600] w-full rounded focus:outline-none focus:shadow-outline"
                 >
-                  GET EARLY ACCESS
+                  {loading ? (
+                    <ButtonLoader color="white" />
+                  ) : (
+                    "GET EARLY ACCESS"
+                  )}
                 </button>
               </div>
             </form>
