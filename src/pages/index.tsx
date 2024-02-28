@@ -39,9 +39,10 @@ export default function Home() {
                   !
                 </h1>
                 <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] max-w-lg ">
-                  We help you make the best financial decisions by providing you
-                  with the right information and tools. We are your one stop
-                  shop for all your financial needs.
+                  Budgeting made easy with our app! Our user-friendly interface
+                  and automated tracking streamline the process, while
+                  customizable budgets and insightful reports help you stay on
+                  top of your finances effortlessly.
                 </p>
                 <div className="flex items-center space-x-6 pt-[1.25rem] ">
                   <button
@@ -196,39 +197,35 @@ export default function Home() {
               Test
             </div>
 
-            {/* text-[#6c6c6c] dark:text-neutral-500 md:dark:bg-brand-white dark:text-brand-blue */}
+            <div className="py-16 mx-auto">
+              <div className="bg-brand-blue bg-opacity-20 p-6 sm:p-16 h-[40vh] w-full rounded-2xl flex items-center overflow-hidden ">
+                <div className="flex items-center  lg:w-[950px] mx-auto overflow-hidden ">
+                  <div className="text-white ">
+                    <h3 className="text-[2.25rem] font-[600] ">
+                      Get Started Today!
+                    </h3>
 
-            <div className="py-16 xl:w-[950px] mx-auto">
-              <div className="bg-black  p-6 sm:p-0 sm:pl-8 overflow-hidden h-[30vh] w-full rounded-2xl flex items-center ">
-                <div className="text-white w-[28rem] ">
-                  <h3 className="text-[2.25rem] font-[600] ">
-                    Get Started Today!
-                  </h3>
-                  {/* <p className="text-[#6c6c6c] dark:text-neutral-400">
-                    We help you make the best financial decisions by providing
-                    you with the right information and tools.
-                  </p> */}
-                  <div className="flex items-center space-x-4 mt-4">
-                    <p className="text-brand-white text-lg font-[500] ">
-                      Download Now
-                    </p>
-                    <button className=" text-brand-white h-[2.5rem] w-[2.5rem] rounded-[2.5rem] border flex justify-center items-center">
-                      <i className="fab fa-apple fa-fw fa-lg "></i>
-                    </button>
-                    <button className=" text-brand-white h-[2.5rem] w-[2.5rem] rounded-[2.5rem] border flex justify-center items-center">
-                      <i className="fab fa-google-play fa-fw fa-lg "></i>
-                    </button>
+                    <div className="flex items-center space-x-4 mt-4">
+                      <p className="text-brand-white text-lg font-[500] ">
+                        Download Now
+                      </p>
+                      <button className=" text-brand-white h-[2.5rem] w-[2.5rem] rounded-[2.5rem] border flex justify-center items-center">
+                        <i className="fab fa-apple fa-fw fa-lg "></i>
+                      </button>
+                      <button className=" text-brand-white h-[2.5rem] w-[2.5rem] rounded-[2.5rem] border flex justify-center items-center">
+                        <i className="fab fa-google-play fa-fw fa-lg "></i>
+                      </button>
+                    </div>
                   </div>
-                </div>
-                <div className="hidden mx-auto sm:block relative ">
-                  <Image
-                    src={`/assets/images/app_screenshots/6.png`}
-                    alt=""
-                    width={500}
-                    height={800}
-                    // fill={true}
-                    className=" mt-72 "
-                  />
+                  <div className="hidden mx-auto sm:block relative ">
+                    <Image
+                      src={`/assets/images/app_screenshots/6.png`}
+                      alt=""
+                      width={500}
+                      height={800}
+                      className=" mt-[20rem] "
+                    />
+                  </div>
                 </div>
               </div>
             </div>
