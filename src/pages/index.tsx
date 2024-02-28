@@ -64,16 +64,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className=" py-16 grid grid-cols-1 lg:grid-cols-2 place-items-center border-b dark:border-neutral-700 min-h-[70vh] ">
-              <div className="">
-                <Image
-                  src={`/assets/images/app_screenshots/6.png`}
-                  alt="Features"
-                  width={600}
-                  height={600}
-                />
-              </div>
-              <div className=" space-y-5 ">
+            <div className="py-20 border-b dark:border-neutral-700 min-h-[70vh] ">
+              <div className=" space-y-8 ">
                 <div>
                   <p className="uppercase text-[1.125rem] !tracking-widest text-brand-green dark:text-neutral-400 ">
                     FEATURES
@@ -82,19 +74,29 @@ export default function Home() {
                     Pennywise Premium
                   </h1>
                 </div>
-
-                <div className="grid grid-cols-1 gap-y-8 ">
+                <div className="grid grid-cols-3 gap-x-4 ">
                   {features.map((item, index) => (
-                    <div className="" key={item.title}>
-                      <div className="flex space-x-2 items-center dark:text-neutral-200 ">
-                        <i className="fas fa-money-bill fa-lg fa-fw"></i>
-                        <h5 className="font-[500] text-[1.4rem] dark:text-brand-white  ">
+                    <div
+                      className="p-8 bg-brand-blue bg-opacity-20 rounded-2xl "
+                      key={item.title}
+                    >
+                      <i
+                        className={`${item.icon} fa-2x fa-fw text-brand-white`}
+                      ></i>
+                      <div className=" space-y-3 mt-24 ">
+                        <h5 className="font-[500] text-[1.325rem] dark:text-brand-white  ">
                           {item.title}
                         </h5>
+                        <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] line-clamp-3 ">
+                          {item.body}
+                        </p>
                       </div>
-                      <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] text-justify lg:pr-6 ">
-                        {item.body}
-                      </p>
+                      <div className="mt-6">
+                        <button className="text-base font-[500] text-brand-green pb-1 hover:border-b border-brand-green flex items-center ">
+                          <span className=" ">Learn More</span>
+                          {/* <i className="fas fa-caret-right fa-fw fa-lg pt-0.5 "></i> */}
+                        </button>
+                      </div>
                     </div>
                   ))}
                 </div>

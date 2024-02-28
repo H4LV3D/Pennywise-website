@@ -2,14 +2,17 @@
   "features": [
     {
       "title": "Multi-Account Connectivity",
+      "icon": "fas fa-link",
       "body": "Effortlessly manage multiple accounts with our platform, gaining a comprehensive financial overview in one place. You can seamlessly monitor all your accounts, saving significant time and hassle. Rest assured, your accounts are securely connected through advanced encryption protocols."
     },
     {
       "title": "Customizable Spending Limits",
+      "icon": "fas fa-chart-line",
       "body": "Tailor your budget precisely to your needs by setting personalized spending limits. Receive instant notifications as you approach or exceed your set spending thresholds. With flexibility built-in, you can adapt your spending limits to changing financial circumstances with ease."
     },
     {
       "title": " Detailed Transaction Insights",
+      "icon": "fas fa-chart-pie",
       "body": "Dive deep into detailed breakdowns of your expenditures to identify trends and areas for improvement. Use these transaction insights to make informed decisions and plan for a more secure financial future. Gain transparency into your budget allocations with clear explanations of where your money is going."
     }
   ],
