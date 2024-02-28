@@ -86,13 +86,13 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
 
   return (
     <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center z-50 ">
-      <div className=" grid grid-cols-1 xxxl:grid-cols-2 gap-x-4 place-items-center min-h-[40vh] mx-8 md:mx-0 w-full md:w-[25rem] rounded-3xl bg-[#000B17] border border-brand-green border-opacity-45 ">
+      <div className="grid grid-cols-1 p-8 min-h-[40vh] mx-8 md:mx-0 w-full max-w-[34rem] rounded-3xl bg-[#000B17] border border-brand-green border-opacity-45 ">
         {/* <div className="w-full h-full bg-[#000B17] rounded-2xl border border-brand-green shadow-xl p-6 drop-shadow-xl   ">
           <h1 className="text-[4rem] font-[800] text-brand-white ">
             START SAVING <br /> PENNIES <br /> TODAY!
           </h1>
         </div> */}
-        <div className="w-full h-full p-8 space-y-4  ">
+        <div className="w-full h-full p-8 mb-8 space-y-4  ">
           <div className="mb-8 ">
             <div className="flex justify-end items-center mb-4 ">
               <button
@@ -111,7 +111,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
             </h1>
             <p className="text-base text-brand-white ">
               {response?.success
-                ? `${response?.count}. We will notify you when you get off the waitlist!`
+                ? `${response?.count} We will notify you when you get off the waitlist!`
                 : "Get early access to our product and receive updates on our progress."}
             </p>
           </div>
@@ -173,7 +173,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="hover:bg-brand-blue hover:text-brand-white bg-brand-green text-brand-blue h-[3rem] font-[600] w-full rounded focus:outline-none focus:shadow-outline"
+                  className="hover:bg-brand-blue hover:text-brand-white bg-brand-green text-brand-blue h-[3.5rem] font-[600] w-full rounded focus:outline-none focus:shadow-outline"
                 >
                   {loading ? (
                     <ButtonLoader color="white" />
