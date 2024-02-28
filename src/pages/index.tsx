@@ -9,6 +9,10 @@ import data from "@/data/index.json";
 import TestimonialsSection from "@/components/shared/Testimonials";
 import WaitlistForm from "@/components/shared/Waitlist";
 
+import React from "react";
+import Lottie from "lottie-react";
+import groovyWalkAnimation from "./Animation.json";
+
 export default function Home() {
   const { features, why, FAQ } = data;
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,25 +26,27 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={` min-h-screen light:bg-[#fbfbfb] bg-[#000B17] pt-20 `}>
+      <div className={`min-h-screen bg-[#000B17] pt-20 `}>
         <PageLayout>
           {isModalOpen && <WaitlistForm closeModal={setIsModalOpen} />}
           <Navbar />
           <div className="px-4 md:px-8 max-w-[1250px] mx-auto overflow-hidden ">
             <div className=" py-16 grid grid-cols-1 lg:grid-cols-2 place-items-center border-b dark:border-neutral-700 min-h-[80vh] ">
-              <div className=" space-y-5 ">
+              <div className="space-y-4 ">
                 <h1 className="font-[800] text-[64px] leading-[60px] text-brand-blue dark:text-brand-white ">
-                  Make The Best Financial Decisions!
+                  Make The <br /> Best{" "}
+                  <span className="text-brand-green ">Financial Decisions</span>{" "}
+                  !
                 </h1>
-                <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem]">
+                <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] max-w-lg ">
                   We help you make the best financial decisions by providing you
                   with the right information and tools. We are your one stop
                   shop for all your financial needs.
                 </p>
-                <div className="flex items-center space-x-6">
+                <div className="flex items-center space-x-6 pt-[1.25rem] ">
                   <button
                     onClick={() => setIsModalOpen(true)}
-                    className="bg-brand-blue  text-white h-[3rem] px-8 rounded-[0.5rem] flex items-center space-x-2"
+                    className="bg-brand-blue  text-white h-[3.5rem] px-8 rounded-[0.5rem] font-[500] flex items-center space-x-2"
                   >
                     <span className="">Get Started</span>
                     <i className="fas fa-long-arrow-right fa-fw fa-lg text-white "></i>
@@ -52,36 +58,9 @@ export default function Home() {
                     <span>Learn More</span>
                   </button>
                 </div>
-                <div className="">
-                  <Image
-                    src="/assets/images/screenshots/Achievements.png"
-                    alt="Achievements"
-                    width={600}
-                    height={300}
-                  />
-                </div>
               </div>
-              <div className="relative flex -rotate-12 -space-x-72 ">
-                {[1, 2, 3].map((item, index) => (
-                  <div
-                    className={`${
-                      index === 0
-                        ? " z-30"
-                        : index === 1
-                        ? " mt-12 z-20"
-                        : " mt-24"
-                    }  `}
-                    key={index}
-                  >
-                    <Image
-                      src={`/assets/images/app_screenshots/${index + 6}.png`}
-                      alt="Features"
-                      width={1000}
-                      height={1000}
-                      className=" "
-                    />
-                  </div>
-                ))}
+              <div className="relative ">
+                <Lottie animationData={groovyWalkAnimation} loop={true} />;
               </div>
             </div>
 
