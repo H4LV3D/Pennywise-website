@@ -142,7 +142,8 @@ function Footer({}: Props) {
             <div className="flex space-x-2 items-center md:justify-end">
               {socials.map((item, index) => (
                 <a
-                  href={item.title}
+                  href={item.link}
+                  target="_blank"
                   key={index}
                   data-aos="fade-up"
                   data-aos-delay={index * 150}
