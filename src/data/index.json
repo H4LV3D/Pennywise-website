@@ -74,21 +74,33 @@
       "quote": "Pennywise has been a valuable tool for my clients. With its detailed transaction insights, they can gain transparency into their budget allocations and make informed decisions. The platform has truly empowered them to secure a prosperous future."
     }
   ],
+  "team": [
+    {
+      "name": "Emmanuel Famuagun",
+      "position": "CEO",
+      "icon": "4"
+    },
+    {
+      "name": "Adesayo Adesokan",
+      "position": "CTO (Infrastructure)",
+      "icon": "7"
+    },
+    {
+      "name": "James Nottidge",
+      "position": "COO",
+      "icon": "1"
+    },
+    {
+      "name": "Toluwalope Akinkunmi",
+      "position": "CTO (Products)",
+      "icon": "8"
+    }
+  ],
   "socials": [
     {
-      "title": "Twitter",
-      "link": "https://twitter.com/kinkunmz_",
-      "icon": "fab fa-twitter"
-    },
-    {
       "title": "Instagram",
-      "link": "https://www.instagram.com/__moyin_",
+      "link": "https://www.instagram.com/pennywiseapp_/",
       "icon": "fab fa-instagram"
-    },
-    {
-      "title": "Telegram",
-      "link": "https://t.me/H4LV3D",
-      "icon": "fab fa-telegram"
     }
   ]
 }
