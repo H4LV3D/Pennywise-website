@@ -20,22 +20,36 @@ export default function Error() {
       <div className={` min-h-screen bg-[#fbfbfb] dark:bg-[#000B17] pt-20 `}>
         <PageLayout>
           <Navbar />
-          <div className="flex flex-col items-center justify-center min-h-[75vh] py-2">
+          <div className="flex flex-col items-center justify-center min-h-[75vh] py-20 space-y-5 ">
+            <h5 className="text-lg uppercase tracking-widest font-[400] text-center text-brand-blue dark:text-brand-white">
+              Pricing plans
+            </h5>
             <h1 className="text-6xl font-bold text-center text-brand-blue dark:text-brand-white">
-              Pricing plans.
+              Simple and Flexible payments!
             </h1>
-            <p className="mt-3 text-[1.25rem] text-center text-[#6464646] dark:text-neutral-400 max-w-[30rem] ">
-              {/* It&#39;s free to get started, and we also have a premium plan for
+            <p className="mt-3 text-[1rem] text-center text-[#6464646] dark:text-neutral-400 max-w-lg ">
+              It&#39;s free to get started, and we also have a premium plan for
               those who want to take their financial decisions to the next
-              level. */}
-              It&#39;s a one size fits all plan, and it&#39;s just $1 per month.
+              level.
             </p>
-            <Link href="/">
-              <button className="dark:bg-brand-blue text-brand-white h-[3.5rem] px-8 rounded-[0.5rem] font-[500] flex items-center space-x-2 mt-3 ">
-                <span>Pay Now !</span>
-                <i className="fas fa-chevron-right fa-fw fa-md text-white "></i>
-              </button>
-            </Link>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 lg:w-[850px] pt-10 ">
+              <div className="border border-brand-green border-opacity-20 rounded-2xl min-h-[50vh] p-8 space-y-5 ">
+                <p className="uppercase tracking-[0.25em] text-neutral-400 font-[500] ">
+                  Free Tier
+                </p>
+                <h1 className="text-6xl font-[800] text-brand-blue dark:text-brand-white">
+                  Free
+                </h1>
+                <p className=" text-neutral-400 font-[500] ">
+                  Unlimited card connections!
+                </p>
+                <button className="dark:bg-brand-blue text-brand-white h-[3.5rem] w-full rounded-[0.5rem] font-[500] flex justify-center items-center space-x-2">
+                  <span>Get Started - For Free</span>
+                </button>
+              </div>
+              <div className="bg-brand-green border border-brand-green rounded-2xl "></div>
+            </div>
           </div>
           <Footer />
         </PageLayout>
