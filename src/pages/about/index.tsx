@@ -34,6 +34,13 @@ export default function Error() {
                 <i className="fas fa-chevron-right fa-fw fa-md text-white "></i>
               </button>
             </Link>
+
+            {/* <div className="flex justify-center items-center">
+              <div className="w-full lg:w-[1150px] mx-auto relative min-h-[70vh] ">
+                <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-full min-h-[50vh] lg:w-[950px] mx-auto rounded-xl border bg-brand-blue bg-opacity-20 text-brand-white z-50"></div>
+                <div className="absolute top-0 left-0 w-[26rem] h-[26rem] rounded-full bg-brand-green bg-opacity-20 z-0 blur-lg"></div>
+              </div>
+            </div> */}
           </div>
           <Footer />
         </PageLayout>
