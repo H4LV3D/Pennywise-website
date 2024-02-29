@@ -39,10 +39,11 @@ export default function Home() {
                   !
                 </h1>
                 <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] max-w-lg ">
-                  Budgeting made easy with our app! Our user-friendly interface
-                  and automated tracking streamline the process, while
-                  customizable budgets and insightful reports help you stay on
-                  top of your finances effortlessly.
+                  Saving and Expense tracking made easy with our app! Our
+                  user-friendly interface and automated tracking streamline the
+                  process, while customizable expense tracking, savings and
+                  insightful reports help you stay on top of your finances
+                  effortlessly.
                 </p>
                 <div className="flex items-center space-x-6 pt-[1.25rem] ">
                   <button
