@@ -65,7 +65,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="py-20 border-b dark:border-neutral-700 min-h-[70vh] ">
+            <div className="py-20 min-h-[70vh] ">
               <div className=" space-y-8 ">
                 <div>
                   <p className="uppercase text-[1.125rem] !tracking-widest text-brand-green dark:text-neutral-400 ">
@@ -104,61 +104,36 @@ export default function Home() {
               </div>
             </div>
 
-            <div className=" py-16 grid grid-cols-1 lg:grid-cols-2 place-items-center min-h-[60vh] ">
-              <div className=" space-y-5 ">
-                <div className="">
-                  <p className="uppercase text-[1.125rem] !tracking-widest dark:text-neutral-400 ">
-                    Advantages
-                  </p>
-                  <h1 className="font-[800] text-[46px] leading-[60px] text-brand-blue dark:text-brand-green  ">
-                    Why choose Pennywise?
-                  </h1>
-                </div>
-
-                <div className="space-y-4 ">
-                  <div className="flex space-x-2 items-center dark:text-brand-white">
-                    <span className="h-[2rem] w-[2rem] border border-black dark:border-brand-white rounded-[50%] flex justify-center items-center ">
-                      <i className="fas fa-bell fa-sm fa-fw"></i>
-                    </span>
-                    <h5 className="font-[500] text-[1.4rem]  ">
-                      {why[0].title}
-                    </h5>
-                  </div>
-                  <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] text-justify lg:pr-24 ">
-                    {why[0].body}
-                  </p>
-                </div>
-              </div>
+            <div className="py-20 border-b dark:border-neutral-700 place-items-center min-h-[70vh] ">
               <div className="">
-                <Image
-                  src={`/assets/images/app_screenshots/7.png`}
-                  alt="Customize"
-                  width={500}
-                  height={500}
-                />
-              </div>
-            </div>
-
-            <div className=" py-16 grid grid-cols-1 lg:grid-cols-2 place-items-center border-b dark:border-neutral-700 min-h-[60vh] ">
-              <div className="">
-                <Image
-                  src={`/assets/images/app_screenshots/8.png`}
-                  alt="Customize"
-                  width={500}
-                  height={500}
-                  loading="lazy"
-                />
-              </div>
-              <div className="space-y-4 ">
-                <div className="flex space-x-2 items-center dark:text-brand-white">
-                  <span className="h-[2rem] w-[2rem] border border-black dark:border-brand-white rounded-[50%] flex justify-center items-center ">
-                    <i className="fas fa-star fa-sm fa-fw"></i>
-                  </span>
-                  <h5 className="font-[500] text-[1.4rem] ">{why[1].title}</h5>
-                </div>
-                <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] text-justify lg:pr-24 ">
-                  {why[1].body}
+                <p className="uppercase text-[1.125rem] !tracking-widest dark:text-neutral-400 ">
+                  Advantages
                 </p>
+                <h1 className="font-[800] text-[46px] leading-[60px] text-brand-blue dark:text-brand-green  ">
+                  Why choose Pennywise?
+                </h1>
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 my-10 space-x-4  ">
+                {why.map((item, index) => (
+                  <div
+                    key={index}
+                    className={`${
+                      index % 2 === 1 ? "bg-brand-blue bg-opacity-20 " : ""
+                    }  space-y-4 border border-neutral-700 p-14 rounded-xl `}
+                  >
+                    <div className="flex space-x-2 items-center dark:text-brand-white">
+                      <span className="h-[2rem] w-[2rem] border border-black dark:border-brand-white rounded-[50%] flex justify-center items-center ">
+                        <i className="fas fa-bell fa-sm fa-fw"></i>
+                      </span>
+                      <h5 className="font-[500] text-[1.4rem]  ">
+                        {item.title}
+                      </h5>
+                    </div>
+                    <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] text-justify max-w-md ">
+                      {item.body}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -179,7 +154,7 @@ export default function Home() {
                     <div
                       className={`"space-y-2 mx-auto p-6 rounded-lg ${
                         index === 0 || index === 3 || index === 4
-                          ? "md:bg-brand-blue text-brand-white  "
+                          ? "md:bg-brand-blue bg-opacity-20 text-brand-white"
                           : " dark:text-brand-white "
                       }  `}
                       key={index}
@@ -219,11 +194,11 @@ export default function Home() {
                   </div>
                   <div className="hidden mx-auto sm:block relative ">
                     <Image
-                      src={`/assets/images/app_screenshots/6.png`}
+                      src={`/assets/images/screenshots/customize.png`}
                       alt=""
                       width={500}
                       height={800}
-                      className=" mt-[20rem] "
+                      className=" mt-[16rem] "
                     />
                   </div>
                 </div>
