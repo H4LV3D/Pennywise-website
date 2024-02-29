@@ -20,20 +20,28 @@ export default function Error() {
       <div className={` min-h-screen bg-[#fbfbfb] dark:bg-[#000B17] pt-20 `}>
         <PageLayout>
           <Navbar />
-          <div className="flex flex-col items-center justify-center min-h-[75vh] py-2">
-            <h1 className="text-6xl font-bold text-center text-brand-blue dark:text-brand-white">
-              Welcome to Pennywise
-            </h1>
-            <p className="mt-3 text-[1.25rem] text-center text-[#6464646] dark:text-neutral-400 max-w-[30rem] ">
-              We have you covered by helping you make financial decisions that
-              matter.
-            </p>
-            <Link href="/">
-              <button className="dark:bg-brand-blue text-brand-white h-[3rem] px-8 rounded-[0.5rem] font-[500] flex items-center space-x-2 mt-3 ">
-                <span>Go Home</span>
-                <i className="fas fa-chevron-right fa-fw fa-md text-white "></i>
-              </button>
-            </Link>
+          <div className="">
+            <div className="py-20 grid grid-cols-1 md:grid-cols-2 place-items-center border  border-neutral-700 min-h-[75vh]">
+              <div className="space-y-3">
+                <h1 className="text-6xl font-bold text-brand-blue dark:text-brand-white">
+                  About <br /> Pennywise
+                </h1>
+                <p className="text-[1.25rem] text-[#6464646] dark:text-neutral-400 max-w-md ">
+                  Set goals, receive reminders, and take control of your
+                  financial future starting today!
+                </p>
+                <div className="pt-6">
+                  <button
+                    // onClick={() => setIsModalOpen(true)}
+                    className="bg-brand-blue  text-white h-[3.5rem] px-8 rounded-[0.5rem] font-[500] flex items-center space-x-2"
+                  >
+                    <span className="">Get Started</span>
+                    <i className="fas fa-long-arrow-right fa-fw fa-lg text-white "></i>
+                  </button>
+                </div>
+              </div>
+              <div className=""></div>
+            </div>
 
             {/* <div className="flex justify-center items-center">
               <div className="w-full lg:w-[1150px] mx-auto relative min-h-[70vh] ">
