@@ -4,6 +4,11 @@ import { contactUs } from "@/utils/requests/contact";
 import { useForm, FieldValues } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { showNotification } from "@mantine/notifications";
+import {
+  notificationStyles,
+  notificationStyles2,
+} from "@/utils/others/notificationStyles";
 
 interface FormInterface {
   fullName: string;
@@ -33,8 +38,29 @@ export default function ContactForm() {
       return res.data;
     },
     onSuccess: (data) => {
+      showNotification({
+        title: "Message sent successfully",
+        message: data.message,
+        style: notificationStyles,
+        // @ts-ignore
+        styles: notificationStyles2,
+        radius: "md",
+        color: "blue",
+      });
       reset(); // Reset the form after successful submission
       console.log(data);
+    },
+    onError: (error: any) => {
+      showNotification({
+        title: "An error occurred",
+        message: error.response.data.messagge,
+        style: notificationStyles,
+        // @ts-ignore
+        styles: notificationStyles2,
+        radius: "md",
+        color: "red",
+      });
+      console.error(error);
     },
   });
 
