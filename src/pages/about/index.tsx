@@ -104,7 +104,7 @@ export default function About() {
                   Members
                 </h1>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 my-10 ">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 ">
                 {team.map((item, index) => (
                   <div
                     key={index}
