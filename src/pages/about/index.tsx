@@ -28,8 +28,8 @@ export default function About() {
                   About <br /> Pennywise
                 </h1>
                 <p className="text-[1.25rem] text-[#6464646] dark:text-neutral-400 max-w-md ">
-                  Every penny counts. Set goals, receive reminders, and take
-                  control of your financial future starting today!
+                  Set goals, receive reminders, and take control of your
+                  financial future starting today! Every penny counts.
                 </p>
                 <div className="pt-6">
                   <button className="bg-brand-blue  text-white h-[3.5rem] px-12 rounded-[0.5rem] font-[500] flex items-center space-x-2">
@@ -51,25 +51,36 @@ export default function About() {
                 </h1>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2  gap-x-2 gap-neutral-500 my-10 ">
-                <p className="text-brand-white p-8 text-justify !leading-7 tracking-wide ">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Distinctio, nostrum cupiditate. Est sunt quis exercitationem
-                  facilis saepe, eveniet esse consequuntur id officiis
-                  praesentium sequi, mollitia repellendus! Illum, corrupti.
-                  Numquam, nulla. Lorem ipsum dolor sit, amet consectetur
-                  adipisicing elit. Quae nesciunt nihil expedita ut, aut rem
-                  possimus necessitatibus explicabo, illum ipsam dolorem beatae
-                  accusamus sunt ipsum laudantium. Fugiat tenetur dolor libero.
+                <p className="text-brand-white p-8 text-justify !leading-7 tracking-wider ">
+                  Pennywise is a personal finance app that{" "}
+                  <span className="text-brand-light-blue ">
+                    {" "}
+                    helps users save money and track expenses using artificial
+                    intelligence
+                  </span>
+                  . Pennywise’s mission is to empower individuals to
+                  <span className="text-brand-light-blue ">
+                    {" "}
+                    take control of their finances and achieve their savings
+                    goals
+                  </span>{" "}
+                  . Drawing from their expertise in finance and technology, they
+                  developed an innovative app that{" "}
+                  <span className="text-brand-light-blue ">
+                    leverages artificial intelligence
+                  </span>{" "}
+                  to provide personalized financial insights and recommendations
+                  to users.
                 </p>
                 <p className="text-brand-white p-8 text-justify !leading-7 tracking-wide ">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Distinctio, nostrum cupiditate. Est sunt quis exercitationem
-                  facilis saepe, eveniet esse consequuntur id officiis
-                  praesentium sequi, mollitia repellendus! Illum, corrupti.
-                  Numquam, nulla. Lorem ipsum dolor sit, amet consectetur
-                  adipisicing elit. Quae nesciunt nihil expedita ut, aut rem
-                  possimus necessitatibus explicabo, illum ipsam dolorem beatae
-                  accusamus sunt ipsum laudantium. Fugiat tenetur dolor libero.
+                  As we evolve, we look beyond just a finance app to becoming a
+                  community allowing users share success stories, tips, and
+                  strategies for saving money and managing expenses effectively.
+                  Our team would regularly engage with the community, hosting
+                  webinars, Q&A sessions, and releasing educational content to
+                  help users make the most of the app and improve their
+                  financial literacy. We remain committed to helping people
+                  build healthier financial lives.
                 </p>
               </div>
             </div>
