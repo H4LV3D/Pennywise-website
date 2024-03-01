@@ -34,12 +34,12 @@ export default function Contact() {
               </p>
               <div className="mt-8">
                 <a
-                  href="mailto:support@iampennywise.com"
+                  href="mailto:hello@iampennywise.com"
                   data-aos="fade-right"
                   className="text-sm font-[400] sm:text-base lg:text-base hover:text-brand-white flex items-center text-brand-green space-x-2 "
                 >
                   <i className="fas fa-envelope fa-fw fa-md"></i>
-                  <span>support@iampennywise.com</span>
+                  <span>hello@iampennywise.com</span>
                 </a>
               </div>
             </div>
