@@ -76,7 +76,7 @@ export default function Home() {
                     Pennywise Premium
                   </h1>
                 </div>
-                <div className="grid grid-cols-3 gap-x-4 ">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
                   {features.map((item, index) => (
                     <div
                       className="p-8 bg-brand-blue bg-opacity-20 rounded-2xl "
@@ -114,16 +114,16 @@ export default function Home() {
                   Why choose Pennywise?
                 </h1>
               </div>
-              <div className="grid grid-cols-1 lg:grid-cols-2 my-10 space-x-4  ">
+              <div className="grid grid-cols-1 lg:grid-cols-2 my-10 gap-4  ">
                 {why.map((item, index) => (
                   <div
                     key={index}
                     className={`${
                       index % 2 === 1 ? "bg-brand-blue bg-opacity-20 " : ""
-                    }  space-y-4 border border-neutral-700 p-14 rounded-xl `}
+                    }  space-y-4 border border-neutral-700 p-6 md:p-14 rounded-xl `}
                   >
                     <div className="flex space-x-2 items-center dark:text-brand-white">
-                      <span className="h-[2rem] w-[2rem] border border-black dark:border-brand-white rounded-[50%] flex justify-center items-center ">
+                      <span className="h-[2rem] w-[2rem] border border-black dark:border-brand-white rounded-[50%] flex justify-center items-center flex-shrink-0 ">
                         <i className="fas fa-bell fa-sm fa-fw"></i>
                       </span>
                       <h5 className="font-[500] text-[1.4rem]  ">
