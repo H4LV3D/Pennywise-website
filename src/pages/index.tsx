@@ -12,6 +12,10 @@ import groovyWalkAnimation from "./Animation.json";
 import Link from "next/link";
 
 import { notifications, showNotification } from "@mantine/notifications";
+import {
+  notificationStyles,
+  notificationStyles2,
+} from "@/utils/others/notificationStyles";
 
 export default function Home() {
   const { features, why, FAQ } = data;
@@ -47,8 +51,12 @@ export default function Home() {
                   <button
                     onClick={() =>
                       showNotification({
-                        title: "Default notification",
-                        message: "Hey there, your code is awesome! 🤥",
+                        title: "Join the Waitlist! 🚀",
+                        message: "Get early access to Pennywise Premium! 🎉",
+                        style: notificationStyles,
+                        // @ts-ignore
+                        styles: notificationStyles2,
+                        radius: "md",
                       })
                     }
                     className="bg-brand-blue  text-white h-[3.5rem] px-8 rounded-[0.5rem] font-[500] flex items-center space-x-2"
