@@ -121,7 +121,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
                   id="firstName"
                   autoCapitalize="words"
                   autoFocus
-                  className=" placeholder:text-neutral-500 border rounded w-full py-3 px-3 text-brand-blue font-[500] bg-neutral-200 leading-tight focus:outline-none focus:shadow-outline"
+                  className="bg-transparent text-brand-white placeholder:text-neutral-500 border border-neutral-400 rounded w-full py-3 px-3 font-[500] leading-tight focus:outline-none focus:shadow-outline focus:border-brand-green "
                 />
                 {errors.firstName && (
                   <span className="text-red-500 text-xs italic">
@@ -137,7 +137,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
                   placeholder="Last Name"
                   type="text"
                   id="lastName"
-                  className=" placeholder:text-neutral-500 border rounded w-full py-3 px-3 text-brand-blue font-[500] bg-neutral-200 leading-tight focus:outline-none focus:shadow-outline"
+                  className="bg-transparent text-brand-white placeholder:text-neutral-500 border border-neutral-400 rounded w-full py-3 px-3 font-[500] leading-tight focus:outline-none focus:shadow-outline focus:border-brand-green "
                 />
                 {errors.lastName && (
                   <span className="text-red-500 text-xs italic">
@@ -152,7 +152,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
                   placeholder="Email"
                   type="email"
                   id="email"
-                  className=" placeholder:text-neutral-500 border rounded w-full py-3 px-3 text-brand-blue font-[500] bg-neutral-200 leading-tight focus:outline-none focus:shadow-outline"
+                  className="bg-transparent text-brand-white placeholder:text-neutral-500 border border-neutral-400 rounded w-full py-3 px-3 font-[500] leading-tight focus:outline-none focus:shadow-outline focus:border-brand-green "
                 />
                 {errors.email && (
                   <span className="text-red-500 text-xs italic">
