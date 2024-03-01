@@ -16,7 +16,7 @@ export default function Pricing() {
     "Basic sign up and login access",
     "access to savings calculator",
     "access to budget calculator",
-    "access to loan calculator",
+    "access to Compound Interest calculator",
   ];
   return (
     <>
@@ -52,9 +52,7 @@ export default function Pricing() {
                   <h1 className="text-6xl font-[800] text-brand-blue dark:text-brand-white">
                     Free
                   </h1>
-                  <p className=" text-neutral-400 ">
-                    Unlimited card connections!
-                  </p>
+                  <p className=" text-neutral-400 ">7 days free trial</p>
                 </div>
                 <button className="dark:bg-brand-blue text-brand-white h-[3.5rem] w-full rounded-[0.5rem] font-[500] flex justify-center items-center space-x-2">
                   <span>Get Started - For Free</span>
