@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import PageLayout from "@/layout/PageLayout";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
@@ -7,15 +6,15 @@ import Image from "next/image";
 import Head from "next/head";
 import data from "@/data/index.json";
 import TestimonialsSection from "@/components/shared/Testimonials";
-import WaitlistForm from "@/components/shared/Waitlist";
-
 import React from "react";
 import Lottie from "lottie-react";
 import groovyWalkAnimation from "./Animation.json";
+import Link from "next/link";
+
+import { notifications, showNotification } from "@mantine/notifications";
 
 export default function Home() {
   const { features, why, FAQ } = data;
-  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
       <Head>
@@ -28,7 +27,6 @@ export default function Home() {
       </Head>
       <div className={`min-h-screen bg-[#000B17] pt-20 `}>
         <PageLayout>
-          {isModalOpen && <WaitlistForm closeModal={setIsModalOpen} />}
           <Navbar />
           <div className="px-4 md:px-8 max-w-[1250px] mx-auto overflow-hidden ">
             <div className=" py-16 grid grid-cols-1 lg:grid-cols-2 place-items-center border-b dark:border-neutral-700 min-h-[80vh] ">
@@ -47,18 +45,25 @@ export default function Home() {
                 </p>
                 <div className="flex items-center space-x-6 pt-[1.25rem] ">
                   <button
-                    onClick={() => setIsModalOpen(true)}
+                    onClick={() =>
+                      showNotification({
+                        title: "Default notification",
+                        message: "Hey there, your code is awesome! 🤥",
+                      })
+                    }
                     className="bg-brand-blue  text-white h-[3.5rem] px-8 rounded-[0.5rem] font-[500] flex items-center space-x-2"
                   >
                     <span className="">Get Started</span>
                     <i className="fas fa-long-arrow-right fa-fw fa-lg text-white "></i>
                   </button>
-                  <button className="  py-3 rounded-[0.5rem] flex items-center space-x-2 text-brand-green ">
-                    <span className="h-8 w-8 border border-brand-green rounded-[50%] flex justify-center items-center ">
-                      <i className="fas fa-play fa-fw fa-md pl-0.5 "></i>
-                    </span>
-                    <span>Learn More</span>
-                  </button>
+                  <Link href="/about">
+                    <button className="py-3 rounded-[0.5rem] flex items-center space-x-2 text-brand-green ">
+                      <span className="h-8 w-8 border border-brand-green rounded-[50%] flex justify-center items-center ">
+                        <i className="fas fa-play fa-fw fa-md pl-0.5 "></i>
+                      </span>
+                      <span>Learn More</span>
+                    </button>
+                  </Link>
                 </div>
               </div>
               <div className="relative ">
@@ -96,7 +101,6 @@ export default function Home() {
                       <div className="mt-6">
                         <button className="text-base font-[500] text-brand-green pb-1 hover:border-b border-brand-green flex items-center ">
                           <span className=" ">Learn More</span>
-                          {/* <i className="fas fa-caret-right fa-fw fa-lg pt-0.5 "></i> */}
                         </button>
                       </div>
                     </div>

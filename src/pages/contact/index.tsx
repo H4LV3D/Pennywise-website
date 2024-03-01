@@ -3,7 +3,7 @@ import PageLayout from "@/layout/PageLayout";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import Head from "next/head";
-import ContactForm from "@/components/shared/ContactForm";
+import ContactForm from "@/components/forms/ContactForm";
 
 export default function Contact() {
   return (

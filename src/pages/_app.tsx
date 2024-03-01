@@ -1,6 +1,10 @@
 import "@/styles/globals.css";
+
 import type { AppProps } from "next/app";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { MantineProvider } from "@mantine/core";
+import { Notifications } from "@mantine/notifications";
+// import "@mantine/notifications/styles.css";
 
 const queryClient = new QueryClient();
 
@@ -44,9 +48,17 @@ const clashDisplay = localFont({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={clashDisplay.className}>
-      <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
-      </QueryClientProvider>
+      <MantineProvider>
+        <Notifications
+          position="top-right"
+          zIndex={3000}
+          limit={3}
+          autoClose={4000}
+        />
+        <QueryClientProvider client={queryClient}>
+          <Component {...pageProps} />
+        </QueryClientProvider>
+      </MantineProvider>
     </main>
   );
 }
