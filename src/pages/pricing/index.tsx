@@ -2,11 +2,22 @@
 import PageLayout from "@/layout/PageLayout";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
-import Image from "next/image";
 import Head from "next/head";
-import Link from "next/link";
 
-export default function Error() {
+export default function Pricing() {
+  const features = [
+    "Unlimited card connections",
+    "View your financial data",
+    "Receive reminders",
+    "Set financial goals",
+  ];
+
+  const basicFeatures = [
+    "Basic sign up and login access",
+    "access to savings calculator",
+    "access to budget calculator",
+    "access to loan calculator",
+  ];
   return (
     <>
       <Head>
@@ -28,27 +39,64 @@ export default function Error() {
               Simple and Flexible payments!
             </h1>
             <p className="mt-3 text-[1rem] text-center text-[#6464646] dark:text-neutral-400 max-w-lg ">
-              It&#39;s free to get started, and we also have a premium plan for
-              those who want to take their financial decisions to the next
-              level.
+              It&#39;s free to get started as well as a premium plan for those
+              who want to take their financial decisions to the next level.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 lg:w-[850px] pt-10 ">
-              <div className="border border-brand-green border-opacity-20 rounded-2xl min-h-[50vh] p-8 space-y-5 ">
-                <p className="uppercase tracking-[0.25em] text-neutral-400 font-[500] ">
-                  Free Tier
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full lg:w-[850px] pt-10 ">
+              <div className="border border-brand-green border-opacity-20 hover:border-opacity-100 w-full rounded-2xl min-h-[50vh] p-8 space-y-5 ">
+                <p className="uppercase tracking-[0.15em] text-neutral-400 font-[500] ">
+                  Basic Tier
                 </p>
-                <h1 className="text-6xl font-[800] text-brand-blue dark:text-brand-white">
-                  Free
-                </h1>
-                <p className=" text-neutral-400 font-[500] ">
-                  Unlimited card connections!
-                </p>
+                <div className="">
+                  <h1 className="text-6xl font-[800] text-brand-blue dark:text-brand-white">
+                    Free
+                  </h1>
+                  <p className=" text-neutral-400 ">
+                    Unlimited card connections!
+                  </p>
+                </div>
                 <button className="dark:bg-brand-blue text-brand-white h-[3.5rem] w-full rounded-[0.5rem] font-[500] flex justify-center items-center space-x-2">
                   <span>Get Started - For Free</span>
                 </button>
+                <div className="grid grid-cols-1 gap-y-3.5 pt-5 ">
+                  {basicFeatures.map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center space-x-2 text-brand-white "
+                    >
+                      <i className="fas fa-check fa-md fa-fw "></i>
+                      <p className="text-[.9375rem] font-[500] ">{item}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="bg-brand-green border border-brand-green rounded-2xl "></div>
+
+              <div className="bg-brand-green border border-brand-green rounded-2xl min-h-[50vh] p-8 w-full space-y-5 ">
+                <p className="uppercase tracking-[0.15em] text-brand-blue text-opacity-50 font-[500] ">
+                  Premium Tier
+                </p>
+                <div className="">
+                  <h1 className="text-6xl font-[800] text-brand-blue">$1</h1>
+                  <p className="font-[400] text-brand-blue ">
+                    Multiple Account Connections.
+                  </p>
+                </div>
+                <button className="dark:bg-brand-blue text-brand-white h-[3.5rem] w-full rounded-[0.5rem] font-[500] flex justify-center items-center space-x-2">
+                  <span>Get Started - For $1</span>
+                </button>
+                <div className="grid grid-cols-1 gap-y-3.5 pt-5 ">
+                  {features.map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center space-x-2 text-brand-blue "
+                    >
+                      <i className="fas fa-check fa-md fa-fw "></i>
+                      <p className="text-[.9375rem] font-[500] ">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
           <Footer />
