@@ -5,6 +5,11 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import ButtonLoader from "../shared/ButtonLoader";
 import { addToWaitList } from "@/utils/requests/waitlist";
+import { showNotification } from "@mantine/notifications";
+import {
+  notificationStyles,
+  notificationStyles2,
+} from "@/utils/others/notificationStyles";
 
 interface Response {
   message: string;
@@ -58,10 +63,19 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
       return res.data;
     },
     onSuccess: (data) => {
-      setResponse(data);
+      // setResponse(data);
+      console.log(data);
+      showNotification({
+        title: "Join the Waitlist! 🚀",
+        message: "Get early access to Pennywise Premium! 🎉",
+        style: notificationStyles,
+        // @ts-ignore
+        styles: notificationStyles2,
+        radius: "md",
+      });
     },
     onError: (error: any) => {
-      setError(error);
+      setError(error?.message);
     },
   });
 
@@ -71,8 +85,8 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
 
   return (
     <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center z-50 ">
-      <div className="grid grid-cols-1 p-8 min-h-[40vh] mx-8 md:mx-0 w-full max-w-[34rem] rounded-3xl bg-[#000B17] border border-brand-green border-opacity-45 ">
-        <div className="w-full h-full p-8 mb-8 space-y-4  ">
+      <div className="grid grid-cols-1 p-4 md:p-8 min-h-[40vh] mx-5 md:mx-0 w-full max-w-[34rem] rounded-3xl bg-[#000B17] border border-brand-green border-opacity-45 ">
+        <div className="w-full h-full p-4 md:p-8 mb-8 space-y-4  ">
           <div className="mb-8 ">
             <div className="flex justify-end items-center mb-4 ">
               <button
