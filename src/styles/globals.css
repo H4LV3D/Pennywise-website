@@ -22,3 +22,10 @@ input:-webkit-autofill:focus {
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('/assets/fonts/Urbanist/Urbanist-VariableFont_wght.ttf');
+}
