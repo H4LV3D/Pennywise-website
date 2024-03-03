@@ -38,9 +38,9 @@ export default function Pricing() {
             <h1 className="text-6xl font-bold text-center text-brand-blue dark:text-brand-white">
               Simple and Flexible payments!
             </h1>
-            <p className="mt-3 text-[1rem] text-center text-[#6464646] dark:text-neutral-400 max-w-lg ">
-              It&#39;s free to get started as well as a premium plan for those
-              who want to take their financial decisions to the next level.
+            <p className="mt-3 text-[1rem] text-center text-[#6464646] dark:text-neutral-400 max-w-lg font-urbanist ">
+              It&#39;s free to get started, but we offer a premium plan for
+              those who want to make better financial decisions.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full lg:w-[850px] pt-10 ">
