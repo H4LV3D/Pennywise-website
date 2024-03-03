@@ -19,7 +19,7 @@ export default function Contact() {
       <div className={` min-h-screen bg-[#fbfbfb] dark:bg-[#000B17] py-20 `}>
         <PageLayout>
           <Navbar />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 min-h-[75vh] py-20 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:px-6 gap-y-8 min-h-[75vh] py-20 ">
             <div className="">
               <h5 className="text-xl text-brand-blue dark:text-brand-white">
                 Contact Us
@@ -27,7 +27,7 @@ export default function Contact() {
               <h1 className="text-6xl font-bold text-brand-blue dark:text-brand-white">
                 Get In Touch
               </h1>
-              <p className="mt-3 text-[1rem] text-[#6464646] dark:text-neutral-400 max-w-[30rem] ">
+              <p className="mt-3 text-[1rem] text-[#6464646] dark:text-neutral-400 max-w-[30rem] font-urbanist ">
                 We are always available to help you with any issues you might
                 have. We are currently available to take any message at the
                 moment.
