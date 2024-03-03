@@ -18,6 +18,7 @@ const config: Config = {
     },
     fontFamily: {
       clash: ["ClashDisplay", "sans-serif"],
+      urbanist: ["Urbanist", "sans-serif"],
     },
     extend: {
       colors: {
