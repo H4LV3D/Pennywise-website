@@ -51,7 +51,7 @@ export default function About() {
                 </h1>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2  gap-x-2 gap-neutral-500 my-10 ">
-                <p className="text-brand-white p-8 text-justify !leading-7 tracking-wider ">
+                <p className="text-brand-white p-8 text-[1.05rem] text-justify !leading-7 tracking-wide font-urbanist ">
                   Pennywise is a personal finance app that{" "}
                   <span className="text-brand-light-blue ">
                     {" "}
@@ -72,15 +72,14 @@ export default function About() {
                   to provide personalized financial insights and recommendations
                   to users.
                 </p>
-                <p className="text-brand-white p-8 text-justify !leading-7 tracking-wide ">
+                <p className="text-brand-white p-8 text-[1.05rem] text-justify !leading-7 tracking-wide font-urbanist ">
                   As we evolve, we look beyond just a finance app to becoming a
                   community allowing users share success stories, tips, and
                   strategies for saving money and managing expenses effectively.
                   Our team would regularly engage with the community, hosting
-                  webinars, Q&A sessions, and releasing educational content to
-                  help users make the most of the app and improve their
-                  financial literacy. We remain committed to helping people
-                  build healthier financial lives.
+                  webinars and Q&A sessions to help users make the most of the
+                  app and improve their financial capacity. We remain committed
+                  to helping people build better financial lives.
                 </p>
               </div>
             </div>
