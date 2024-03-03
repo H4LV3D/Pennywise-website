@@ -2,7 +2,6 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import BrandLogo from "./Logo";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import WaitlistForm from "../forms/Waitlist";
 
 type Props = {};
@@ -23,7 +22,7 @@ function Header({}: Props) {
     <>
       {isModalOpen && <WaitlistForm closeModal={setIsModalOpen} />}
       <div className="fixed top-0 left-0 w-full bg-[#fbfbfb] dark:bg-[#000B17] bg-opacity-75 z-40">
-        <div className="px-6 lg:px-0 md:container mx-auto xl:w-[1250px] ">
+        <div className="px-6 md:px-0 md:container mx-auto xl:w-[1250px] ">
           <div
             className={`flex items-center justify-between py-5 md:py-3   shadow-sm `}
           >
@@ -84,7 +83,7 @@ function Header({}: Props) {
         {
           // Mobile Menu
           isMenuOpen && (
-            <div className="w-full p-6 md:hidden ">
+            <div className="w-full p-6 md:container mx-auto lg:hidden ">
               <div className="grid grid-cols-1 space-y-3">
                 {navItems.map((item, index) => (
                   <Link
