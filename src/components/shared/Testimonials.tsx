@@ -72,7 +72,7 @@ const TestimonialsSection = () => {
             <h5 className="font-[500] text-[1.3rem] dark:text-brand-white ">
               {testimonials[currentIndex].title}
             </h5>
-            <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] ">
+            <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] font-urbanist ">
               {testimonials[currentIndex].quote}
             </p>
             <div className="flex items-center space-x-3">
