@@ -1,8 +1,8 @@
-import React, { Dispatch, SetStateAction, useEffect } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useQuery, useMutation } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import ButtonLoader from "../shared/ButtonLoader";
 import { addToWaitList } from "@/utils/requests/waitlist";
 import { showNotification } from "@mantine/notifications";
@@ -63,11 +63,10 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
       return res.data;
     },
     onSuccess: (data) => {
-      // setResponse(data);
-      console.log(data);
+      setResponse(data);
       showNotification({
-        title: "Join the Waitlist! 🚀",
-        message: "Get early access to Pennywise Premium! 🎉",
+        title: data.message,
+        message: data.count,
         style: notificationStyles,
         // @ts-ignore
         styles: notificationStyles2,
@@ -75,7 +74,17 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
       });
     },
     onError: (error: any) => {
-      setError(error?.message);
+      // @ts-ignore
+      setError(error.response.data.message);
+      showNotification({
+        title: "An error occurred",
+        // @ts-ignore
+        message: error.response.data.message,
+        style: notificationStyles,
+        // @ts-ignore
+        styles: notificationStyles2,
+        radius: "md",
+      });
     },
   });
 
@@ -83,9 +92,27 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
     mutation.mutate(formData);
   };
 
+  const bodyRef = useRef<HTMLDivElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  const handleClick = (e: React.MouseEvent) => {
+    if (bodyRef.current === e.target) {
+      closeModal(false);
+    } else if (modalRef.current === e.target) {
+      return;
+    }
+  };
+
   return (
-    <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center z-50 ">
-      <div className="grid grid-cols-1 p-4 md:p-8 min-h-[40vh] mx-5 md:mx-0 w-full max-w-[34rem] rounded-3xl bg-[#000B17] border border-brand-green border-opacity-45 ">
+    <div
+      ref={bodyRef}
+      onClick={handleClick}
+      className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center z-50 "
+    >
+      <div
+        ref={modalRef}
+        className="grid grid-cols-1 p-4 md:p-8 min-h-[40vh] mx-5 md:mx-0 w-full max-w-[34rem] rounded-3xl bg-[#000B17] border border-brand-green border-opacity-45 "
+      >
         <div className="w-full h-full p-4 md:p-8 mb-8 space-y-4  ">
           <div className="mb-8 ">
             <div className="flex justify-end items-center mb-4 ">
@@ -121,7 +148,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
                   id="firstName"
                   autoCapitalize="words"
                   autoFocus
-                  className="bg-transparent text-brand-white placeholder:text-neutral-500 border border-neutral-400 rounded w-full py-3 px-3 font-[500] leading-tight focus:outline-none focus:shadow-outline focus:border-brand-green "
+                  className="bg-transparent text-brand-white placeholder:text-neutral-500 border border-neutral-400 rounded w-full py-3 px-3 font-[500] leading-tight focus:outline-none focus:shadow-outline focus:border-brand-green focus:caret-white "
                 />
                 {errors.firstName && (
                   <span className="text-red-500 text-xs italic">
@@ -137,7 +164,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
                   placeholder="Last Name"
                   type="text"
                   id="lastName"
-                  className="bg-transparent text-brand-white placeholder:text-neutral-500 border border-neutral-400 rounded w-full py-3 px-3 font-[500] leading-tight focus:outline-none focus:shadow-outline focus:border-brand-green "
+                  className="bg-transparent text-brand-white placeholder:text-neutral-500 border border-neutral-400 rounded w-full py-3 px-3 font-[500] leading-tight focus:outline-none focus:shadow-outline focus:border-brand-green focus:caret-white "
                 />
                 {errors.lastName && (
                   <span className="text-red-500 text-xs italic">
@@ -152,7 +179,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
                   placeholder="Email"
                   type="email"
                   id="email"
-                  className="bg-transparent text-brand-white placeholder:text-neutral-500 border border-neutral-400 rounded w-full py-3 px-3 font-[500] leading-tight focus:outline-none focus:shadow-outline focus:border-brand-green "
+                  className="bg-transparent text-brand-white placeholder:text-neutral-500 border border-neutral-400 rounded w-full py-3 px-3 font-[500] leading-tight focus:outline-none focus:shadow-outline focus:border-brand-green focus:caret-white "
                 />
                 {errors.email && (
                   <span className="text-red-500 text-xs italic">
@@ -161,7 +188,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
                 )}
               </div>
               {error && (
-                <div className="text-brand-white text-sm italic">{error}</div>
+                <div className="text-red-500 text-xs italic">{error}</div>
               )}
               <div className="mt-6">
                 <button
