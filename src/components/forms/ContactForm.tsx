@@ -9,6 +9,7 @@ import {
   notificationStyles,
   notificationStyles2,
 } from "@/utils/others/notificationStyles";
+import ButtonLoader from "@/components/shared/ButtonLoader";
 
 interface FormInterface {
   fullName: string;
@@ -47,8 +48,7 @@ export default function ContactForm() {
         radius: "md",
         color: "blue",
       });
-      reset(); // Reset the form after successful submission
-      console.log(data);
+      reset();
     },
     onError: (error: any) => {
       showNotification({
@@ -109,12 +109,7 @@ export default function ContactForm() {
           disabled={mutation.isPending}
           className="bg-brand-blue text-brand-white h-[3.5rem] rounded-[0.5rem] font-[500] flex justify-center items-center space-x-2"
         >
-          {mutation.isPending ? (
-            <i className="fas fa-spinner fa-spin fa-md"></i>
-          ) : (
-            <i className="fas fa-paper-plane fa-md fa-fw"></i>
-          )}
-          <span>Send</span>
+          {mutation.isPending ? <ButtonLoader /> : <span>Send</span>}
         </button>
       </div>
     </form>
