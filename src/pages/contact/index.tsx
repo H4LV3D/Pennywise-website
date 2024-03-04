@@ -27,7 +27,7 @@ export default function Contact() {
               <h1 className="text-6xl font-bold text-brand-blue dark:text-brand-white">
                 Get In Touch
               </h1>
-              <p className="mt-3 text-[1rem] text-[#6464646] dark:text-neutral-400 max-w-[30rem] font-urbanist ">
+              <p className="mt-3 text-[1rem] text-[#6464646] dark:text-neutral-400 max-w-[30rem] tracking-wide  ">
                 We are always available to help you with any issues you might
                 have. We are currently available to take any message at the
                 moment.
