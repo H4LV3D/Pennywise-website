@@ -20,11 +20,11 @@ const TestimonialsSection = () => {
 
   return (
     <div className="py-16">
-      <div className="text-center">
+      <div className="mb-6 md:mb-0 md:text-center">
         <p className="uppercase text-[1.125rem] !tracking-widest text-brand-green dark:text-neutral-400 ">
           Testimonials
         </p>
-        <h1 className="font-[800] text-[40px] sm:text-[46px] leading-[48px] w-[24rem] mx-auto text-brand-blue dark:text-brand-green ">
+        <h1 className="font-[800] text-[40px] sm:text-[46px] leading-[48px] md:w-[24rem] mx-auto text-brand-blue dark:text-brand-green ">
           What Our Users Say About Us?
         </h1>
       </div>
@@ -68,12 +68,15 @@ const TestimonialsSection = () => {
           ))}
         </div>
         <div id="testimonial-text" className="w-full">
-          <div className="space-y-6 w-[24rem] mx-auto">
+          <div className="space-y-4 w-full max-w-[24rem] mx-auto">
             <h5 className="font-[500] text-[1.3rem] dark:text-brand-white ">
               {testimonials[currentIndex].title}
             </h5>
-            <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] font-urbanist ">
+            <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem]  ">
               {testimonials[currentIndex].quote}
+            </p>
+            <p className="text-[1rem] font-[500] text-brand-green">
+              {testimonials[currentIndex].name}
             </p>
             <div className="flex items-center space-x-3">
               {testimonials.map((item, index) => (
@@ -95,9 +98,6 @@ const TestimonialsSection = () => {
                 </button>
               ))}
             </div>
-            <p className="text-[1rem] font-[500] text-brand-green">
-              {testimonials[currentIndex].name}
-            </p>
           </div>
         </div>
       </div>
