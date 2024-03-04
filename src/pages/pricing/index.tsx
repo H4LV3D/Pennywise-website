@@ -31,14 +31,14 @@ export default function Pricing() {
       <div className={` min-h-screen bg-[#fbfbfb] dark:bg-[#000B17] pt-20 `}>
         <PageLayout>
           <Navbar />
-          <div className="flex flex-col items-center justify-center min-h-[75vh] py-20 space-y-5 ">
-            <h5 className="text-lg uppercase tracking-widest font-[400] text-center text-brand-blue dark:text-brand-white">
+          <div className="flex flex-col md:items-center md:justify-center min-h-[75vh] py-20 space-y-1 md:space-y-5 ">
+            <h5 className="text-lg uppercase tracking-widest font-[400] text-start md:text-center text-brand-blue dark:text-brand-white">
               Pricing plans
             </h5>
-            <h1 className="text-6xl font-bold text-center text-brand-blue dark:text-brand-white">
+            <h1 className="text-5xl md:text-6xl font-bold md:text-center text-brand-blue dark:text-brand-white">
               Simple and Flexible payments!
             </h1>
-            <p className="mt-3 text-[1rem] text-center text-[#6464646] dark:text-neutral-400 max-w-lg font-urbanist ">
+            <p className="pt-3 md:pt-0 text-[1rem] md:text-center text-[#6464646] dark:text-neutral-400 max-w-lg  ">
               It&#39;s free to get started, but we offer a premium plan for
               those who want to make better financial decisions.
             </p>
