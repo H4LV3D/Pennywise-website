@@ -29,19 +29,19 @@ export default function Home() {
         {isModalOpen && <WaitlistForm closeModal={setIsModalOpen} />}
         <PageLayout>
           <Navbar />
-          <div className="px-4 max-w-[1250px] mx-auto overflow-hidden ">
+          <div className="max-w-[1250px] mx-auto overflow-hidden ">
             <div className=" py-16 grid grid-cols-1 lg:grid-cols-2 place-items-center border-b dark:border-neutral-700 min-h-[80vh] ">
               <div className="space-y-4 ">
                 <h1 className="font-[800] text-[64px] leading-[60px] text-brand-blue dark:text-brand-white ">
                   Make The <br /> Best{" "}
                   <span className="text-brand-green ">
-                    Financial <br /> Decisions
+                    Financial <br /> Decision
                   </span>{" "}
                   !
                 </h1>
-                <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] max-w-lg font-urbanist ">
+                <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] max-w-lg tracking-wider  ">
                   Saving and Expense tracking made easy with our app! Our
-                  user-friendly interface and automated tracking streamline the
+                  user-friendly interface and automated tracking streamlines the
                   process, while customizable expense tracking, savings and
                   insightful reports help you stay on top of your finances
                   effortlessly.
@@ -94,7 +94,7 @@ export default function Home() {
                         <h5 className="font-[500] text-[1.325rem] dark:text-brand-white  ">
                           {item.title}
                         </h5>
-                        <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] line-clamp-3 font-urbanist ">
+                        <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] line-clamp-3  ">
                           {item.body}
                         </p>
                       </div>
@@ -134,7 +134,7 @@ export default function Home() {
                         {item.title}
                       </h5>
                     </div>
-                    <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] text-justify max-w-md font-urbanist ">
+                    <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] text-justify max-w-md  ">
                       {item.body}
                     </p>
                   </div>
@@ -157,7 +157,7 @@ export default function Home() {
                 <div className="w-full grid grid-cols-1 gap-8 md:grid-cols-2 ">
                   {FAQ.map((item, index) => (
                     <div
-                      className={`"space-y-2 mx-auto p-6 rounded-lg ${
+                      className={`"space-y-2 mx-auto py-6 md:p-6 rounded-lg ${
                         index === 0 || index === 3 || index === 4
                           ? "md:bg-brand-blue bg-opacity-20 text-brand-white"
                           : " dark:text-brand-white "
@@ -167,19 +167,18 @@ export default function Home() {
                       <h5 className="font-[500] text-[1.3rem] line-clamp-1 hover:line-clamp-none ">
                         {item.question}
                       </h5>
-                      <p className="text-[1rem] line-clamp-3 hover:line-clamp-none font-urbanist ">
+                      <p className="text-[1rem] line-clamp-3 hover:line-clamp-none  ">
                         {item.answer}
                       </p>
                     </div>
                   ))}
                 </div>
               </div>
-              Test
             </div>
 
             <div className="py-16 mx-auto">
               <div className="bg-brand-blue bg-opacity-20 p-6 sm:p-16 h-[40vh] w-full rounded-2xl flex items-center overflow-hidden ">
-                <div className="flex items-center  lg:w-[950px] mx-auto overflow-hidden ">
+                <div className="flex items-center w-full lg:w-[950px] mx-auto overflow-hidden ">
                   <div className="text-white ">
                     <h3 className="text-[2.25rem] font-[600] ">
                       Get Started Today!
