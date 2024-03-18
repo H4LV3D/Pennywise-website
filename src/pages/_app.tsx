@@ -48,7 +48,13 @@ const clashDisplay = localFont({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={clashDisplay.className}>
-      <MantineProvider>
+      <MantineProvider
+        theme={{
+          colorScheme: "light",
+          primaryColor: "blue",
+          fontFamily: "Clash Display, sans-serif",
+        }}
+      >
         <Notifications
           position="top-right"
           zIndex={3000}
