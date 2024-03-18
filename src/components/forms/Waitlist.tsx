@@ -84,6 +84,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
         // @ts-ignore
         styles: notificationStyles2,
         radius: "md",
+        color: "red",
       });
     },
   });
@@ -188,13 +189,19 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
                 )}
               </div>
               {error && (
-                <div className="text-red-500 text-xs italic">{error}</div>
+                <div className="text-red-500 text-sm font-[500] italic">
+                  {error}
+                </div>
               )}
               <div className="mt-6">
                 <button
                   type="submit"
                   disabled={mutation.isPending}
-                  className="hover:bg-brand-blue hover:text-brand-white bg-brand-green text-brand-blue h-[3.5rem] font-[600] w-full rounded focus:outline-none focus:shadow-outline"
+                  className={`"hover:bg-brand-blue hover:text-brand-white ${
+                    mutation.isPending
+                      ? "bg-brand-blue text-brand-white "
+                      : "bg-brand-green text-brand-blue"
+                  }  h-[3.5rem] font-[600] w-full rounded focus:outline-none focus:shadow-outline"`}
                 >
                   {mutation.isPending ? (
                     <ButtonLoader color="white" />
