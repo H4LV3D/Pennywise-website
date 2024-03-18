@@ -7,10 +7,6 @@ export interface Contact {
 }
 
 export const contactUs = async (data: Contact) => {
-  const res = await appAxios.post("/contact-us", data, {
-    headers: {
-      api_key: process.env.NEXT_PUBLIC_API_KEY as string,
-    },
-  });
+  const res = await appAxios.post("/contact-us", data);
   return res;
 };
