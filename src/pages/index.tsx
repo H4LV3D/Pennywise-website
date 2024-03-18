@@ -30,7 +30,7 @@ export default function Home() {
         <PageLayout>
           <Navbar />
           <div className="max-w-[1250px] mx-auto overflow-hidden ">
-            <div className=" py-16 grid grid-cols-1 lg:grid-cols-2 place-items-center border-b dark:border-neutral-700 min-h-[80vh] ">
+            <div className="py-16 grid grid-cols-1 lg:grid-cols-2 place-items-center border-b dark:border-neutral-700 min-h-[80vh] ">
               <div className="space-y-4 ">
                 <h1 className="font-[800] text-[64px] leading-[60px] text-brand-blue dark:text-brand-white ">
                   Make The <br /> Best{" "}
@@ -81,7 +81,7 @@ export default function Home() {
                     Pennywise Premium
                   </h1>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
                   {features.map((item, index) => (
                     <div
                       className="p-8 bg-brand-blue bg-opacity-20 rounded-2xl "
@@ -157,9 +157,9 @@ export default function Home() {
                 <div className="w-full grid grid-cols-1 gap-8 md:grid-cols-2 ">
                   {FAQ.map((item, index) => (
                     <div
-                      className={`"space-y-2 mx-auto py-6 md:p-6 rounded-lg ${
+                      className={`space-y-2 mx-auto py-6 md:p-8 rounded-lg ${
                         index === 0 || index === 3 || index === 4
-                          ? "md:bg-brand-blue bg-opacity-20 text-brand-white"
+                          ? "bg-brand-blue bg-opacity-20 text-brand-white"
                           : " dark:text-brand-white "
                       }  `}
                       key={index}
@@ -177,23 +177,25 @@ export default function Home() {
             </div>
 
             <div className="py-16 mx-auto">
-              <div className="bg-brand-blue bg-opacity-20 p-6 sm:p-16 h-[40vh] w-full rounded-2xl flex items-center overflow-hidden ">
+              <div className="bg-brand-blue bg-opacity-20 p-6 sm:pl-16 h-[40vh] w-full rounded-2xl flex items-center overflow-hidden ">
                 <div className="flex items-center w-full lg:w-[950px] mx-auto overflow-hidden ">
                   <div className="text-white ">
                     <h3 className="text-[2.25rem] font-[600] ">
                       Get Started Today!
                     </h3>
 
-                    <div className="flex items-center space-x-4 mt-4">
+                    <div className="mt-5">
                       <p className="text-brand-white text-lg font-[500] ">
                         Download Now
                       </p>
-                      <button className=" text-brand-white h-[2.5rem] w-[2.5rem] rounded-[2.5rem] border flex justify-center items-center">
-                        <i className="fab fa-apple fa-fw fa-lg "></i>
-                      </button>
-                      <button className=" text-brand-white h-[2.5rem] w-[2.5rem] rounded-[2.5rem] border flex justify-center items-center">
-                        <i className="fab fa-google-play fa-fw fa-lg "></i>
-                      </button>
+                      <div className="flex items-center space-x-4 mt-2">
+                        <button className=" text-brand-white h-[2.5rem] w-[2.5rem] rounded-[2.5rem] border flex justify-center items-center">
+                          <i className="fab fa-apple fa-fw fa-lg "></i>
+                        </button>
+                        <button className=" text-brand-white h-[2.5rem] w-[2.5rem] rounded-[2.5rem] border flex justify-center items-center">
+                          <i className="fab fa-google-play fa-fw fa-lg "></i>
+                        </button>
+                      </div>
                     </div>
                   </div>
                   <div className="hidden mx-auto sm:block relative ">
@@ -202,7 +204,7 @@ export default function Home() {
                       alt=""
                       width={500}
                       height={800}
-                      className=" mt-[16rem] "
+                      className=" mt-[16rem] scale-125 "
                     />
                   </div>
                 </div>
