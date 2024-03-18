@@ -10,6 +10,7 @@ import {
   notificationStyles,
   notificationStyles2,
 } from "@/utils/others/notificationStyles";
+import { useRouter } from "next/router";
 
 interface Response {
   message: string;
@@ -49,6 +50,8 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
 
   const [response, setResponse] = React.useState<Response | null>();
   const [error, setError] = React.useState(null);
+
+  const router = useRouter();
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -120,6 +123,9 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
               <button
                 onClick={() => {
                   setResponse(null), closeModal(false);
+                  if (mutation.isSuccess) {
+                    router.push("/waitlist");
+                  }
                 }}
                 className="text-sm font-[500] text-brand-green  "
               >
