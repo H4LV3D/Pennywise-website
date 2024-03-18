@@ -105,7 +105,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="py-20  place-items-center min-h-[70vh] ">
+            <div className="py-20 w-full lg:w-[850px] mx-auto place-items-center min-h-[70vh] ">
               <div className="">
                 <p className="uppercase text-[1.125rem] !tracking-widest dark:text-neutral-400 ">
                   Our Team
@@ -114,7 +114,7 @@ export default function About() {
                   Members
                 </h1>
               </div>
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 my-6 md:my-10 ">
+              <div className="grid grid-cols-2 gap-4 md:gap-8 my-6 md:my-10  ">
                 {team.map((item, index) => (
                   <div
                     key={index}
