@@ -53,7 +53,7 @@ export default function ContactForm() {
     onError: (error: any) => {
       showNotification({
         title: "An error occurred",
-        message: error.response.data.messagge,
+        message: error.response.data.message,
         style: notificationStyles,
         // @ts-ignore
         styles: notificationStyles2,
@@ -70,7 +70,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="grid grid-cols-1 gap-y-6 md:p-8 max-w-xl">
+      <div className="grid grid-cols-1 gap-y-6 max-w-lg">
         <h1 className="text-2xl font-bold text-brand-blue dark:text-brand-white">
           Leave us a message.
         </h1>
