@@ -22,7 +22,7 @@ export default function About() {
         <PageLayout>
           <Navbar />
           <div className="">
-            <div className="mt-[1rem] md:mt-0 py-20 px-6 sm:px-12 grid grid-cols-1 md:grid-cols-2 place-items-center border  border-brand-green border-opacity-40 rounded-xl min-h-[75vh]">
+            <div className="mt-[1rem] md:mt-0 py-20 px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-2 lg:place-items-center border border-brand-green border-opacity-40 rounded-xl min-h-[75vh]">
               <div className="space-y-3">
                 <h1 className="text-5xl md:text-6xl font-bold text-brand-blue dark:text-brand-white">
                   About <br /> Pennywise
@@ -31,14 +31,14 @@ export default function About() {
                   Set goals, receive reminders, and take control of your
                   financial future starting today! Every penny counts.
                 </p>
-                <div className="pt-6">
+                <div className="pt-4">
                   <button className="bg-brand-blue  text-white h-[3.5rem] px-8 md:px-12 rounded-[0.5rem] font-[500] flex items-center space-x-2">
                     <span className="">Get Started Today</span>
                     <i className="fas fa-long-arrow-right fa-fw fa-lg text-white "></i>
                   </button>
                 </div>
               </div>
-              <div className="hidden md:block w-full h-full bg-brand-blue bg-opacity-40 rounded-xl "></div>
+              <div className="hidden md:block w-full h-full min-h-[16rem] bg-brand-blue bg-opacity-40 rounded-xl "></div>
             </div>
 
             <div className="py-20 lg:w-[950px] mx-auto place-items-center min-h-[70vh] ">
@@ -50,7 +50,7 @@ export default function About() {
                   Who Are We?
                 </h1>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-neutral-500 my-6 md:my-10 ">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-6 my-6 md:my-10 ">
                 <p className="text-brand-white md:p-8 text-[1.05rem] text-justify !leading-7 tracking-wide  ">
                   Pennywise is a personal finance app that{" "}
                   <span className="text-brand-light-blue ">
@@ -72,7 +72,7 @@ export default function About() {
                   to provide personalized financial insights and recommendations
                   to users.
                 </p>
-                <p className="text-brand-white md:p-8 text-[1.05rem] text-justify !leading-7 tracking-wide  ">
+                <p className="text-brand-white md:p-8 text-[1.05rem] text-justify !leading-7 tracking-wide ">
                   As we evolve, we look beyond just a finance app to becoming a
                   community allowing users share success stories, tips, and
                   strategies for saving money and managing expenses effectively.
@@ -94,7 +94,7 @@ export default function About() {
                     <span className="font-[500] ">
                       Empowering Financial Freedom for Every Individual
                     </span>{" "}
-                    by Revolutionizingg personal finance and seamlessly
+                    by Revolutionizing personal finance and seamlessly
                     integrating technology with financial expertise.
                   </p>
 
@@ -114,7 +114,7 @@ export default function About() {
                   Members
                 </h1>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 ">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 my-6 md:my-10 ">
                 {team.map((item, index) => (
                   <div
                     key={index}
