@@ -9,7 +9,7 @@ export const addToWaitList = async (data: Waitlist) => {
   return res;
 };
 
-export const getWaitlistNumber = async () => {
+export const getWaitlist = async () => {
   const res = await appAxios.get("/users");
   return res;
 };
