@@ -25,7 +25,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={`min-h-screen bg-[#000B17] pt-20 `}>
+      <div className={`min-h-screen bg-[#000B17] pt-20 overflow-x-hidden `}>
         {isModalOpen && <WaitlistForm closeModal={setIsModalOpen} />}
         <PageLayout>
           <Navbar />
@@ -118,7 +118,7 @@ export default function Home() {
                   Why choose Pennywise?
                 </h1>
               </div>
-              <div className="grid grid-cols-1 lg:grid-cols-2 my-10 gap-4  ">
+              <div className="grid grid-cols-1 lg:grid-cols-2 my-10 gap-4 md:gap-8  ">
                 {why.map((item, index) => (
                   <div
                     key={index}
