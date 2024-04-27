@@ -27,7 +27,7 @@ export default function About() {
                 <h1 className="text-5xl md:text-6xl font-bold text-brand-blue dark:text-brand-white">
                   About <br /> Pennywise
                 </h1>
-                <p className="text-[.9375rem] md:text-[1.25rem] text-[#6464646] dark:text-neutral-400 max-w-md ">
+                <p className="text-[.9375rem] md:text-[1.125rem] text-[#6464646] dark:text-neutral-400 max-w-md tracking-wider ">
                   Set goals, receive reminders, and take control of your
                   financial future starting today! Every penny counts.
                 </p>
@@ -38,7 +38,9 @@ export default function About() {
                   </button>
                 </div>
               </div>
-              <div className="hidden md:block w-full h-full min-h-[16rem] bg-brand-blue bg-opacity-40 rounded-xl "></div>
+              <div className="hidden md:block w-full h-full min-h-[16rem] bg-brand-blue bg-opacity-40 rounded-xl relative overflow-hidden  ">
+                {/* <Image src="/about.jpg" fill={true} alt="About Image" /> */}
+              </div>
             </div>
 
             <div className="py-20 lg:w-[950px] mx-auto place-items-center min-h-[70vh] ">
