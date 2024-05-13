@@ -60,15 +60,15 @@ function Footer({}: Props) {
   const date = new Date().getFullYear();
   return (
     <>
-      <div className="w-full font-raleway bg-neutral-100 dark:bg-[#000B17] dark:text-neutral-400 py-20">
-        <div className=" md:container mx-auto lg:w-[950px]">
+      <div className="w-full overflow-x-hidden font-raleway bg-neutral-100 dark:bg-[#000B17] dark:text-neutral-400 py-20">
+        <div className="px-6 md:px-0 md:container mx-auto xl:w-[1250px]">
           <div className="md:flex flex-row lg:grid sm:grid-cols-2 mb-8">
             <div className="w-full sm:w-1/3 lg:w-full mb-8 md:mb-4 ">
               <BrandLogo />
 
               <p
                 data-aos="fade-right"
-                className="text-[.9375rem]  font-[400] sm:text-base lg:text-base !leading-6 md:!leading-7 mt-4 text-justify sm:hidden lg:block lg:w-2/3 xl:w-3/4"
+                className="text-[.9375rem] font-[400] sm:text-base !leading-6 md:!leading-7 mt-4 text-justify sm:hidden lg:block max-w-md "
               >
                 We help you make the best financial decisions by providing you
                 with the right information and tools. We are your one stop shop
@@ -86,7 +86,7 @@ function Footer({}: Props) {
               </div>
             </div>
 
-            <div className="hidden w-full md:w-2/3 lg:w-full sm:grid grid-cols-3 sm:grid-cols-3 gap-4">
+            <div className="hidden w-full md:w-2/3 lg:w-full max-w-md sm:grid grid-cols-3 sm:grid-cols-3 gap-4">
               <div className="flex flex-col">
                 <h3 className="font-raleway font-[500] text-base md:text-lg text-black dark:text-neutral-400 mb-2 md:mb-4">
                   Resource
