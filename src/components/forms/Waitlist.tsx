@@ -116,7 +116,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
     >
       <div
         ref={modalRef}
-        className="grid grid-cols-1 p-4 md:p-8 min-h-[40vh] mx-5 md:mx-0 w-full max-w-[34rem] rounded-3xl bg-[#000B17] border border-brand-green border-opacity-45 "
+        className="grid grid-cols-1 p-4 md:p-8 min-h-[40vh] mx-5 md:mx-0 w-full max-w-[34rem] rounded-3xl bg-[#000B17] border border-brand-light-blue border-opacity-45 "
       >
         <div className="w-full h-full p-4 md:p-8 mb-8 space-y-4  ">
           <div className="mb-8 ">
@@ -128,12 +128,13 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
                     router.push("/waitlist");
                   }
                 }}
-                className="text-sm font-[500] text-brand-green  "
+                className="text-sm font-[500] text-brand-green   "
               >
-                {response?.success ? "Close" : "Cancel"}
+                {/* {response?.success ? "Close" : "Cancel"} */}
+                <i className="fas fa-xmark fa-xl p-2 "></i>
               </button>
             </div>
-            <h1 className="text-2xl font-[500] text-brand-green  ">
+            <h1 className="text-2xl sm:text-3xl font-[600] text-brand-light-blue ">
               {response?.success
                 ? `Congratulations ${response.data.firstName} `
                 : "Join The Waitlist Now !"}
@@ -156,7 +157,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
                   id="firstName"
                   autoCapitalize="words"
                   autoFocus
-                  className="bg-transparent text-brand-white placeholder:text-neutral-500 border border-neutral-400 rounded w-full py-3 px-3 font-[500] leading-tight focus:outline-none focus:shadow-outline focus:border-brand-green focus:caret-white "
+                  className="bg-transparent !text-brand-white placeholder:text-neutral-500 border border-neutral-500 rounded-md w-full py-3.5 px-3 font-[500] leading-tight focus:outline-none focus:shadow-outline focus:border-brand-light-blue focus:caret-white "
                 />
                 {errors.firstName && (
                   <span className="text-red-500 text-xs italic">
@@ -172,7 +173,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
                   placeholder="Last Name"
                   type="text"
                   id="lastName"
-                  className="bg-transparent text-brand-white placeholder:text-neutral-500 border border-neutral-400 rounded w-full py-3 px-3 font-[500] leading-tight focus:outline-none focus:shadow-outline focus:border-brand-green focus:caret-white "
+                  className="bg-transparent !text-brand-white placeholder:text-neutral-500 border border-neutral-500 rounded-md w-full py-3.5 px-3 font-[500] leading-tight focus:outline-none focus:shadow-outline focus:border-brand-light-blue focus:caret-white "
                 />
                 {errors.lastName && (
                   <span className="text-red-500 text-xs italic">
@@ -187,7 +188,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
                   placeholder="Email"
                   type="email"
                   id="email"
-                  className="bg-transparent text-brand-white placeholder:text-neutral-500 border border-neutral-400 rounded w-full py-3 px-3 font-[500] leading-tight focus:outline-none focus:shadow-outline focus:border-brand-green focus:caret-white "
+                  className="bg-transparent !text-brand-white placeholder:text-neutral-500 border border-neutral-500 rounded-md w-full py-3.5 px-3 font-[500] leading-tight focus:outline-none focus:shadow-outline focus:border-brand-light-blue focus:caret-white "
                 />
                 {errors.email && (
                   <span className="text-red-500 text-xs italic">
@@ -207,13 +208,16 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
                   className={`"hover:bg-brand-blue hover:text-brand-white ${
                     mutation.isPending
                       ? "bg-brand-blue text-brand-white "
-                      : "bg-brand-green text-brand-blue"
+                      : "bg-brand-light-blue text-brand-blue"
                   }  h-[3.5rem] font-[600] w-full rounded focus:outline-none focus:shadow-outline"`}
                 >
                   {mutation.isPending ? (
                     <ButtonLoader color="white" />
                   ) : (
-                    "GET EARLY ACCESS"
+                    <span>
+                      <i className="fas fa-paper-plane mr-2"></i>
+                      <span className="">Join The Waitlist</span>
+                    </span>
                   )}
                 </button>
               </div>

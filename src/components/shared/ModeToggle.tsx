@@ -8,7 +8,6 @@ export default function ColorModeToggle() {
   const [theme, setTheme] = useState<string>(); //default state
 
   const toggleDarkMode = () => {
-    console.log("clicked");
     if (checked) {
       setChecked(false);
       setTheme("dark");

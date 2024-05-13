@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-// import ColorModeToggle from "./ModeToggle";
+import ColorModeToggle from "./ModeToggle";
 
 type Props = {};
 
 const Logo = ({}: Props) => {
-  // const { theme } = ColorModeToggle();
+  const { theme } = ColorModeToggle();
   // const light = "/logo.svg";
   const dark = "/assets/images/logo/Primary.svg";
   return (

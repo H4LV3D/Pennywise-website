@@ -21,7 +21,7 @@ export default function About() {
       {isModalOpen && <WaitlistForm closeModal={setIsModalOpen} />}
       <PageLayout>
         <div className="">
-          <div className="mt-[1rem] md:mt-0 py-20 px-0 sm:px-12 grid grid-cols-1 lg:grid-cols-2 lg:place-items-center  border-brand-green border-opacity-40 rounded-xl min-h-[60vh]">
+          <div className="mt-[1rem] md:mt-0 py-20 px-0 sm:px-12 grid grid-cols-1 lg:grid-cols-2 lg:place-items-center  border-brand-green border-opacity-40 rounded-xl min-h-[60vh] ">
             <div className="space-y-3 w-full">
               <h1 className="text-5xl md:text-6xl font-bold text-brand-blue dark:text-brand-white">
                 About <br /> Pennywise
@@ -42,7 +42,7 @@ export default function About() {
                 </button>
               </div>
             </div>
-            <div className="hidden md:block w-full h-full min-h-[16rem] bg-brand-blue bg-opacity-40 rounded-xl relative overflow-hidden  ">
+            <div className="hidden md:block w-full h-full min-h-[35rem] max-w-lg bg-brand-blue bg-opacity-40 rounded-xl relative overflow-hidden  ">
               <Image
                 src="/money-jar.png"
                 fill={true}

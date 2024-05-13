@@ -1,10 +1,11 @@
 import PageLayout from "@/layout/PageLayout";
 import { Table } from "@mantine/core";
 import Head from "next/head";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { getWaitlist } from "@/utils/requests/waitlist";
 import { WaitlistUser } from "@/typings/waitlist";
 import { showNotification } from "@mantine/notifications";
+import { RotatingLines } from "react-loader-spinner";
 
 export default function Contact() {
   const { data, isLoading, isError, error } = useQuery({
@@ -22,6 +23,7 @@ export default function Contact() {
     showNotification({
       title: "Error fetching waitlist.",
       message: error.message,
+      color: "red",
     });
   }
 
@@ -54,6 +56,8 @@ export default function Contact() {
     </tr>
   ));
 
+  const queryClient = useQueryClient();
+
   return (
     <>
       <Head>
@@ -74,25 +78,52 @@ export default function Contact() {
             </p>
           </div>
           <div
-            className={`my-10 ${!isLoading && "border-b"} text-brand-white `}
+            className={`my-10 ${
+              !isLoading && !isError && "border-b"
+            } text-brand-white `}
           >
-            <Table
-              className="hover:bg-opacity-20 border-neutral-500 dark:border-neutral-500"
-              highlightOnHover
-              captionSide="bottom"
-              verticalSpacing={"md"}
-              horizontalSpacing={"md"}
-              fontSize={"md"}
-              withBorder={false}
-            >
-              <thead>{ths}</thead>
-              <tbody>{rows}</tbody>
-            </Table>
+            {!isLoading && !isError && data?.length! > 0 && (
+              <Table
+                className="hover:bg-opacity-20 border-neutral-500 dark:border-neutral-500"
+                highlightOnHover
+                captionSide="bottom"
+                verticalSpacing={"md"}
+                horizontalSpacing={"md"}
+                fontSize={"md"}
+                withBorder={false}
+              >
+                <thead>{ths}</thead>
+                <tbody>{rows}</tbody>
+              </Table>
+            )}
             {isLoading && (
               <div className="min-h-[30vh] w-full flex items-center justify-center ">
-                <div className=" text-center ">
-                  <i className="fas fa-spinner fa-spin fa-2x text-brand-blue dark:text-brand-white"></i>
-                  <p className=" text-brand-white text-lg ">Loading</p>
+                <div className="flex space-x-4 items-center ">
+                  <RotatingLines
+                    width="40px"
+                    strokeWidth={"4"}
+                    strokeColor="#FBFBFB"
+                  />
+                  <p className=" text-brand-white text-xl font-[500] ">
+                    Loading
+                  </p>
+                </div>
+              </div>
+            )}
+            {isError && !isLoading && (
+              <div className="min-h-[30vh] w-full flex items-center justify-center ">
+                <div className="text-center">
+                  <h4 className=" text-red-100 text-xl font-[500] ">
+                    Error fetching waitlist!
+                  </h4>
+                  <button
+                    onClick={() => {
+                      queryClient.invalidateQueries({ queryKey: ["waitlist"] });
+                    }}
+                    className=" text-brand-green text-xl font-[500] "
+                  >
+                    Retry
+                  </button>
                 </div>
               </div>
             )}
