@@ -16,13 +16,14 @@ function Header({}: Props) {
     { text: "About", link: "/about" },
     { text: "Pricing", link: "/pricing" },
     { text: "Contact", link: "/contact" },
+    { text: "Waitlist", link: "/waitlist" },
   ];
 
   return (
     <>
       {isModalOpen && <WaitlistForm closeModal={setIsModalOpen} />}
-      <div className="fixed top-0 left-0 w-full bg-[#fbfbfb] dark:bg-[#000B17] bg-opacity-75 z-40">
-        <div className="px-6 md:px-0 md:container mx-auto xl:w-[1250px] ">
+      <div className="fixed top-0 left-0 w-full bg-brand-white dark:bg-[#000B17] bg-opacity-75 z-40">
+        <div className="px-6 md:px-0 md:container mx-auto xl:w-[1250px] h-20 ">
           <div
             className={`flex items-center justify-between py-5 md:py-3   shadow-sm `}
           >
@@ -40,7 +41,11 @@ function Header({}: Props) {
                   }}
                   className=""
                 >
-                  <i className="fas fa-bars fa-fw fa-lg text-black dark:text-neutral-400"></i>
+                  {isMenuOpen ? (
+                    <i className="fas fa-xmark fa-fw fa-lg text-black dark:text-neutral-400"></i>
+                  ) : (
+                    <i className="fas fa-bars fa-fw fa-lg text-black dark:text-neutral-400"></i>
+                  )}
                 </button>
               </div>
               <div className="hidden lg:block">
@@ -66,7 +71,6 @@ function Header({}: Props) {
             </div>
 
             <div className="flex items-center space-x-3 ">
-              {/* <ToggleButton /> */}
               <button
                 data-aos="fade-down"
                 data-aos-delay={1200}
@@ -83,7 +87,7 @@ function Header({}: Props) {
         {
           // Mobile Menu
           isMenuOpen && (
-            <div className="w-full p-6 md:container mx-auto lg:hidden ">
+            <div className="w-full p-6 md:container mx-auto lg:hidden border-b border-brand-green rounded-b-2xl shadow-lg ">
               <div className="grid grid-cols-1 space-y-3">
                 {navItems.map((item, index) => (
                   <Link
