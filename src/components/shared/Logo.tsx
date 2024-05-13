@@ -1,22 +1,17 @@
 import React from "react";
 import Image from "next/image";
-import ColorModeToggle from "./ModeToggle";
 import Link from "next/link";
+// import ColorModeToggle from "./ModeToggle";
 
 type Props = {};
 
 const Logo = ({}: Props) => {
-  const { theme } = ColorModeToggle();
+  // const { theme } = ColorModeToggle();
+  // const light = "/logo.svg";
   const dark = "/assets/images/logo/Primary.svg";
-  const light = "/logo.svg";
   return (
     <Link href={"/"}>
-      <Image
-        src={theme === "dark" ? dark : light}
-        alt="logo"
-        width={190}
-        height={100}
-      />
+      <Image src={dark} alt="Pennywise Logo" width={190} height={100} />
     </Link>
   );
 };
