@@ -12,7 +12,7 @@ const MaxWidthProvider: React.FC<Props> = ({ className, children }) => {
     <>
       <Navbar />
       <div
-        className={`${className} max-w-[84rem] md:container xl:w-[1250px] mx-auto px-6 sm:px-8 md:px-0 mt-[5rem] bg-[#fbfbfb] dark:bg-[#000B17] overflow-x-hidden`}
+        className={`${className} max-w-[84rem] md:container xl:w-[1250px] mx-auto px-6 sm:px-8 md:px-0 mt-[5rem] bg-[#000B17] overflow-x-hidden`}
       >
         {children}
       </div>
