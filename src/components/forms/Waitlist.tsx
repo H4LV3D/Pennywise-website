@@ -63,6 +63,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
   const mutation = useMutation({
     mutationFn: async (data: WaitlistFormData) => {
       const res = await addToWaitList(data);
+      localStorage.setItem("waitlister", JSON.stringify(data));
       return res.data;
     },
     onSuccess: (data) => {
