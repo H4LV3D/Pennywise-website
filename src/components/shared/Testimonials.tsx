@@ -39,7 +39,7 @@ const TestimonialsSection = () => {
                 src={`/assets/images/placeholders/Memoji-${
                   currentIndex + 1
                 }.png`}
-                alt="Icons"
+                alt={`${testimonials[currentIndex].name} Memoji`}
                 width={200}
                 height={200}
               />
@@ -60,7 +60,7 @@ const TestimonialsSection = () => {
             >
               <Image
                 src={`/assets/images/placeholders/Memoji-${index + 1}.png`}
-                alt="Icons"
+                alt={`${item.name} Memoji`}
                 width={160}
                 height={160}
               />
@@ -91,7 +91,7 @@ const TestimonialsSection = () => {
                 >
                   <Image
                     src={`/assets/images/placeholders/Memoji-${index + 1}.png`}
-                    alt="Icons"
+                    alt={`${item.name} Memoji`}
                     width={40}
                     height={40}
                   />
