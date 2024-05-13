@@ -57,7 +57,7 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Pennywise | Contact </title>
+        <title>Pennywise | Waitlist </title>
         <meta
           name="description"
           content="Pennywise is a financial accounting app that helps you make the best financial decisions by providing you with the right information and tools."
