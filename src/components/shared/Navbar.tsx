@@ -22,7 +22,7 @@ function Header({}: Props) {
   return (
     <>
       {isModalOpen && <WaitlistForm closeModal={setIsModalOpen} />}
-      <div className="fixed top-0 left-0 w-full bg-brand-white dark:bg-[#000B17] bg-opacity-75 z-40">
+      <div className="fixed top-0 left-0 w-full bg-[#000B17] bg-opacity-75 z-40">
         <div className="px-6 md:px-0 md:container mx-auto xl:w-[1250px] h-20 ">
           <div
             className={`flex items-center justify-between py-5 md:py-3   shadow-sm `}

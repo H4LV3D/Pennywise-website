@@ -60,7 +60,7 @@ function Footer({}: Props) {
   const date = new Date().getFullYear();
   return (
     <>
-      <div className="w-full overflow-x-hidden font-raleway bg-neutral-100 dark:bg-[#000B17] dark:text-neutral-400 py-20">
+      <div className="w-full overflow-x-hidden font-raleway bg-[#000B17] dark:text-neutral-400 py-20">
         <div className="px-6 md:px-0 md:container mx-auto xl:w-[1250px]">
           <div className="md:flex flex-row lg:grid sm:grid-cols-2 mb-8">
             <div className="w-full sm:w-1/3 lg:w-full mb-8 md:mb-4 ">
