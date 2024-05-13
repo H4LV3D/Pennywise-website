@@ -27,7 +27,7 @@ export default function Document() {
         {/* Meta Tags */}
 
         <title>Pennywise — A penny saved is apenny earned.</title>
-        <meta http-equiv="Content-Type" content="text/html" />
+        <meta httpEquiv="Content-Type" content="text/html" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta name="author" content="Toluwalope Akinkunmi" />
