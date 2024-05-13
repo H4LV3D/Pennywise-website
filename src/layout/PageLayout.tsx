@@ -1,4 +1,6 @@
 import React from "react";
+import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
 
 interface Props {
   className?: string;
@@ -7,11 +9,15 @@ interface Props {
 
 const MaxWidthProvider: React.FC<Props> = ({ className, children }) => {
   return (
-    <div
-      className={`${className} max-w-[84rem] md:container xl:w-[1250px] mx-auto px-6 sm:px-8 md:px-0 `}
-    >
-      {children}
-    </div>
+    <>
+      <Navbar />
+      <div
+        className={`${className} max-w-[84rem] md:container xl:w-[1250px] mx-auto px-6 sm:px-8 md:px-0 mt-[5rem] bg-[#fbfbfb] dark:bg-[#000B17] overflow-x-hidden`}
+      >
+        {children}
+      </div>
+      <Footer />
+    </>
   );
 };
 
