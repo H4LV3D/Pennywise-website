@@ -194,7 +194,7 @@ export default function Home() {
                 </div>
                 <div className="hidden mx-auto sm:block relative ">
                   <Image
-                    src={`/assets/images/screenshots/customize.png`}
+                    src={`/assets/images/customize.png`}
                     alt="Pennywise App"
                     width={500}
                     height={800}

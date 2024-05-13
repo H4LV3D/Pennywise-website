@@ -44,7 +44,7 @@ export default function About() {
             </div>
             <div className="hidden md:block w-full h-full min-h-[35rem] max-w-lg bg-brand-blue bg-opacity-40 rounded-xl relative overflow-hidden  ">
               <Image
-                src="/money-jar.png"
+                src="/assets/images/money-jar.png"
                 fill={true}
                 alt="Pennywise About Image - Save the pennies"
               />

@@ -63,7 +63,7 @@ export default function Document() {
         />
         <meta
           property="og:image"
-          content="https://iampennywise.com/preview.png"
+          content="https://iampennywise.com/assets/images/preview.png"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -78,7 +78,7 @@ export default function Document() {
         />
         <meta
           property="twitter:image"
-          content="https://iampennywise.com/preview.png"
+          content="https://iampennywise.com/assets/images/preview.png"
         />
 
         <meta

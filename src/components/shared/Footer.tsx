@@ -144,6 +144,7 @@ function Footer({}: Props) {
                 <a
                   href={item.link}
                   target="_blank"
+                  rel="noreferrer"
                   key={index}
                   data-aos="fade-up"
                   data-aos-delay={index * 150}
