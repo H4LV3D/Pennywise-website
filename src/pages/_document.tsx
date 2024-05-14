@@ -32,7 +32,13 @@ export default function Document() {
         />
         <meta
           name="description"
-          content="We simplify finances with our intuitive app, automating expense tracking and savings management, empowering you to stay financially healthy."
+          content="Welcome to Pennywise! Simplify finances with our app. Track expenses, set spending limits, gain insights. Revolutionize your financial future!"
+        />
+
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="https://iampennywise.com/favicon.ico"
         />
 
         <meta property="og:type" content="website" />
@@ -43,7 +49,7 @@ export default function Document() {
         />
         <meta
           property="og:description"
-          content="We simplify finances with our intuitive app, automating expense tracking and savings management, empowering you to stay financially healthy."
+          content="Welcome to Pennywise! Simplify finances with our app. Track expenses, set spending limits, gain insights. Revolutionize your financial future!"
         />
         <meta
           property="og:image"
@@ -58,7 +64,7 @@ export default function Document() {
         />
         <meta
           property="twitter:description"
-          content="We simplify finances with our intuitive app, automating expense tracking and savings management, empowering you to stay financially healthy."
+          content="Welcome to Pennywise! Simplify finances with our app. Track expenses, set spending limits, gain insights. Revolutionize your financial future!"
         />
         <meta
           property="twitter:image"

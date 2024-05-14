@@ -4,6 +4,7 @@ import type { AppProps } from "next/app";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { MantineProvider } from "@mantine/core";
 import { Notifications } from "@mantine/notifications";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 const queryClient = new QueryClient();
 
@@ -110,6 +111,8 @@ export default function App({ Component, pageProps }: AppProps) {
           </QueryClientProvider>
         </MantineProvider>
       </main>
+      <GoogleTagManager gtmId="GTM-522V4PRV" />
+      <GoogleAnalytics gaId="G-8BPCY7PWM4" />
     </>
   );
 }
