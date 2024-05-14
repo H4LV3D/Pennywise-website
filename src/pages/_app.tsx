@@ -111,6 +111,7 @@ export default function App({ Component, pageProps }: AppProps) {
           </QueryClientProvider>
         </MantineProvider>
       </main>
+
       <GoogleTagManager gtmId="GTM-522V4PRV" />
       <GoogleAnalytics gaId="G-8BPCY7PWM4" />
     </>

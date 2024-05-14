@@ -12,7 +12,6 @@ export default function Contact() {
     queryKey: ["waitlist"],
     queryFn: async () => {
       const res = await getWaitlist();
-      console.log(res.data.data);
       return res.data.data as WaitlistUser[];
     },
     enabled: true,
