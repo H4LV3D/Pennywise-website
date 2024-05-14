@@ -1,6 +1,7 @@
 import PageLayout from "@/layout/PageLayout";
 import Head from "next/head";
 import ContactForm from "@/components/forms/ContactForm";
+import Image from "next/image";
 
 export default function Contact() {
   return (
@@ -16,8 +17,8 @@ export default function Contact() {
 
       <PageLayout>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 min-h-[65vh] py-20 place-items-center ">
-          <div className="w-full ">
-            <h5 className="text-sm sm:text-xl uppercase mb-2 text-brand-blue dark:text-brand-white">
+          <div className="w-full md:pt-20 ">
+            <h5 className="text-sm sm:text-base tracking-wide uppercase mb-2 text-brand-blue dark:text-brand-white">
               Contact Us
             </h5>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-blue dark:text-brand-white">
@@ -28,7 +29,14 @@ export default function Contact() {
               have. We are currently available to take any message at the
               moment.
             </p>
-            <div className="mt-8"></div>
+            <div className="mt-8 mx-auto ">
+              <Image
+                src={"/assets/images/grow_your_finance.png"}
+                width={300}
+                height={300}
+                alt="Pennywise Contact Us"
+              />
+            </div>
           </div>
           <div className=" w-full ">
             <ContactForm />

@@ -42,9 +42,9 @@ export default function About() {
                 </button>
               </div>
             </div>
-            <div className="hidden md:block w-full h-full min-h-[35rem] max-w-lg bg-brand-blue bg-opacity-40 rounded-xl relative overflow-hidden  ">
+            <div className="hidden md:block w-full h-full min-h-[35rem] max-w-lg bg-opacity-40 rounded-xl relative overflow-hidden  ">
               <Image
-                src="/assets/images/money-jar.png"
+                src="/assets/images/about_pennywise.png"
                 fill={true}
                 alt="Pennywise About Image - Save the pennies"
               />

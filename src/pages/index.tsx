@@ -28,7 +28,7 @@ export default function Home() {
         <div className="max-w-[1250px] mx-auto overflow-hidden ">
           <div className="py-16 grid grid-cols-1 lg:grid-cols-2 place-items-center border-b dark:border-neutral-700 min-h-[80vh] ">
             <div className="space-y-4 ">
-              <h1 className="font-[800] text-[64px] leading-[60px] text-brand-blue dark:text-brand-white ">
+              <h1 className="font-[800] text-[64px] leading-[60px] darktext-brand-blue text-brand-white ">
                 Make The <br /> Best{" "}
                 <span className="text-brand-green ">
                   Financial <br /> Decision
