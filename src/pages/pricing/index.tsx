@@ -29,7 +29,7 @@ export default function Pricing() {
       <PageLayout>
         <div className="flex flex-col md:items-center md:justify-center min-h-[75vh] md:pb-20 space-y-1 md:space-y-3 ">
           <div className=" py-10 md:py-20 ">
-            <h5 className="mb-1 text-sm sm:text-lg uppercase tracking-widest font-[400] text-start md:text-center text-brand-blue dark:text-brand-white">
+            <h5 className="mb-1 text-sm sm:text-base tracking-wider uppercase font-[400] text-start md:text-center text-brand-blue dark:text-brand-white">
               Pricing plans
             </h5>
             <h1 className="text-5xl md:text-6xl font-bold md:text-center text-brand-blue dark:text-brand-white">
@@ -68,7 +68,7 @@ export default function Pricing() {
               </div>
             </div>
 
-            <div className="bg-brand-green hover:border-4 border-brand-light-blue rounded-2xl min-h-[40vh] p-8 w-full space-y-5 max-w-md md:w-full ">
+            <div className="bg-brand-green hover:border border-brand-light-blue rounded-2xl min-h-[40vh] p-8 w-full space-y-5 max-w-md md:w-full ">
               <p className="uppercase tracking-[0.15em] text-brand-blue text-opacity-50 font-[500] ">
                 Premium Tier
               </p>

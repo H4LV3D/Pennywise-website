@@ -65,7 +65,7 @@ export default function Contact() {
       <PageLayout>
         <div className=" min-h-[75vh]  ">
           <div className="pt-12 ">
-            <h5 className="text-base sm:text-lg font-[500] uppercase tracking-wide text-brand-blue dark:text-neutral-200">
+            <h5 className="text-sm sm:text-base tracking-wide font-[500] uppercase tracking-wide text-brand-blue dark:text-neutral-200">
               Wait list
             </h5>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl mt-0.5 font-bold text-brand-blue dark:text-brand-white">
