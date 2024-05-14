@@ -11,24 +11,8 @@ export default function Document() {
           href="/fontawesome-free-6.2.1-web/css/solid.css"
         />
         <link rel="stylesheet" href="/fontawesome-free-6.2.1-web/css/all.css" />
-        <link
-          rel="stylesheet"
-          href="/fontawesome-free-6.2.1-web/css/brands.css"
-        />
-        <link
-          rel="stylesheet"
-          href="/fontawesome-free-6.2.1-web/css/regular.css"
-        />
-        <link
-          rel="stylesheet"
-          href="/fontawesome-free-6.2.1-web/css/fontawesome.css"
-        />
-
-        {/* Meta Tags */}
-
-        <title>Pennywise — A penny saved is apenny earned.</title>
         <meta httpEquiv="Content-Type" content="text/html" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <meta name="theme-color" content="#000000" />
         <meta name="author" content="Toluwalope Akinkunmi" />
         <meta name="robots" content="index, follow" />
