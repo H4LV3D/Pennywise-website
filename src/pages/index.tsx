@@ -63,7 +63,7 @@ export default function Home() {
               </div>
             </div>
             <div className="relative ">
-              <Lottie animationData={groovyWalkAnimation} loop={true} />;
+              <Lottie animationData={groovyWalkAnimation} loop={true} />
             </div>
           </div>
 

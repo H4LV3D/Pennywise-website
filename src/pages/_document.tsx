@@ -5,7 +5,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html lang="en">
-      <head>
+      <Head>
         <link
           rel="stylesheet"
           href="/fontawesome-free-6.2.1-web/css/solid.css"
@@ -75,8 +75,7 @@ export default function Document() {
           name="keywords"
           content="Pennywise, finance, savings, budget, Pennywise Financial accounting app, Financial decisions, Financial tools, Financial information, Personal finance, Money management, Budgeting, Saving goals, Financial reminders, Financial future, Every penny counts, Get started today, About Pennywise, Our story, Who are we, Personal finance app, Money saving app, Budgeting app, Financial planning, Financial literacy, Money tracking, Expense tracking, Financial goals, Money management tools, Personal finance management, Financial independence, Saving money, Financial security, Financial freedom, Money advice, Financial tips, Financial education, Money habits, Financial discipline, Financial responsibility, Money goals, Financial health, Money planning, Financial success, Money control, Personal finance tips, Financial improvement, Money wisdom, Financial growth, Money strategy, Financial strategy, Money solutions, Financial solutions, Personal finance solutions, Pennnywise, Penywise, Penneywise, Penywise, Pennywize, Penywise, Penneywize, Penneywize, Penywize, Penywise, Pennywisse, Penneywisse, Pennnywize, Penywis, Penneywis, Penneywisse, Penywis, Pennywisse"
         />
-      </head>
-      <Head />
+      </Head>
       <body className="bg-[#000B17]">
         <Main />
         <NextScript />
