@@ -48,16 +48,7 @@ const WaitlistForm = ({ closeModal }: WaitlistFormProps) => {
     resolver: yupResolver(WaitlistFormSchema),
   });
 
-  const [response, setResponse] = React.useState<Response | null>({
-    message: "Congratulations Toluwalope",
-    count: "You are number 1 on the waitlist",
-    data: {
-      email: "akinkunmitolulope23@gmailcom",
-      firstName: "Toluwalope",
-      lastName: "Akinkunmi",
-    },
-    success: true,
-  });
+  const [response, setResponse] = React.useState<Response | null>();
   const [error, setError] = React.useState(null);
 
   const router = useRouter();
