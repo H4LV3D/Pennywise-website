@@ -1,31 +1,23 @@
 import PageLayout from "@/layout/PageLayout";
 import { Table } from "@mantine/core";
 import Head from "next/head";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { getWaitlist } from "@/utils/requests/waitlist";
 import { WaitlistUser } from "@/typings/waitlist";
-import { showNotification } from "@mantine/notifications";
-import { RotatingLines } from "react-loader-spinner";
+// import { useQuery, useQueryClient } from "@tanstack/react-query";
+// import { showNotification } from "@mantine/notifications";
+// import { RotatingLines } from "react-loader-spinner";
+import React from "react";
 
-export default function Contact() {
-  const { data, isLoading, isError, error } = useQuery({
-    queryKey: ["waitlist"],
-    queryFn: async () => {
-      const res = await getWaitlist();
-      return res.data.data as WaitlistUser[];
+export const getStaticProps = async () => {
+  const res = await getWaitlist();
+  return {
+    props: {
+      waitlist: res.data.data,
     },
-    enabled: true,
-    refetchOnWindowFocus: true,
-  });
+  };
+};
 
-  if (isError) {
-    showNotification({
-      title: "Error fetching waitlist.",
-      message: error.message,
-      color: "red",
-    });
-  }
-
+export default function Contact({ waitlist }: { waitlist: WaitlistUser[] }) {
   const ths = (
     <tr className="!text-brand-white font-[400] ">
       <th className="!text-brand-white font-[400]">No.</th>
@@ -39,10 +31,10 @@ export default function Contact() {
     </tr>
   );
 
-  const rows = data?.map((element, index) => (
+  const rows = waitlist?.map((element, index) => (
     <tr
       className="text-neutral-300 hover:font-[500] hover:text-brand-blue  "
-      key={element?.firstName}
+      key={element?.email}
     >
       <td className="!border-neutral-500">{index + 1}</td>
       <td className="!border-neutral-500 hidden sm:table-cell ">
@@ -55,8 +47,6 @@ export default function Contact() {
     </tr>
   ));
 
-  const queryClient = useQueryClient();
-
   return (
     <>
       <Head>
@@ -65,7 +55,7 @@ export default function Contact() {
       <PageLayout>
         <div className=" min-h-[75vh]  ">
           <div className="pt-12 ">
-            <h5 className="text-sm sm:text-base tracking-wide font-[500] uppercase tracking-wide text-brand-blue dark:text-neutral-200">
+            <h5 className="text-sm sm:text-base tracking-wide font-[500] uppercase text-brand-blue dark:text-neutral-200">
               Wait list
             </h5>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl mt-0.5 font-bold text-brand-blue dark:text-brand-white">
@@ -76,12 +66,8 @@ export default function Contact() {
               possible. Thank you for your patience.
             </p>
           </div>
-          <div
-            className={`my-10 ${
-              !isLoading && !isError && "border-b"
-            } text-brand-white `}
-          >
-            {!isLoading && !isError && data?.length! > 0 && (
+          <div className={`my-10 "border-b text-brand-white `}>
+            {waitlist?.length > 0 && (
               <Table
                 className="hover:bg-opacity-20 border-neutral-500 dark:border-neutral-500"
                 highlightOnHover
@@ -95,7 +81,7 @@ export default function Contact() {
                 <tbody>{rows}</tbody>
               </Table>
             )}
-            {isLoading && (
+            {/* {isLoading && (
               <div className="min-h-[30vh] w-full flex items-center justify-center ">
                 <div className="flex space-x-4 items-center ">
                   <RotatingLines
@@ -125,7 +111,7 @@ export default function Contact() {
                   </button>
                 </div>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </PageLayout>
