@@ -8,7 +8,16 @@ import { WaitlistUser } from "@/typings/waitlist";
 // import { RotatingLines } from "react-loader-spinner";
 import React from "react";
 
-export const getStaticProps = async () => {
+// export const getStaticProps = async () => {
+//   const res = await getWaitlist();
+//   return {
+//     props: {
+//       waitlist: res.data.data,
+//     },
+//   };
+// };
+
+export const getServerSideProps = async () => {
   const res = await getWaitlist();
   return {
     props: {
