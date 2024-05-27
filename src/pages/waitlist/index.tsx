@@ -3,19 +3,7 @@ import { Table } from "@mantine/core";
 import Head from "next/head";
 import { getWaitlist } from "@/utils/requests/waitlist";
 import { WaitlistUser } from "@/typings/waitlist";
-// import { useQuery, useQueryClient } from "@tanstack/react-query";
-// import { showNotification } from "@mantine/notifications";
-// import { RotatingLines } from "react-loader-spinner";
 import React from "react";
-
-// export const getStaticProps = async () => {
-//   const res = await getWaitlist();
-//   return {
-//     props: {
-//       waitlist: res.data.data,
-//     },
-//   };
-// };
 
 export const getServerSideProps = async () => {
   const res = await getWaitlist();
@@ -26,7 +14,7 @@ export const getServerSideProps = async () => {
   };
 };
 
-export default function Contact({ waitlist }: { waitlist: WaitlistUser[] }) {
+export default function Waitlist({ waitlist }: { waitlist: WaitlistUser[] }) {
   const ths = (
     <tr className="!text-brand-white font-[400] ">
       <th className="!text-brand-white font-[400]">No.</th>
@@ -36,7 +24,7 @@ export default function Contact({ waitlist }: { waitlist: WaitlistUser[] }) {
       <th className="!text-brand-white font-[400] hidden sm:table-cell">
         Last Name
       </th>
-      <th className="!text-brand-white font-[400]">Email</th>
+      {/* <th className="!text-brand-white font-[400]">Email</th> */}
     </tr>
   );
 
@@ -52,7 +40,7 @@ export default function Contact({ waitlist }: { waitlist: WaitlistUser[] }) {
       <td className="!border-neutral-500 hidden sm:table-cell ">
         {element?.lastName}
       </td>
-      <td className="!border-neutral-500">{element?.email}</td>
+      {/* <td className="!border-neutral-500">{element?.email}</td> */}
     </tr>
   ));
 
