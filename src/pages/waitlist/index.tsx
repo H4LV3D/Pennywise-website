@@ -18,8 +18,8 @@ export default function Waitlist({ waitlist }: { waitlist: WaitlistUser[] }) {
   const ths = (
     <tr className="!text-brand-white font-[400] ">
       <th className="!text-brand-white font-[400]">No.</th>
-      <th className="!text-brand-white font-[400] hidden ">First Name</th>
-      <th className="!text-brand-white font-[400] hidden">Last Name</th>
+      <th className="!text-brand-white font-[400]">First Name</th>
+      <th className="!text-brand-white font-[400]">Last Name</th>
       {/* <th className="!text-brand-white font-[400]">Email</th> */}
     </tr>
   );
