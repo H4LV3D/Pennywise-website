@@ -18,12 +18,8 @@ export default function Waitlist({ waitlist }: { waitlist: WaitlistUser[] }) {
   const ths = (
     <tr className="!text-brand-white font-[400] ">
       <th className="!text-brand-white font-[400]">No.</th>
-      <th className="!text-brand-white font-[400] hidden sm:table-cell ">
-        First Name
-      </th>
-      <th className="!text-brand-white font-[400] hidden sm:table-cell">
-        Last Name
-      </th>
+      <th className="!text-brand-white font-[400] hidden ">First Name</th>
+      <th className="!text-brand-white font-[400] hidden">Last Name</th>
       {/* <th className="!text-brand-white font-[400]">Email</th> */}
     </tr>
   );
@@ -34,12 +30,8 @@ export default function Waitlist({ waitlist }: { waitlist: WaitlistUser[] }) {
       key={element?.email}
     >
       <td className="!border-neutral-500">{index + 1}</td>
-      <td className="!border-neutral-500 hidden sm:table-cell ">
-        {element?.firstName}
-      </td>
-      <td className="!border-neutral-500 hidden sm:table-cell ">
-        {element?.lastName}
-      </td>
+      <td className="!border-neutral-500">{element?.firstName}</td>
+      <td className="!border-neutral-500">{element?.lastName}</td>
       {/* <td className="!border-neutral-500">{element?.email}</td> */}
     </tr>
   ));
