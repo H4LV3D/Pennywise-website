@@ -114,7 +114,6 @@ import Head from "next/head";
 import { getWaitlist } from "@/utils/requests/waitlist";
 import { WaitlistUser } from "@/typings/waitlist";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { showNotification } from "@mantine/notifications";
 import { RotatingLines } from "react-loader-spinner";
 import React from "react";
 
