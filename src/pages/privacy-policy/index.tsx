@@ -14,12 +14,11 @@ const BlogPost = (props: Props) => {
     e.preventDefault();
 
     const element = document.getElementById(id);
-    const parent = document.getElementById("parent");
 
-    if (element && parent) {
+    if (element) {
       // Scroll the parent container instead of the window
-      parent.scrollTo({
-        top: element.offsetTop - 450, // Adjust the offset if needed
+      window.scrollTo({
+        top: element.offsetTop - 100, // Adjust the offset if needed
         behavior: "smooth",
       });
 
@@ -88,7 +87,7 @@ const BlogPost = (props: Props) => {
         <div className="mt-[5rem] mx-auto max-w-[1250px] px-6 sm:px-8 md:px-0 bg-[#000B17] ">
           <div id="top" className="space-y-1 min-h-[35vh] flex items-center ">
             <div className="space-y-2 max-w-lg ">
-              <h1 className="font-bricolageGrotesque text-3xl md:text-5xl font-[600] text-brand-blue dark:text-brand-white  ">
+              <h1 className="font-[600] text-3xl sm:text-4xl md:text-5xl dark:text-brand-whitet-brand-blue dark:text-brand-white tracking-wider  ">
                 Privacy Policy
               </h1>
               <p className="dark:text-neutral-300 text-[#222] tracking-wider mt-0.5 ">
@@ -97,8 +96,8 @@ const BlogPost = (props: Props) => {
             </div>
           </div>
 
-          <div className="flex justify-between space-x-8 ">
-            <div className="w-3/5 min-h-[1000px] h-[800vh] ">
+          <div className="flex  flex-col-reverse lg:flex-row justify-between lg:space-x-8 ">
+            <div className="lg:w-3/5 min-h-[1000px] h-[800vh] mt-8 lg:mt-0 ">
               <div className="w-full space-y-6 text-[#646464] dark:text-neutral-300 ">
                 <div className="space-y-2.5 mt-3.5 ">
                   <p className="leading-6 tracking-wider  mt-0.5 ">
@@ -115,12 +114,15 @@ const BlogPost = (props: Props) => {
                   </p>
                 </div>
 
-                <p className="font-bricolageGrotesque text-[21px] font-[500] text-brand-dark-blue/90  ">
+                <p
+                  id="interpretation-and-definitions"
+                  className="font-[500] text-[21px] font-[500]:text-br dark:text-brand-white text-brand-blue/90  "
+                >
                   Interpretation and Definitions
                 </p>
 
                 <div className="space-y-1.5">
-                  <p className="font-bricolageGrotesque font-[400] text-[19px] text-brand-dark-blue/80  ">
+                  <p className="font-[500] text-[19px] dark:text-brand-white text-brand-blue/80  ">
                     Interpretation
                   </p>
                   <p className="leading-6 tracking-wider  mt-0.5 ">
@@ -133,7 +135,7 @@ const BlogPost = (props: Props) => {
 
                 <div className="space-y-4 ">
                   <div className="space-y-1.5">
-                    <p className="font-bricolageGrotesque text-[19px] text-brand-dark-blue/80  ">
+                    <p className="font-[500] text-[19px] dark:text-brand-white text-brand-blue/80  ">
                       Definitions
                     </p>
                     <p className="leading-6 tracking-wider  mt-0.5 ">
@@ -143,9 +145,9 @@ const BlogPost = (props: Props) => {
 
                   <div className="space-y-4">
                     <p className="leading-6 tracking-wider  mt-0.5 ">
-                      <p className="font-[500] text-brand-dark-blue ">
+                      <span className="font-[500] text-brand-dark-blue ">
                         Account
-                      </p>{" "}
+                      </span>{" "}
                       means a unique account created for You to access our
                       Service or parts of our Service.
                     </p>
@@ -262,16 +264,19 @@ const BlogPost = (props: Props) => {
                   </div>
                 </div>
 
-                <p className="font-bricolageGrotesque text-[21px] text-brand-dark-blue/90  ">
+                <p
+                  id="collecting-and-using-your-personal-data"
+                  className="font-[500] text-[21px] dark:text-brand-white text-brand-blue/90  "
+                >
                   Collecting and Using Your Personal Data
                 </p>
 
-                <p className="font-bricolageGrotesque text-[19px] text-brand-dark-blue/90  ">
+                <p className="font-[500] text-[19px] dark:text-brand-white text-brand-blue/90  ">
                   Types of Data Collected
                 </p>
 
                 <div className="space-y-1.5">
-                  <p className="font-bricolageGrotesque text-[19px] text-brand-dark-blue/80  ">
+                  <p className="font-[400] text-[19px] dark:text-brand-white text-brand-blue/80  ">
                     Personal Data
                   </p>
                   <p className="leading-6 tracking-wider  mt-0.5 ">
@@ -281,28 +286,28 @@ const BlogPost = (props: Props) => {
                     information may include, but is not limited to:
                   </p>
 
-                  <div className="space-y-2 pt-3.5 ">
-                    <p className="text-body-text tracking-wider pl-4 ">
+                  <ul className="space-y-3 pt-3.5 pl-6 ">
+                    <li className="text-[#646464] dark:text-neutral-400 tracking-wider ">
                       Email Address
-                    </p>
-                    <p className="text-body-text tracking-wider pl-4 ">
+                    </li>
+                    <li className="text-[#646464] dark:text-neutral-400 tracking-wider ">
                       First and Last Names
-                    </p>
-                    <p className="text-body-text tracking-wider pl-4 ">
+                    </li>
+                    <li className="text-[#646464] dark:text-neutral-400 tracking-wider ">
                       Address, State, Province, ZIP/Postal code, City
-                    </p>
+                    </li>
 
-                    <p className="text-body-text tracking-wider pl-4 ">
+                    <li className="text-[#646464] dark:text-neutral-400 tracking-wider ">
                       Usage Data
-                    </p>
-                    <p className="text-body-text tracking-wider pl-4 ">
+                    </li>
+                    <li className="text-[#646464] dark:text-neutral-400 tracking-wider ">
                       Bank Account Number
-                    </p>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
 
-                <div className="space-y-1.5">
-                  <p className="font-bricolageGrotesque text-[19px] text-brand-dark-blue/80  ">
+                <div className="space-y-4">
+                  <p className="font-[500] text-[19px] text-brand-blue/80 dark:text-brand-white  ">
                     Usage Data
                   </p>
 
@@ -338,7 +343,7 @@ const BlogPost = (props: Props) => {
                 </div>
 
                 <div className="space-y-1.5">
-                  <p className="font-bricolageGrotesque text-[19px] text-brand-dark-blue/80  ">
+                  <p className="font-[500] text-[19px] text-brand-blue/80 dark:text-brand-white  ">
                     Tracking Technologies and Cookies
                   </p>
                   <p className="leading-6 tracking-wider  ">
@@ -351,7 +356,7 @@ const BlogPost = (props: Props) => {
 
                   <div className="py-2 pl-2">
                     <p className="leading-6 tracking-wider  ">
-                      <p className="font-bricolageGrotesque text-[16px] text-brand-dark-blue/80  ">
+                      <p className="font-[500] text-[16px] text-brand-blue/80 dark:text-brand-white  ">
                         Cookies or Browser Cookies
                       </p>{" "}
                       A cookie is a small file placed on Your Device. You can
@@ -365,7 +370,7 @@ const BlogPost = (props: Props) => {
 
                   <div className="py-2 pl-2">
                     <p className="leading-6 tracking-wider  ">
-                      <p className="font-bricolageGrotesque text-[16px] text-brand-dark-blue/80  ">
+                      <p className="font-[500] text-[16px] text-brand-blue/80 dark:text-brand-white  ">
                         Web Beacons
                       </p>{" "}
                       Certain sections of our Service and our emails may contain
@@ -398,7 +403,7 @@ const BlogPost = (props: Props) => {
                         fontFamily: "Bricolage Grotesque",
                         fontWeight: "500",
                       }}
-                      className="font-bricolageGrotesque text-[16px] text-brand-dark-blue/80  "
+                      className="font-[500] text-[16px] text-brand-blue/80 dark:text-brand-white  "
                     >
                       Necessary / Essential Cookies
                     </p>
@@ -428,7 +433,7 @@ const BlogPost = (props: Props) => {
                         fontFamily: "Bricolage Grotesque",
                         fontWeight: "500",
                       }}
-                      className="font-bricolageGrotesque text-[16px] text-brand-dark-blue/80  "
+                      className="font-[500] text-[16px] text-brand-blue/80 dark:text-brand-white  "
                     >
                       Cookies Policy / Notice Acceptance Cookies
                     </p>
@@ -453,7 +458,7 @@ const BlogPost = (props: Props) => {
                         fontFamily: "Bricolage Grotesque",
                         fontWeight: "500",
                       }}
-                      className="font-bricolageGrotesque text-[16px] text-brand-dark-blue/80  "
+                      className="font-[500] text-[16px] text-brand-blue/80 dark:text-brand-white  "
                     >
                       Functionality Cookies
                     </p>
@@ -484,7 +489,7 @@ const BlogPost = (props: Props) => {
                 </div>
 
                 <div className="space-y-4 ">
-                  <p className="font-bricolageGrotesque text-[19px] text-brand-dark-blue/80 font-[500]  ">
+                  <p className="font-[500] text-[19px] text-brand-blue/80 dark:text-brand-white  ">
                     Use of Your Personal Data
                   </p>
                   <p className="leading-6 tracking-wider  ">
@@ -492,18 +497,18 @@ const BlogPost = (props: Props) => {
                     purposes:
                   </p>
 
-                  <div className="py-2 pl-6 space-y-2 ">
+                  <div className="py-2 pl-10 space-y-2 ">
                     <p className="leading-6 tracking-wider  ">
-                      <p className="font-[700] text-black/80 ">
+                      <span className="font-[700]  ">
                         To provide and maintain our Service,
-                      </p>{" "}
+                      </span>{" "}
                       including to monitor the usage of our Service.
                     </p>
 
                     <p className="leading-6 tracking-wider  ">
-                      <p className="font-[700] text-black/80 ">
+                      <span className="font-[700]  ">
                         To manage Your Account:
-                      </p>{" "}
+                      </span>{" "}
                       to manage Your registration as a user of the Service. The
                       Personal Data You provide can give You access to different
                       functionalities of the Service that are available to You
@@ -511,9 +516,9 @@ const BlogPost = (props: Props) => {
                     </p>
 
                     <p className="leading-6 tracking-wider  ">
-                      <p className="font-[700] text-black/80 ">
+                      <span className="font-[700]  ">
                         For the performance of a contract:
-                      </p>{" "}
+                      </span>{" "}
                       the development, compliance and undertaking of the
                       purchase contract for the products, items or services You
                       have purchased or of any other contract with Us through
@@ -521,10 +526,8 @@ const BlogPost = (props: Props) => {
                     </p>
 
                     <p className="leading-6 tracking-wider  ">
-                      <p className="font-[700] text-black/80 ">
-                        To contact You:
-                      </p>{" "}
-                      To contact You by email, telephone calls, SMS, or other
+                      <span className="font-[700]  ">To contact You:</span> To
+                      contact You by email, telephone calls, SMS, or other
                       equivalent forms of electronic communication, such as a
                       mobile application&rsquo;s push notifications regarding
                       updates or informative communications related to the
@@ -534,9 +537,7 @@ const BlogPost = (props: Props) => {
                     </p>
 
                     <p className="leading-6 tracking-wider  ">
-                      <p className="font-[700] text-black/80 ">
-                        To provide You :
-                      </p>{" "}
+                      <span className="font-[700]  ">To provide You :</span>{" "}
                       with news, special offers and general information about
                       other goods, services and events which we offer that are
                       similar to those that you have already purchased or
@@ -545,9 +546,9 @@ const BlogPost = (props: Props) => {
                     </p>
 
                     <p className="leading-6 tracking-wider  ">
-                      <p className="font-[700] text-black/80 ">
+                      <span className="font-[700] ">
                         For business transfers:
-                      </p>{" "}
+                      </span>{" "}
                       We may use Your information to evaluate or conduct a
                       merger, divestiture, restructuring, reorganization,
                       dissolution, or other sale or transfer of some or all of
@@ -558,9 +559,7 @@ const BlogPost = (props: Props) => {
                     </p>
 
                     <p className="leading-6 tracking-wider  ">
-                      <p className="font-[700] text-black/80 ">
-                        For other purposes:
-                      </p>{" "}
+                      <span className="font-[700] ">For other purposes:</span>{" "}
                       We may use Your information for other purposes, such as
                       data analysis, identifying usage trends, determining the
                       effectiveness of our promotional campaigns and to evaluate
@@ -574,20 +573,20 @@ const BlogPost = (props: Props) => {
                     situations:
                   </p>
 
-                  <div className="py-2 pl-6 space-y-2 ">
+                  <div className="py-2 pl-10 space-y-2 ">
                     <p className="leading-6 tracking-wider  ">
-                      <p className="font-[700] text-black/80 ">
+                      <span className="font-[700] ">
                         With Service Providers:
-                      </p>{" "}
+                      </span>{" "}
                       We may share Your personal information with Service
                       Providers to monitor and analyze the use of our Service,
                       to contact You.
                     </p>
 
                     <p className="leading-6 tracking-wider  ">
-                      <p className="font-[700] text-black/80 ">
+                      <span className="font-[700] ">
                         For business transfers:
-                      </p>{" "}
+                      </span>{" "}
                       We may share or transfer Your personal information in
                       connection with, or during negotiations of, any merger,
                       sale of Company assets, financing, or acquisition of all
@@ -595,11 +594,9 @@ const BlogPost = (props: Props) => {
                     </p>
 
                     <p className="leading-6 tracking-wider  ">
-                      <p className="font-[700] text-black/80 ">
-                        With Affiliates:
-                      </p>{" "}
-                      We may share Your information with Our affiliates, in
-                      which case we will require those affiliates to honor this
+                      <span className="font-[700] ">With Affiliates:</span> We
+                      may share Your information with Our affiliates, in which
+                      case we will require those affiliates to honor this
                       Privacy Policy. Affiliates include Our parent company and
                       any other subsidiaries, joint venture partners or other
                       companies that We control or that are under common control
@@ -607,17 +604,15 @@ const BlogPost = (props: Props) => {
                     </p>
 
                     <p className="leading-6 tracking-wider  ">
-                      <p className="font-[700] text-black/80 ">
+                      <span className="font-[700] ">
                         With business partners:
-                      </p>{" "}
+                      </span>{" "}
                       We may share Your information with Our business partners
                       to offer You certain products, services or promotions.
                     </p>
 
                     <p className="leading-6 tracking-wider  ">
-                      <p className="font-[700] text-black/80 ">
-                        With other users:
-                      </p>{" "}
+                      <span className="font-[700] ">With other users:</span>{" "}
                       when You share personal information or otherwise interact
                       in the public areas with other users, such information may
                       be dived by all users and may be publicly distributed
@@ -625,17 +620,18 @@ const BlogPost = (props: Props) => {
                     </p>
 
                     <p className="leading-6 tracking-wider  ">
-                      <p className="font-[700] text-black/80 ">
-                        With Your consent:
-                      </p>{" "}
-                      We may disclose Your personal information for any other
+                      <span className="font-[700] ">With Your consent:</span> We
+                      may disclose Your personal information for any other
                       purpose with Your consent.
                     </p>
                   </div>
                 </div>
 
                 <div className="space-y-1.5">
-                  <p className="font-bricolageGrotesque text-[19px] text-brand-dark-blue/80 font-[500]  ">
+                  <p
+                    id="retention-of-your-personal-data"
+                    className="font-[500] text-[19px] text-brand-blue/80 dark:text-brand-white  "
+                  >
                     Retention of Your Personal Data
                   </p>
                   <p className="leading-6 tracking-wider  ">
@@ -658,7 +654,10 @@ const BlogPost = (props: Props) => {
                 </div>
 
                 <div className="space-y-4">
-                  <p className="font-bricolageGrotesque text-[19px] text-brand-dark-blue/80 font-[500]  ">
+                  <p
+                    id="transfer-of-your-personal-data"
+                    className="font-[500] text-[19px] text-brand-blue/80 dark:text-brand-white  "
+                  >
                     Transfer of Your Personal Data
                   </p>
                   <p className="leading-6 tracking-wider  ">
@@ -687,7 +686,10 @@ const BlogPost = (props: Props) => {
                 </div>
 
                 <div className="space-y-4">
-                  <p className="font-bricolageGrotesque text-[19px] text-brand-dark-blue/80 font-[500]  ">
+                  <p
+                    id="disclosure-of-your-personal-data"
+                    className="font-[500] text-[19px] text-brand-blue/80 dark:text-brand-white  "
+                  >
                     Delete Your Personal Data
                   </p>
                   <p className="leading-6 tracking-wider  ">
@@ -714,12 +716,16 @@ const BlogPost = (props: Props) => {
                 </div>
 
                 <div className="space-y-4">
-                  <p className="font-bricolageGrotesque text-[19px] text-brand-blue/80 dark:text-brand-white font-[500] ">
+                  <p
+                    id="disclosure-of-your-personal-data"
+                    className="font-[500] text-[19px] text-brand/80 dark dark:text-brand-white:text-brand-white "
+                  >
                     Disclosure Your Personal Data
                   </p>
 
                   <div className=" space-y-1.5 ">
-                    <p className="font-bricolageGrotesque text-[16px] text-black/70 ">
+                    <p className="font-[500] text-[16px] text-black dark:text-brand-white">
+                      {" "}
                       Business Transactions
                     </p>
                     <p className="leading-6 tracking-wider  ">
@@ -731,7 +737,7 @@ const BlogPost = (props: Props) => {
                   </div>
 
                   <div className=" space-y-1.5 ">
-                    <p className="font-bricolageGrotesque text-[16px] text-black/70 ">
+                    <p className="font-[500] text-[16px] text-black dark:text-brand-white ">
                       Law enforcement
                     </p>
                     <p className="leading-6 tracking-wider  ">
@@ -743,7 +749,7 @@ const BlogPost = (props: Props) => {
                   </div>
 
                   <div className=" space-y-1.5 ">
-                    <p className="font-bricolageGrotesque text-[16px] text-black/70 ">
+                    <p className="font-[500] text-[16px] text-black dark:text-brand-white     ">
                       Other legal requirements
                     </p>
                     <p className="leading-6 tracking-wider  ">
@@ -773,7 +779,7 @@ const BlogPost = (props: Props) => {
                   </div>
 
                   <div className=" space-y-1.5 ">
-                    <p className="font-bricolageGrotesque text-[16px] text-black/70 ">
+                    <p className="font-[500] text-[16px] text-black dark:text-brand-white">
                       Security of Your Personal Data
                     </p>
                     <p className="leading-6 tracking-wider  ">
@@ -788,7 +794,10 @@ const BlogPost = (props: Props) => {
                 </div>
 
                 <div className=" space-y-1.5 ">
-                  <p className="font-bricolageGrotesque text-[19px] text-brand-blue dark:text-brand-white font-[500] ">
+                  <p
+                    id="disclosure-of-your-personal-data"
+                    className="font-[500] text-[19px] text-brand dark:te dark:text-brand-whitext-brand-white "
+                  >
                     Children&rsquo;s Privacy
                   </p>
                   <p className="leading-6 tracking-wider  ">
@@ -810,7 +819,10 @@ const BlogPost = (props: Props) => {
                 </div>
 
                 <div className=" space-y-1.5 ">
-                  <p className="font-bricolageGrotesque text-[19px] text-brand-blue dark:text-brand-white font-[500] ">
+                  <p
+                    id="disclosure-of-your-personal-data"
+                    className="font-[500] text-[19px] text-brand dark:te dark:text-brand-whitext-brand-white "
+                  >
                     Links to Other Websites
                   </p>
                   <p className="leading-6 tracking-wider  ">
@@ -828,7 +840,10 @@ const BlogPost = (props: Props) => {
                 </div>
 
                 <div className=" space-y-1.5 ">
-                  <p className="font-bricolageGrotesque text-[19px] text-brand-blue dark:text-brand-white font-[500] ">
+                  <p
+                    id="changes-to-this-privacy-policy"
+                    className="font-[500] text-[19px] text-brand dark:te dark:text-brand-whitext-brand-white "
+                  >
                     Changes to this Privacy Policy
                   </p>
                   <p className="leading-6 tracking-wider  ">
@@ -850,7 +865,10 @@ const BlogPost = (props: Props) => {
                 </div>
 
                 <div className="space-y-1.5">
-                  <p className="font-bricolageGrotesque text-[19px] text-brand-dark-blue/80  ">
+                  <p
+                    id="contact-us"
+                    className="font-[500] text-[19px] text-brand-blue/80 dark:text-brand-white  "
+                  >
                     Contact Us
                   </p>
                   <p className="leading-6 tracking-wider  mt-0.5 ">
@@ -868,7 +886,7 @@ const BlogPost = (props: Props) => {
               </div>
             </div>
 
-            <div className="w-2/5 h-[60vh] overflow-auto sticky top-[10%] ">
+            <div className=" lg:w-2/5 h-[60vh] overflow-auto lg:sticky top-[10%] ">
               <div className=" bg-brand-blue bg-opacity-20 p-8 rounded-xl space-y-6 sticky top-0">
                 <h4 className="text-[1.25rem] font-[500] text-brand-blue dark:text-brand-white ">
                   Table of Contents
