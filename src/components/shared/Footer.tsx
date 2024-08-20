@@ -17,11 +17,11 @@ const footerData = {
     },
     {
       title: "Privacy Policy",
-      link: "",
+      link: "/privacy-policy",
     },
     {
       title: "Terms & Conditions",
-      link: "",
+      link: "terms-conditions",
     },
   ],
   resources: [

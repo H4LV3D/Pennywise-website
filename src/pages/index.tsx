@@ -4,14 +4,27 @@ import Head from "next/head";
 import data from "@/data/index.json";
 import TestimonialsSection from "@/components/shared/Testimonials";
 import React from "react";
-import Lottie from "lottie-react";
-import groovyWalkAnimation from "./Animation.json";
 import Link from "next/link";
 import WaitlistForm from "@/components/forms/Waitlist";
+import LottieComponent from "./Lottie";
+import dynamic from "next/dynamic";
 
 export default function Home() {
   const { features, why, FAQ } = data;
   const [isModalOpen, setIsModalOpen] = React.useState(false);
+
+  const DynamicLottie = dynamic(
+    () =>
+      Promise.resolve(() => (
+        <div className="relative">
+          <LottieComponent />
+        </div>
+      )),
+    {
+      ssr: false,
+    }
+  );
+
   return (
     <>
       <Head>
@@ -62,9 +75,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="relative ">
-              <Lottie animationData={groovyWalkAnimation} loop={true} />
-            </div>
+            <DynamicLottie />
           </div>
 
           <div className="py-20 min-h-[70vh] ">
