@@ -112,8 +112,8 @@ const index = (props: Props) => {
               <h1 className="font-[600] text-3xl md:text-5xl dark:text-brand-whitet-brand-blue dark:text-brand-white tracking-wider  ">
                 Terms & Conditions
               </h1>
-              <p className="dark:text-neutral-300 text-[#222] tracking-wider mt-0.5 ">
-                Please read these terms and conditions carefully before using
+              <p className="dark:text-brand-light-blue font-[400] text-base text-[#222] tracking-wider mt-0.5 ">
+                *Please read these terms and conditions carefully before using
                 Our Service.
               </p>
             </div>
