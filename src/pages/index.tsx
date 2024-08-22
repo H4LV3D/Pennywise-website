@@ -41,14 +41,14 @@ export default function Home() {
         <div className="max-w-[1250px] mx-auto overflow-hidden ">
           <div className="py-16 grid grid-cols-1 lg:grid-cols-2 place-items-center border-b dark:border-neutral-700 min-h-[80vh] ">
             <div className="space-y-4 ">
-              <h1 className="font-[800] text-[64px] leading-[60px] darktext-brand-blue text-brand-white ">
+              <h1 className="font-[800] text-[64px] leading-[60px] text-brand-blue dark:text-brand-white ">
                 Make The <br /> Best{" "}
-                <span className="text-brand-green ">
+                <span className="text-brand-light-blue dark:text-brand-green ">
                   Financial <br /> Decision
                 </span>{" "}
                 !
               </h1>
-              <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] max-w-lg tracking-wider  ">
+              <p className="text-[#646464] dark:text-neutral-400 text-[1rem] max-w-lg tracking-wider  ">
                 Saving and Expense tracking made easy with our app! Our
                 user-friendly interface and automated tracking streamlines the
                 process, while customizable expense tracking, savings and
@@ -66,8 +66,8 @@ export default function Home() {
                   <i className="fas fa-long-arrow-right fa-fw fa-lg text-white "></i>
                 </button>
                 <Link href="/about">
-                  <button className="py-3 rounded-[0.5rem] flex items-center space-x-2 text-brand-green ">
-                    <span className="h-8 w-8 border border-brand-green rounded-[50%] flex justify-center items-center ">
+                  <button className="py-3 rounded-[0.5rem] flex items-center space-x-2 text-brand-light-blue dark:text-brand-green ">
+                    <span className="h-8 w-8 border border-brand-light-blue dark:border-brand-green rounded-[50%] flex justify-center items-center ">
                       <i className="fas fa-play fa-fw fa-md pl-0.5 "></i>
                     </span>
                     <span>Learn More</span>
@@ -81,32 +81,32 @@ export default function Home() {
           <div className="py-20 min-h-[70vh] ">
             <div className=" space-y-8 ">
               <div>
-                <p className="uppercase text-[1.125rem] !tracking-widest text-brand-green dark:text-neutral-400 ">
+                <p className="uppercase text-[1.125rem] !tracking-widest text-brand-light-blue dark:text-neutral-400 ">
                   FEATURES
                 </p>
-                <h1 className="font-[800] text-[46px] leading-[60px] text-brand-blue dark:text-brand-green ">
+                <h1 className="font-[600] md:font-[800] text-[46px] leading-[60px] text-brand-blue dark:text-brand-green ">
                   Pennywise Premium
                 </h1>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
                 {features.map((item, index) => (
                   <div
-                    className="p-8 bg-brand-blue bg-opacity-20 rounded-2xl "
+                    className="p-8 bg-neutral-100 dark:bg-brand-blue dark:bg-opacity-20 rounded-2xl "
                     key={item.title}
                   >
                     <i
-                      className={`${item.icon} fa-2x fa-fw text-brand-white`}
+                      className={`${item.icon} fa-2x fa-fw text-brand-blue dark:text-brand-white`}
                     ></i>
                     <div className=" space-y-3 mt-24 ">
-                      <h5 className="font-[500] text-[1.325rem] dark:text-brand-white  ">
+                      <h5 className="font-[500] text-[1.325rem] text-brand-blue dark:text-brand-white  ">
                         {item.title}
                       </h5>
-                      <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] line-clamp-3  ">
+                      <p className="text-[#646464] dark:text-neutral-400 text-[1rem] line-clamp-3  ">
                         {item.body}
                       </p>
                     </div>
                     <div className="mt-6">
-                      <button className="text-base font-[500] text-brand-green pb-1 hover:border-b border-brand-green flex items-center ">
+                      <button className="text-base font-[500] text-brand-light-blue dark:text-brand-green pb-1 hover:border-b border-brand-green flex items-center ">
                         <span className=" ">Learn More</span>
                       </button>
                     </div>
@@ -118,10 +118,10 @@ export default function Home() {
 
           <div className="py-20 border-b dark:border-neutral-700 place-items-center min-h-[70vh] ">
             <div className="">
-              <p className="uppercase text-[1.125rem] !tracking-widest dark:text-neutral-400 ">
+              <p className="uppercase text-[1.125rem] !tracking-widest text-brand-light-blue dark:text-neutral-400 ">
                 Advantages
               </p>
-              <h1 className="font-[800] text-[46px] leading-[60px] text-brand-blue dark:text-brand-green  ">
+              <h1 className="font-[600] md:font-[800] text-[46px] leading-[60px] text-brand-blue dark:text-brand-green ">
                 Why choose Pennywise?
               </h1>
             </div>
@@ -130,16 +130,20 @@ export default function Home() {
                 <div
                   key={index}
                   className={`${
-                    index % 2 === 1 ? "bg-brand-blue bg-opacity-20 " : ""
-                  }  space-y-4 border border-neutral-700 p-6 md:p-14 rounded-xl `}
+                    index % 2 === 1
+                      ? "bg-brand dark:bg-brand-blue dark:bg-opacity-20 "
+                      : ""
+                  } space-y-2 md:space-y-4 border border-neutral-200 dark:border-neutral-700 p-6 md:p-14 rounded-xl `}
                 >
-                  <div className="flex space-x-2 items-center dark:text-brand-white">
+                  <div className="flex flex-col md:flex-row space-y-3 md:space-x-2 md:items-center dark:text-brand-white">
                     <span className="h-[2rem] w-[2rem] border border-black dark:border-brand-white rounded-[50%] flex justify-center items-center flex-shrink-0 ">
                       <i className="fas fa-bell fa-sm fa-fw"></i>
                     </span>
-                    <h5 className="font-[500] text-[1.4rem]  ">{item.title}</h5>
+                    <h5 className="font-[500] text-[1.25rem] md:text-[1.4rem]  ">
+                      {item.title}
+                    </h5>
                   </div>
-                  <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem] text-justify max-w-md  ">
+                  <p className="text-[#646464] dark:text-neutral-400 text-[1rem] text-justify max-w-md  ">
                     {item.body}
                   </p>
                 </div>
@@ -151,10 +155,10 @@ export default function Home() {
 
           <div className="py-16 xl:w-[950px] mx-auto">
             <div className="">
-              <p className="uppercase text-[1.125rem] !tracking-widest dark:text-neutral-400 ">
+              <p className="uppercase text-[1.125rem] !tracking-widest text-brand-light-blue dark:text-neutral-400 ">
                 FAQ
               </p>
-              <h1 className="font-[800] text-[40px] sm:text-[46px] leading-[48px] w-[28rem] text-brand-blue dark:text-brand-green ">
+              <h1 className="font-[600] md:font-[800] text-[40px] sm:text-[46px] leading-[48px] w-[28rem] text-brand-blue dark:text-brand-green ">
                 Frequently Asked Questions
               </h1>
             </div>
@@ -164,7 +168,7 @@ export default function Home() {
                   <div
                     className={`space-y-2 mx-auto py-6 md:p-8 rounded-lg ${
                       index === 0 || index === 3 || index === 4
-                        ? "bg-brand-blue bg-opacity-20 text-brand-white"
+                        ? "bg- dark:bg-brand-blue dark:bg-opacity-20 text-brand-blue "
                         : " dark:text-brand-white "
                     }  `}
                     key={index}
@@ -172,7 +176,7 @@ export default function Home() {
                     <h5 className="font-[500] text-[1.3rem] line-clamp-1 hover:line-clamp-none ">
                       {item.question}
                     </h5>
-                    <p className="text-[1rem] line-clamp-3 hover:line-clamp-none  ">
+                    <p className="text-[1rem] line-clamp-3 hover:line-clamp-none text-[#646464]  ">
                       {item.answer}
                     </p>
                   </div>
@@ -182,10 +186,10 @@ export default function Home() {
           </div>
 
           <div className="py-16 mx-auto">
-            <div className="bg-brand-blue bg-opacity-20 p-6 sm:pl-16 h-[40vh] w-full rounded-2xl flex items-center overflow-hidden ">
+            <div className="bg-brand-blue dark:bg-opacity-20 p-6 sm:pl-16 h-[40vh] w-full rounded-2xl flex items-center overflow-hidden ">
               <div className="flex items-center w-full lg:w-[950px] mx-auto overflow-hidden ">
-                <div className="text-white ">
-                  <h3 className="text-[2.25rem] font-[600] ">
+                <div className=" ">
+                  <h3 className=" text-[1.95rem] md:text-[2.25rem] !font-[500] md:font-[600] text-white">
                     Get Started Today!
                   </h3>
 
@@ -193,7 +197,7 @@ export default function Home() {
                     <p className="text-brand-white text-lg font-[500] ">
                       Download Now
                     </p>
-                    <div className="flex items-center space-x-4 mt-2">
+                    <div className="flex items-center space-x-5 mt-2">
                       <button className=" text-brand-white h-[2.5rem] w-[2.5rem] rounded-[2.5rem] border flex justify-center items-center">
                         <i className="fab fa-apple fa-fw fa-lg "></i>
                       </button>

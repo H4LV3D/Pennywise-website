@@ -84,7 +84,7 @@ const BlogPost = (props: Props) => {
 
       <>
         <Navbar />
-        <div className="mt-[5rem] mx-auto max-w-[1250px] px-6 sm:px-8 md:px-0 bg-[#000B17] ">
+        <div className="mt-[5rem] mx-auto max-w-[1250px] px-6 sm:px-8 md:px-0 dark:bg-[#000B17] ">
           <div id="top" className="space-y-1 min-h-[35vh] flex items-center ">
             <div className="space-y-2 max-w-lg ">
               <h1 className="font-[600] text-3xl sm:text-4xl md:text-5xl dark:text-brand-whitet-brand-blue dark:text-brand-white tracking-wider  ">
@@ -97,7 +97,7 @@ const BlogPost = (props: Props) => {
           </div>
 
           <div className="flex  flex-col-reverse lg:flex-row justify-between lg:space-x-8 ">
-            <div className="lg:w-3/5 min-h-[1000px] h-[800vh] mt-8 lg:mt-0 ">
+            <div className="lg:w-3/5 min-h-[1000px] md:h-[800vh] mt-8 lg:mt-0 ">
               <div className="w-full space-y-6 text-[#646464] dark:text-neutral-300 ">
                 <div className="space-y-2.5 mt-3.5 ">
                   <p className="leading-6 tracking-wider  mt-0.5 ">
@@ -116,13 +116,13 @@ const BlogPost = (props: Props) => {
 
                 <p
                   id="interpretation-and-definitions"
-                  className="font-[500] text-[21px] font-[500]:text-br dark:text-brand-white text-brand-blue/90  "
+                  className="font-[500] text-[21px] font-[500]:text-br dark:text-brand-white text-brand-blue  "
                 >
                   Interpretation and Definitions
                 </p>
 
                 <div className="space-y-1.5">
-                  <p className="font-[500] text-[19px] dark:text-brand-white text-brand-blue/80  ">
+                  <p className="font-[500] text-[19px] dark:text-brand-white text-brand-blue  ">
                     Interpretation
                   </p>
                   <p className="leading-6 tracking-wider  mt-0.5 ">
@@ -135,7 +135,7 @@ const BlogPost = (props: Props) => {
 
                 <div className="space-y-4 ">
                   <div className="space-y-1.5">
-                    <p className="font-[500] text-[19px] dark:text-brand-white text-brand-blue/80  ">
+                    <p className="font-[500] text-[19px] dark:text-brand-white text-brand-blue  ">
                       Definitions
                     </p>
                     <p className="leading-6 tracking-wider  mt-0.5 ">
@@ -153,9 +153,9 @@ const BlogPost = (props: Props) => {
                     </p>
 
                     <p className="leading-6 tracking-wider  mt-0.5 ">
-                      <p className="font-[500] text-brand-dark-blue ">
+                      <span className="font-[500] text-brand-dark-blue ">
                         Affiliate
-                      </p>{" "}
+                      </span>{" "}
                       means an entity that controls, is controlled by or is
                       under common control with a party, where &#34;control&#34;
                       means ownership of 50% or more of the shares, equity
@@ -164,17 +164,17 @@ const BlogPost = (props: Props) => {
                     </p>
 
                     <p className="leading-6 tracking-wider  mt-0.5 ">
-                      <p className="font-[500] text-brand-dark-blue ">
+                      <span className="font-[500] text-brand-dark-blue ">
                         Application
-                      </p>{" "}
+                      </span>{" "}
                       refers to Pennywise, the software program provided by the
                       Company.
                     </p>
 
                     <p className="leading-6 tracking-wider  mt-0.5 ">
-                      <p className="font-[500] text-brand-dark-blue ">
+                      <span className="font-[500] text-brand-dark-blue ">
                         Company
-                      </p>{" "}
+                      </span>{" "}
                       (referred to as either &quot;the Company&quot;,
                       &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this
                       Agreement) refers to PENNYTECH @JETS GLOBAL LIMITED, 6
@@ -182,9 +182,9 @@ const BlogPost = (props: Props) => {
                     </p>
 
                     <p className="leading-6 tracking-wider  mt-0.5 ">
-                      <p className="font-[500] text-brand-dark-blue ">
+                      <span className="font-[500] text-brand-dark-blue ">
                         Cookies
-                      </p>{" "}
+                      </span>{" "}
                       are small files that are placed on Your computer, mobile
                       device or any other device by a website, containing the
                       details of Your browsing history on that website among its
@@ -192,37 +192,39 @@ const BlogPost = (props: Props) => {
                     </p>
 
                     <p className="leading-6 tracking-wider  mt-0.5 ">
-                      <p className="font-[500] text-brand-dark-blue ">
+                      <span className="font-[500] text-brand-dark-blue ">
                         Country
-                      </p>{" "}
+                      </span>{" "}
                       refers to: Nigeria
                     </p>
 
                     <p className="leading-6 tracking-wider  mt-0.5 ">
-                      <p className="font-[500] text-brand-dark-blue ">Device</p>{" "}
+                      <span className="font-[500] text-brand-dark-blue ">
+                        Device
+                      </span>{" "}
                       means any device that can access the Service such as a
                       computer, a cellphone or a digital tablet.
                     </p>
 
                     <p className="leading-6 tracking-wider  mt-0.5 ">
-                      <p className="font-[500] text-brand-dark-blue ">
+                      <span className="font-[500] text-brand-dark-blue ">
                         Personal Data
-                      </p>{" "}
+                      </span>{" "}
                       is any information that relates to an identified or
                       identifiable individual.
                     </p>
 
                     <p className="leading-6 tracking-wider  mt-0.5 ">
-                      <p className="font-[500] text-brand-dark-blue ">
+                      <span className="font-[500] text-brand-dark-blue ">
                         Service
-                      </p>{" "}
+                      </span>{" "}
                       refers to the Application or the Website or both.
                     </p>
 
                     <p className="leading-6 tracking-wider  mt-0.5 ">
-                      <p className="font-[500] text-brand-dark-blue ">
+                      <span className="font-[500] text-brand-dark-blue ">
                         Service Provider
-                      </p>{" "}
+                      </span>{" "}
                       means any natural or legal person who processes the data
                       on behalf of the Company. It refers to third-party
                       companies or individuals employed by the Company to
@@ -233,9 +235,9 @@ const BlogPost = (props: Props) => {
                     </p>
 
                     <p className="leading-6 tracking-wider  mt-0.5 ">
-                      <p className="font-[500] text-brand-dark-blue ">
+                      <span className="font-[500] text-brand-dark-blue ">
                         Usage Data
-                      </p>{" "}
+                      </span>{" "}
                       refers to data collected automatically, either generated
                       by the use of the Service or from the Service
                       infrastructure itself (for example, the duration of a page
@@ -243,9 +245,9 @@ const BlogPost = (props: Props) => {
                     </p>
 
                     <p className="leading-6 tracking-wider  mt-0.5 ">
-                      <p className="font-[500] text-brand-dark-blue ">
+                      <span className="font-[500] text-brand-dark-blue ">
                         Website
-                      </p>{" "}
+                      </span>{" "}
                       refers to Pennywise, accessible from{" "}
                       <Link href="https://www.iampennywise.com">
                         <span className="dark:text-brand-light-blue dark:hover:text-brand-green hover:text-brand-white text-brand-blue ">
@@ -255,7 +257,9 @@ const BlogPost = (props: Props) => {
                     </p>
 
                     <p className="leading-6 tracking-wider  mt-0.5 ">
-                      <p className="font-[500] text-brand-dark-blue ">You</p>{" "}
+                      <span className="font-[500] text-brand-dark-blue ">
+                        You
+                      </span>{" "}
                       means the individual accessing or using the Service, or
                       the company, or other legal entity on behalf of which such
                       individual is accessing or using the Service, as
@@ -276,7 +280,7 @@ const BlogPost = (props: Props) => {
                 </p>
 
                 <div className="space-y-1.5">
-                  <p className="font-[400] text-[19px] dark:text-brand-white text-brand-blue/80  ">
+                  <p className="font-[400] text-[19px] dark:text-brand-white text-brand-blue  ">
                     Personal Data
                   </p>
                   <p className="leading-6 tracking-wider  mt-0.5 ">
@@ -307,7 +311,7 @@ const BlogPost = (props: Props) => {
                 </div>
 
                 <div className="space-y-4">
-                  <p className="font-[500] text-[19px] text-brand-blue/80 dark:text-brand-white  ">
+                  <p className="font-[500] text-[19px] text-brand-blue dark:text-brand-white  ">
                     Usage Data
                   </p>
 
@@ -343,7 +347,7 @@ const BlogPost = (props: Props) => {
                 </div>
 
                 <div className="space-y-1.5">
-                  <p className="font-[500] text-[19px] text-brand-blue/80 dark:text-brand-white  ">
+                  <p className="font-[500] text-[19px] text-brand-blue dark:text-brand-white  ">
                     Tracking Technologies and Cookies
                   </p>
                   <p className="leading-6 tracking-wider  ">
@@ -355,8 +359,8 @@ const BlogPost = (props: Props) => {
                   </p>
 
                   <div className="py-2 pl-2">
-                    <p className="leading-6 tracking-wider  ">
-                      <p className="font-[500] text-[16px] text-brand-blue/80 dark:text-brand-white  ">
+                    <span className="leading-6 tracking-wider  ">
+                      <p className="font-[500] text-[16px] text-brand-blue dark:text-brand-white  ">
                         Cookies or Browser Cookies
                       </p>{" "}
                       A cookie is a small file placed on Your Device. You can
@@ -365,14 +369,14 @@ const BlogPost = (props: Props) => {
                       Cookies, You may not be able to use some parts of our
                       Service. Unless you have adjusted Your browser setting so
                       that it will refuse Cookies, our Service may use Cookies.
-                    </p>
+                    </span>
                   </div>
 
                   <div className="py-2 pl-2">
                     <p className="leading-6 tracking-wider  ">
-                      <p className="font-[500] text-[16px] text-brand-blue/80 dark:text-brand-white  ">
+                      <span className="font-[500] text-[16px] text-brand-blue dark:text-brand-white  ">
                         Web Beacons
-                      </p>{" "}
+                      </span>{" "}
                       Certain sections of our Service and our emails may contain
                       small electronic files known as web beacons (also referred
                       to as clear gifs, pixel tags, and single-pixel gifs) that
@@ -403,7 +407,7 @@ const BlogPost = (props: Props) => {
                         fontFamily: "Bricolage Grotesque",
                         fontWeight: "500",
                       }}
-                      className="font-[500] text-[16px] text-brand-blue/80 dark:text-brand-white  "
+                      className="font-[500] text-[16px] text-brand-blue dark:text-brand-white  "
                     >
                       Necessary / Essential Cookies
                     </p>
@@ -433,7 +437,7 @@ const BlogPost = (props: Props) => {
                         fontFamily: "Bricolage Grotesque",
                         fontWeight: "500",
                       }}
-                      className="font-[500] text-[16px] text-brand-blue/80 dark:text-brand-white  "
+                      className="font-[500] text-[16px] text-brand-blue dark:text-brand-white  "
                     >
                       Cookies Policy / Notice Acceptance Cookies
                     </p>
@@ -458,7 +462,7 @@ const BlogPost = (props: Props) => {
                         fontFamily: "Bricolage Grotesque",
                         fontWeight: "500",
                       }}
-                      className="font-[500] text-[16px] text-brand-blue/80 dark:text-brand-white  "
+                      className="font-[500] text-[16px] text-brand-blue dark:text-brand-white  "
                     >
                       Functionality Cookies
                     </p>
@@ -489,7 +493,7 @@ const BlogPost = (props: Props) => {
                 </div>
 
                 <div className="space-y-4 ">
-                  <p className="font-[500] text-[19px] text-brand-blue/80 dark:text-brand-white  ">
+                  <p className="font-[500] text-[19px] text-brand-blue dark:text-brand-white  ">
                     Use of Your Personal Data
                   </p>
                   <p className="leading-6 tracking-wider  ">
@@ -630,7 +634,7 @@ const BlogPost = (props: Props) => {
                 <div className="space-y-1.5">
                   <p
                     id="retention-of-your-personal-data"
-                    className="font-[500] text-[19px] text-brand-blue/80 dark:text-brand-white  "
+                    className="font-[500] text-[19px] text-brand-blue dark:text-brand-white  "
                   >
                     Retention of Your Personal Data
                   </p>
@@ -656,7 +660,7 @@ const BlogPost = (props: Props) => {
                 <div className="space-y-4">
                   <p
                     id="transfer-of-your-personal-data"
-                    className="font-[500] text-[19px] text-brand-blue/80 dark:text-brand-white  "
+                    className="font-[500] text-[19px] text-brand-blue dark:text-brand-white  "
                   >
                     Transfer of Your Personal Data
                   </p>
@@ -688,7 +692,7 @@ const BlogPost = (props: Props) => {
                 <div className="space-y-4">
                   <p
                     id="disclosure-of-your-personal-data"
-                    className="font-[500] text-[19px] text-brand-blue/80 dark:text-brand-white  "
+                    className="font-[500] text-[19px] text-brand-blue dark:text-brand-white  "
                   >
                     Delete Your Personal Data
                   </p>
@@ -796,7 +800,7 @@ const BlogPost = (props: Props) => {
                 <div className=" space-y-1.5 ">
                   <p
                     id="disclosure-of-your-personal-data"
-                    className="font-[500] text-[19px] text-brand dark:te dark:text-brand-whitext-brand-white "
+                    className="font-[500] text-[19px] text-brand-blue dark:text-brand-white  "
                   >
                     Children&rsquo;s Privacy
                   </p>
@@ -821,7 +825,7 @@ const BlogPost = (props: Props) => {
                 <div className=" space-y-1.5 ">
                   <p
                     id="disclosure-of-your-personal-data"
-                    className="font-[500] text-[19px] text-brand dark:te dark:text-brand-whitext-brand-white "
+                    className="font-[500] text-[19px] text-brand-blue dark:text-brand-white "
                   >
                     Links to Other Websites
                   </p>
@@ -842,7 +846,7 @@ const BlogPost = (props: Props) => {
                 <div className=" space-y-1.5 ">
                   <p
                     id="changes-to-this-privacy-policy"
-                    className="font-[500] text-[19px] text-brand dark:te dark:text-brand-whitext-brand-white "
+                    className="font-[500] text-[19px] text-brand-blue dark:text-brand-white "
                   >
                     Changes to this Privacy Policy
                   </p>
@@ -867,7 +871,7 @@ const BlogPost = (props: Props) => {
                 <div className="space-y-1.5">
                   <p
                     id="contact-us"
-                    className="font-[500] text-[19px] text-brand-blue/80 dark:text-brand-white  "
+                    className="font-[500] text-[19px] text-brand-blue dark:text-brand-white  "
                   >
                     Contact Us
                   </p>
@@ -882,12 +886,12 @@ const BlogPost = (props: Props) => {
                   </p>
                 </div>
 
-                <div className="pb-20"></div>
+                {/* <div className="pb-0"></div> */}
               </div>
             </div>
 
             <div className=" lg:w-2/5 h-[60vh] overflow-auto lg:sticky top-[10%] ">
-              <div className=" bg-brand-blue bg-opacity-20 p-8 rounded-xl space-y-6 sticky top-0">
+              <div className="bg-neutral-100 dark:bg-brand-blue dark:bg-opacity-20 p-8 rounded-xl space-y-6 sticky top-0">
                 <h4 className="text-[1.25rem] font-[500] text-brand-blue dark:text-brand-white ">
                   Table of Contents
                 </h4>

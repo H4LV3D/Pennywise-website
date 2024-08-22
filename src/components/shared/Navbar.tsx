@@ -3,6 +3,7 @@ import { usePathname } from "next/navigation";
 import BrandLogo from "./Logo";
 import Link from "next/link";
 import WaitlistForm from "../forms/Waitlist";
+import Image from "next/image";
 
 type Props = {};
 
@@ -22,14 +23,24 @@ function Header({}: Props) {
   return (
     <>
       {isModalOpen && <WaitlistForm closeModal={setIsModalOpen} />}
-      <div className="fixed top-0 left-0 w-full dark:bg-[#000B17] bg-opacity-75 z-40">
-        <div className="px-6 md:px-0 md:container mx-auto xl:w-[1250px] h-20 ">
+      <div className="fixed top-0 left-0 w-full bg-neutral-50 dark:bg-[#000B17] dark:bg-opacity-75 z-40">
+        <div className="px-6 md:px-0 md:container mx-auto xl:w-[1250px] md:h-20 ">
           <div
-            className={`flex items-center justify-between py-5 md:py-3   shadow-sm `}
+            className={`flex items-center justify-between py-5 md:py-3 md:shadow-sm `}
           >
             <div className="flex items-center lg:space-x-6 text-black dark:text-neutral-400">
               <div className="hidden lg:block group relative dark:border-gray-600 dark:text-neutral-300 cursor-pointer">
-                <BrandLogo />
+                <span className="hidden dark:block ">
+                  <BrandLogo />
+                </span>
+                <Image
+                  src={`/assets/images/logo/monochrome.svg`}
+                  width={180}
+                  height={60}
+                  alt=""
+                  priority={true}
+                />
+
                 <p className="opacity-0 bg-black dark:bg-neutral-900 dark:text-neutral-400 text-white text-center text-xs rounded-lg py-2 absolute z-40 group-hover:opacity-100 top-full -left-4 mt-4 px-4 pointer-events-none">
                   Home
                 </p>
@@ -58,7 +69,7 @@ function Header({}: Props) {
                       data-aos-delay={index * 100}
                       className={`w-full p-2  ${
                         path === item.link
-                          ? "text-lg text-brand-green font-[600] dark:text-brand-green "
+                          ? "text-lg text-brand-blue font-[600] dark:text-brand-green "
                           : "text-lg text-neutral-400 dark:hover:text-white  hover:text-black "
                       }  
                        `}
@@ -87,7 +98,7 @@ function Header({}: Props) {
         {
           // Mobile Menu
           isMenuOpen && (
-            <div className="w-full p-6 md:container mx-auto lg:hidden border-b border-brand-green rounded-b-2xl shadow-lg ">
+            <div className="w-full p-6 md:container mx-auto lg:hidden border-b border-brand-blue dark:border-brand-green rounded-b-2xl shadow-lg ">
               <div className="grid grid-cols-1 space-y-3">
                 {navItems.map((item, index) => (
                   <Link
@@ -95,7 +106,7 @@ function Header({}: Props) {
                     key={index}
                     data-aos="fade-down"
                     data-aos-delay={index * 100}
-                    className={`w-full p-2  ${
+                    className={`w-full p-2 ${
                       path === item.link
                         ? "text-xl text-brand-green font-[600] dark:text-brand-green "
                         : "text-xl text-neutral-400 dark:hover:text-white  hover:text-black "

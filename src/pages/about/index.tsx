@@ -20,7 +20,7 @@ export default function About() {
       </Head>
       {isModalOpen && <WaitlistForm closeModal={setIsModalOpen} />}
       <PageLayout>
-        <div className="">
+        <>
           <div className="mt-[1rem] md:mt-0 py-20 px-0 sm:px-12 grid grid-cols-1 lg:grid-cols-2 lg:place-items-center  border-brand-green border-opacity-40 rounded-xl min-h-[60vh] ">
             <div className="space-y-3 w-full">
               <h1 className="text-5xl md:text-6xl font-bold text-brand-blue dark:text-brand-white">
@@ -51,17 +51,17 @@ export default function About() {
             </div>
           </div>
 
-          <div className="py-20 lg:w-[950px] mx-auto place-items-center min-h-[60vh] ">
+          <div className="py-10 md:py-20 lg:w-[950px] mx-auto place-items-center min-h-[60vh] ">
             <div className="md:text-center">
-              <p className="uppercase text-[1.125rem] !tracking-widest dark:text-neutral-400 ">
+              <p className="uppercase text-brand-light-blue text-base md:text-[1.125rem] !tracking-widest dark:text-neutral-400 ">
                 Our story
               </p>
-              <h1 className="font-[800] text-[46px] leading-[60px] text-brand-blue dark:text-brand-green  ">
+              <h1 className="font-[600] md:font-[800] text-[40px] md:text-[46px] leading-[60px] text-brand-blue dark:text-brand-green  ">
                 Who Are We?
               </h1>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-6 my-6 md:my-10 ">
-              <p className="text-brand-white md:p-8 text-[1.05rem] text-justify !leading-7 tracking-wide  ">
+              <p className=" text-[#646464] dark:text-brand-white md:p-8 text-[1.05rem] text-justify !leading-7 tracking-wide  ">
                 Pennywise is a personal finance app that{" "}
                 <span className="text-brand-light-blue ">
                   {" "}
@@ -81,7 +81,7 @@ export default function About() {
                 to provide personalized financial insights and recommendations
                 to users.
               </p>
-              <p className="text-brand-white md:p-8 text-[1.05rem] text-justify !leading-7 tracking-wide ">
+              <p className="text-[#646464] dark:text-brand-white md:p-8 text-[1.05rem] text-justify !leading-7 tracking-wide ">
                 As we evolve, we look beyond just a finance app to becoming a
                 community allowing users share success stories, tips, and
                 strategies for saving money and managing expenses effectively.
@@ -93,21 +93,21 @@ export default function About() {
             </div>
           </div>
 
-          <div className="py-20 lg:w-[950px] mx-auto place-items-center min-h-[70vh] ">
-            <div className=" bg-brand-green bg-opacity-45 rounded-xl p-8 min-h-[45vh] grid place-items-center ">
-              <div className="text-center space-y-4 ">
-                <p className="uppercase text-[1.75rem] font-[400] !tracking-widest text-brand-white ">
+          <div className="py-10 md:py-20 lg:w-[950px] mx-auto place-items-center md:min-h-[70vh] ">
+            <div className="bg-brand-blue dark:bg-brand-green dark:bg-opacity-45 rounded-xl p-8 min-h-[45vh] grid place-items-center ">
+              <div className="text-start md:text-center space-y-4 ">
+                <p className="uppercase text-[1.75rem] font-[500] !tracking-widest text-brand-white ">
                   Mission & Vision
                 </p>
-                <p className="text-center mx-auto text-[1.125rem] font-[400] max-w-lg  text-brand-white ">
-                  <span className="font-[500] ">
+                <p className="md:text-center md:mx-auto text-[1rem] tracking-wider leading-7 md:text-[1.125rem] font-[400] max-w-lg  text-brand-white ">
+                  <span className="font-[500] text-brand-light-blue ">
                     Empowering Financial Freedom for Every Individual
                   </span>{" "}
                   by Revolutionizing personal finance and seamlessly integrating
                   technology with financial expertise.
                 </p>
 
-                <h4 className="font-[600] text-2xl leading-[60px] text-brand-white  ">
+                <h4 className="font-[500] text-2xl leading-[60px] text-brand-white  ">
                   ~ Pennywise
                 </h4>
               </div>
@@ -116,10 +116,10 @@ export default function About() {
 
           <div className="py-20 w-full lg:w-[850px] mx-auto place-items-center min-h-[70vh] ">
             <div className="md:text-center">
-              <p className="uppercase text-[1.125rem] !tracking-widest dark:text-neutral-400 ">
+              <p className="uppercase text-[1rem] md:text-[1.125rem] !tracking-widest text-brand-light-blue dark:text-neutral-400 ">
                 Our Team
               </p>
-              <h1 className="font-[800] text-[46px] leading-[60px] text-brand-blue dark:text-brand-green  ">
+              <h1 className="font-[600] md:font-[800] text-[40px] md:text-[46px] leading-[60px] text-brand-blue dark:text-brand-green  ">
                 Members
               </h1>
             </div>
@@ -127,7 +127,7 @@ export default function About() {
               {team.map((item, index) => (
                 <div
                   key={index}
-                  className="rounded-lg p-5 bg-brand-blue bg-opacity-20 border border-brand-green border-opacity-20 flex flex-row md:flex-col items-center "
+                  className="rounded-lg p-5 bg-brand-blue dark:bg-opacity-20 border dark:border-brand-green dark:border-opacity-20 flex flex-row md:flex-col items-center "
                 >
                   <div className="w-24 md:w-full flex justify-center ">
                     <Image
@@ -157,7 +157,7 @@ export default function About() {
               ))}
             </div>
           </div>
-        </div>
+        </>
       </PageLayout>
     </>
   );

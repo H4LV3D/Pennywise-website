@@ -21,10 +21,10 @@ const TestimonialsSection = () => {
   return (
     <div className="py-16">
       <div className="mb-6 md:mb-0 md:text-center">
-        <p className="uppercase text-[1.125rem] !tracking-widest text-brand-green dark:text-neutral-400 ">
+        <p className="uppercase text-[1.125rem] !tracking-widest text-brand-light-blue dark:text-neutral-400 ">
           Testimonials
         </p>
-        <h1 className="font-[800] text-[40px] sm:text-[46px] leading-[48px] md:w-[24rem] mx-auto text-brand-blue dark:text-brand-green ">
+        <h1 className="font-[600] md:font-[800] text-[40px] sm:text-[46px] leading-[48px] md:w-[24rem] mx-auto text-brand-blue dark:text-brand-green ">
           What Our Users Say About Us?
         </h1>
       </div>
@@ -75,16 +75,17 @@ const TestimonialsSection = () => {
             <p className="text-[#6c6c6c] dark:text-neutral-400 text-[1rem]  ">
               {testimonials[currentIndex].quote}
             </p>
-            <p className="text-[1rem] font-[500] text-brand-green">
+            <p className="text-[1rem] font-[500] text-brand-light-blue dark:text-brand-green">
               {testimonials[currentIndex].name}
             </p>
+
             <div className="flex items-center space-x-3">
               {testimonials.map((item, index) => (
                 <button
-                  className={`bg-brand-white h-6 w-6 rounded-[50%] ${
+                  className={`bg-brand-white h-8 w-8 rounded-[50%] ${
                     index === currentIndex
-                      ? "border-2 border-brand-green"
-                      : "border border-transparent"
+                      ? "border-2 border-brand-light-blue dark:border-brand-green"
+                      : "border "
                   }`}
                   key={index}
                   onClick={() => rotateToTestimonial(index)}

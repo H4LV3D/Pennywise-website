@@ -106,7 +106,8 @@ const index = (props: Props) => {
 
       <>
         <Navbar />
-        <div className="mt-[5rem] mx-auto max-w-[1250px] px-6 sm:px-8 md:px-0 bg-[#000B17] ">
+
+        <div className="mt-[5rem] mx-auto max-w-[1250px] px-6 sm:px-8 md:px-0 dark:bg-[#000B17] ">
           <div id="top" className="space-y-1 min-h-[35vh] flex items-center ">
             <div className="space-y-2 max-w-lg ">
               <h1 className="font-[600] text-3xl md:text-5xl dark:text-brand-whitet-brand-blue dark:text-brand-white tracking-wider  ">
@@ -120,7 +121,7 @@ const index = (props: Props) => {
           </div>
 
           <div className="flex flex-col-reverse lg:flex-row justify-between lg:space-x-8 ">
-            <div className="lg:w-3/5  h-[500vh] mt-8 lg:mt-0 ">
+            <div className="lg:w-3/5 md:h-[500vh] mt-8 lg:mt-0 ">
               <div className="w-full space-y-6 text-[#646464] dark:text-neutral-300 ">
                 <div className="w-full space-y-6 max-w-3xl ">
                   <p
@@ -131,7 +132,7 @@ const index = (props: Props) => {
                   </p>
 
                   <div className="space-y-1.5">
-                    <p className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue/80   ">
+                    <p className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue   ">
                       Interpretation
                     </p>
                     <p className="dark:text-neutral-300 text-[#222] tracking-wider leading-6  mt-0.5 ">
@@ -145,7 +146,7 @@ const index = (props: Props) => {
 
                   <div className="space-y-4 ">
                     <div className="space-y-1.5">
-                      <p className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue/80   ">
+                      <p className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue   ">
                         Definitions
                       </p>
                       <p className="dark:text-neutral-300 text-[#222] tracking-wider leading-6  mt-0.5 ">
@@ -261,7 +262,7 @@ const index = (props: Props) => {
                   <div className="space-y-4">
                     <p
                       id="acknowledgment"
-                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue/80   "
+                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue   "
                     >
                       Acknowledgment
                     </p>
@@ -303,7 +304,7 @@ const index = (props: Props) => {
                   <div className="space-y-4">
                     <p
                       id="links-to-other-websites"
-                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue/80   "
+                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue   "
                     >
                       Links to Other Websites
                     </p>
@@ -332,7 +333,7 @@ const index = (props: Props) => {
                   <div className="space-y-4">
                     <p
                       id="termination"
-                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue/80   "
+                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue   "
                     >
                       Termination
                     </p>
@@ -351,7 +352,7 @@ const index = (props: Props) => {
                   <div className="space-y-4">
                     <p
                       id="refund-policy"
-                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue/80   "
+                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue   "
                     >
                       Refund Policy
                     </p>
@@ -364,7 +365,7 @@ const index = (props: Props) => {
                   <div className="space-y-4">
                     <p
                       id="limitation-of-liability"
-                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue/80   "
+                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue   "
                     >
                       Limitation of Liability
                     </p>
@@ -405,7 +406,7 @@ const index = (props: Props) => {
                   <div className="space-y-4">
                     <p
                       id="as-is-and-as-available-disclaimer"
-                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue/80   "
+                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue   "
                     >
                       &ldquo;AS IS&rdquo; and &ldquo;AS AVAILABLE&rdquo;
                       Disclaimer
@@ -461,7 +462,7 @@ const index = (props: Props) => {
                   <div className="space-y-4">
                     <p
                       id="governing-law"
-                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue/80   "
+                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue   "
                     >
                       Governing Law
                     </p>
@@ -476,7 +477,7 @@ const index = (props: Props) => {
                   <div className="space-y-4">
                     <p
                       id="dispute-resolution"
-                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue/80   "
+                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue   "
                     >
                       Dispute Resolution
                     </p>
@@ -490,7 +491,7 @@ const index = (props: Props) => {
                   <div className="space-y-4">
                     <p
                       id="for-european-union-eu-users"
-                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue/80   "
+                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue   "
                     >
                       For European Union (EU) Users
                     </p>
@@ -504,7 +505,7 @@ const index = (props: Props) => {
                   <div className="space-y-4">
                     <p
                       id="united-states-legal-compliance"
-                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue/80   "
+                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue   "
                     >
                       United States Legal Compliance
                     </p>
@@ -520,13 +521,13 @@ const index = (props: Props) => {
 
                   <p
                     id="severability-and-waiver"
-                    className="font-bricolageGrotesque text-[21px] dark:text-neutral-200 text-brand-blue/80 font-[500]   "
+                    className="font-bricolageGrotesque text-[21px] dark:text-neutral-200 text-brand-blue font-[500]   "
                   >
                     Severability and Waiver
                   </p>
 
                   <div className="space-y-4">
-                    <p className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue/80   ">
+                    <p className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue   ">
                       Severability
                     </p>
                     <p className="dark:text-neutral-300 text-[#222] tracking-wider leading-6  mt-0.5 ">
@@ -540,7 +541,7 @@ const index = (props: Props) => {
                   </div>
 
                   <div className="space-y-4">
-                    <p className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue/80   ">
+                    <p className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue   ">
                       Waiver
                     </p>
                     <p className="dark:text-neutral-300 text-[#222] tracking-wider leading-6  mt-0.5 ">
@@ -556,7 +557,7 @@ const index = (props: Props) => {
                   <div className="space-y-4">
                     <p
                       id="translation-interpretation"
-                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue/80   "
+                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue   "
                     >
                       Translation Interpretation
                     </p>
@@ -571,7 +572,7 @@ const index = (props: Props) => {
                   <div className="space-y-4">
                     <p
                       id="changes-to-these-terms-and-conditions"
-                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue/80   "
+                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue   "
                     >
                       Changes to These Terms and Conditions
                     </p>
@@ -595,7 +596,7 @@ const index = (props: Props) => {
                   <div className="space-y-4">
                     <p
                       id="contact-us"
-                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue/80   "
+                      className="font-bricolageGrotesque text-[19px] font-[500] dark:text-neutral-200 text-brand-blue   "
                     >
                       Contact Us
                     </p>
@@ -613,14 +614,14 @@ const index = (props: Props) => {
                     </p>
                   </div>
 
-                  <div className="pb-20"></div>
+                  {/* <div className="pb-0"></div> */}
                 </div>
                 {/*  */}
               </div>
             </div>
 
-            <div className="lg:w-2/5 h-[70vh] overflow-auto lg:sticky top-[10%] ">
-              <div className=" bg-brand-blue bg-opacity-20 p-8 rounded-xl space-y-6 sticky top-0">
+            <div className="lg:w-2/5 h-[80vh] md:h-[70vh] overflow-auto lg:sticky top-[10%] ">
+              <div className="bg-neutral-100 dark:bg-brand-blue dark:bg-opacity-20 p-8 rounded-xl space-y-6 sticky top-0">
                 <h4 className="text-[1.25rem] font-[500] text-brand-blue dark:text-brand-white ">
                   Table of Contents
                 </h4>

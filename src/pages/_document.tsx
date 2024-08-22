@@ -76,7 +76,7 @@ export default function Document() {
           content="Pennywise, finance, savings, budget, Pennywise Financial accounting app, Financial decisions, Financial tools, Financial information, Personal finance, Money management, Budgeting, Saving goals, Financial reminders, Financial future, Every penny counts, Get started today, About Pennywise, Our story, Who are we, Personal finance app, Money saving app, Budgeting app, Financial planning, Financial literacy, Money tracking, Expense tracking, Financial goals, Money management tools, Personal finance management, Financial independence, Saving money, Financial security, Financial freedom, Money advice, Financial tips, Financial education, Money habits, Financial discipline, Financial responsibility, Money goals, Financial health, Money planning, Financial success, Money control, Personal finance tips, Financial improvement, Money wisdom, Financial growth, Money strategy, Financial strategy, Money solutions, Financial solutions, Personal finance solutions, Pennnywise, Penywise, Penneywise, Penywise, Pennywize, Penywise, Penneywize, Penneywize, Penywize, Penywise, Pennywisse, Penneywisse, Pennnywize, Penywis, Penneywis, Penneywisse, Penywis, Pennywisse"
         />
       </Head>
-      <body className="bg-[#000B17]">
+      <body className="bg-brand-white dark:bg-[#000B17]">
         <Main />
         <NextScript />
       </body>
