@@ -33,13 +33,15 @@ function Header({}: Props) {
                 <span className="hidden dark:block ">
                   <BrandLogo />
                 </span>
-                <Image
-                  src={`/assets/images/logo/monochrome.svg`}
-                  width={180}
-                  height={60}
-                  alt=""
-                  priority={true}
-                />
+                <span className="dark:hidden ">
+                  <Image
+                    src={`/assets/images/logo/monochrome.svg`}
+                    width={180}
+                    height={60}
+                    alt=""
+                    priority={true}
+                  />
+                </span>
 
                 <p className="opacity-0 bg-black dark:bg-neutral-900 dark:text-neutral-400 text-white text-center text-xs rounded-lg py-2 absolute z-40 group-hover:opacity-100 top-full -left-4 mt-4 px-4 pointer-events-none">
                   Home

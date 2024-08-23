@@ -168,15 +168,15 @@ export default function Home() {
                   <div
                     className={`space-y-2 mx-auto py-6 md:p-8 rounded-lg ${
                       index === 0 || index === 3 || index === 4
-                        ? "bg- dark:bg-brand-blue dark:bg-opacity-20 text-brand-blue "
+                        ? " dark:bg-brand-blue dark:bg-opacity-20  text-[#646464] dark:text-neutral-400 "
                         : " dark:text-brand-white "
                     }  `}
                     key={index}
                   >
-                    <h5 className="font-[500] text-[1.3rem] line-clamp-1 hover:line-clamp-none ">
+                    <h5 className="font-[500] text-[1.3rem] line-clamp-1 hover:line-clamp-none text-brand-blue dark:text-brand-white ">
                       {item.question}
                     </h5>
-                    <p className="text-[1rem] line-clamp-3 hover:line-clamp-none text-[#646464]  ">
+                    <p className="text-[1rem] line-clamp-3 hover:line-clamp-none tracking-wider  ">
                       {item.answer}
                     </p>
                   </div>

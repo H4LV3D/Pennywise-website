@@ -48,6 +48,10 @@ const footerData = {
       link: "/about",
     },
     {
+      title: "Blogs",
+      link: "/blogs",
+    },
+    {
       title: "Pricing",
       link: "/pricing",
     },
@@ -63,10 +67,7 @@ const additionalPages = [
     title: "Community",
     link: "/community",
   },
-  {
-    title: "Blog",
-    link: "/blog",
-  },
+
   {
     title: "Privacy Policy",
     link: "/privacy-policy",
@@ -91,13 +92,15 @@ function Footer({}: Props) {
               <span className="hidden dark:block ">
                 <BrandLogo />
               </span>
-              <Image
-                src={`/assets/images/logo/monochrome.svg`}
-                width={180}
-                height={60}
-                alt=""
-                priority={true}
-              />
+              <span className="dark:hidden ">
+                <Image
+                  src={`/assets/images/logo/monochrome.svg`}
+                  width={180}
+                  height={60}
+                  alt=""
+                  priority={true}
+                />
+              </span>
 
               <p
                 data-aos="fade-right"
