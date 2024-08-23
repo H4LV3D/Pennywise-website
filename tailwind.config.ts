@@ -26,6 +26,7 @@ const config: Config = {
         "brand-blue": "#023047",
         "brand-light-blue": "#4CC9F0",
         "brand-white": "#FBFBFB",
+        "brand-dark-blue": "#011824",
       },
     },
   },

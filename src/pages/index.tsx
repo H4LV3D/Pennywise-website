@@ -48,7 +48,7 @@ export default function Home() {
                 </span>{" "}
                 !
               </h1>
-              <p className="text-[#646464] dark:text-neutral-400 text-[1rem] max-w-lg tracking-wider  ">
+              <p className="text-[#646464] dark:text-neutral-300 text-[1rem] max-w-lg tracking-wider font-[300] ">
                 Saving and Expense tracking made easy with our app! Our
                 user-friendly interface and automated tracking streamlines the
                 process, while customizable expense tracking, savings and
@@ -135,7 +135,7 @@ export default function Home() {
                       : ""
                   } space-y-2 md:space-y-4 border border-neutral-200 dark:border-neutral-700 p-6 md:p-14 rounded-xl `}
                 >
-                  <div className="flex flex-col md:flex-row space-y-3 md:space-x-2 md:items-center dark:text-brand-white">
+                  <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-2 md:items-center dark:text-brand-white">
                     <span className="h-[2rem] w-[2rem] border border-black dark:border-brand-white rounded-[50%] flex justify-center items-center flex-shrink-0 ">
                       <i className="fas fa-bell fa-sm fa-fw"></i>
                     </span>

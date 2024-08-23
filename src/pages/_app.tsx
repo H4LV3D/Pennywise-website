@@ -5,10 +5,17 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { MantineProvider } from "@mantine/core";
 import { Notifications } from "@mantine/notifications";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import { Bricolage_Grotesque } from "next/font/google";
+import localFont from "next/font/local";
 
 const queryClient = new QueryClient();
 
-import localFont from "next/font/local";
+const BricolageGrotesque = Bricolage_Grotesque({
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  style: "normal",
+  display: "swap",
+  subsets: ["latin"],
+});
 
 const clashDisplay = localFont({
   src: [

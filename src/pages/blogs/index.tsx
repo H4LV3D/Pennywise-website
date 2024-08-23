@@ -22,7 +22,7 @@ const index = (props: Props) => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
             {Blogs.map((blog, index) => (
               <Link href={`/blogs/${blog.id}`} key={index}>
-                <div className="bg-white dark:bg-brand-blue rounded-[1rem] shadow-lg overflow-hidden ">
+                <div className="bg-white dark:bg-brand-dark-blue rounded-[1rem] shadow-lg overflow-hidden ">
                   <div className="h-[250px] w-full bg-brand-blue"></div>
                   <div className="p-6">
                     <h1 className="font-[500] text-xl dark:text-brand-white text-brand-blue line-clamp-2 ">
