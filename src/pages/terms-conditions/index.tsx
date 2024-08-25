@@ -121,7 +121,7 @@ const index = (props: Props) => {
           </div>
 
           <div className="flex flex-col-reverse lg:flex-row justify-between lg:space-x-8 ">
-            <div className="lg:w-3/5 min-h-[1000px] md:h-[800vh] mt-8 lg:mt-0 ">
+            <div className="lg:w-3/5 min-h-[1000px] md:h-[600vh] mt-8 lg:mt-0 ">
               <div className="w-full space-y-6 text-[#646464] dark:text-neutral-300 ">
                 <div className="w-full space-y-6 max-w-3xl ">
                   <p
