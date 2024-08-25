@@ -862,9 +862,9 @@ const BlogPost = (props: Props) => {
                     Privacy Policy.
                   </p>
                   <p className="leading-6 tracking-wider  ">
-                    You are advised to rediv this Privacy Policy periodically
-                    for any changes. Changes to this Privacy Policy are
-                    effective when they are posted on this page.
+                    You are advised to read this Privacy Policy periodically for
+                    any changes. Changes to this Privacy Policy are effective
+                    when they are posted on this page.
                   </p>
                 </div>
 
